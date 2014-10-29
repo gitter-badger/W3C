@@ -1,4 +1,4 @@
 W3C
 ===
 
-W3C work in various groups
+Work in various [W3C](http://www.w3.org/) groups.
