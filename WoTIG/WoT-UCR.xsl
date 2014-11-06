@@ -2,20 +2,46 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xsd" version="2.0">
     <xsl:output method="xhtml" encoding="UTF-8" omit-xml-declaration="yes" indent="yes"/>
     <xsl:template match="/">
-        <div>
-            <section id="use-cases">
-                <h2>Use Cases</h2>
-                <xsl:apply-templates select="/ucr/usecase"/>
-            </section>
-            <section id="requirements">
-                <h2>Requirements</h2>
-                <xsl:apply-templates select="/ucr/req"/>
-            </section>
-            <section id="technologies">
-                <h2>Technologies</h2>
-                <xsl:apply-templates select="/ucr/tech"/>
-            </section>
-        </div> 
+        <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html>&#xa;</xsl:text>
+        <html>
+            <head>
+                <title>Use Cases and Requirements for the Web of Things</title>
+                <meta charset="utf-8"/>
+                    <script src="http://www.w3.org/Tools/respec/respec-w3c-common" async="async" class="remove"></script>
+                    <script class="remove">
+                        var respecConfig = {
+                        specStatus: "unofficial",
+                        shortName:  "WoT-UCR",
+                        editors: [
+                        {   name:       "Johannes Hund",
+                        company:    "Siemens",
+                        companyURL: "http://www.siemens.com/" },
+                        {   name:       "Erik Wilde",
+                        url:        "http://dret.net/netdret/",
+                        company:    "Siemens",
+                        companyURL: "http://www.siemens.com/" }
+                        ],
+                        };
+                    </script>
+            </head>
+            <body>
+                <section id="abstract">
+                    <p>This document describes Use Cases and Requirements for the Web of Things.</p>
+                </section>
+                <section id="use-cases">
+                    <h2>Use Cases</h2>
+                    <xsl:apply-templates select="/ucr/usecase"/>
+                </section>
+                <section id="requirements">
+                    <h2>Requirements</h2>
+                    <xsl:apply-templates select="/ucr/req"/>
+                </section>
+                <section id="technologies">
+                    <h2>Technologies</h2>
+                    <xsl:apply-templates select="/ucr/tech"/>
+                </section>
+            </body>
+        </html>
     </xsl:template>
     <xsl:template match="usecase">
         <div id="{@id}">
