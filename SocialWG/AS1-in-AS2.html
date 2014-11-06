@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Using Activity Streams 1.0 Vocabularies in Activity Streams 2.0</title>
+      <meta charset="utf-8"></meta>
+      <script src="http://www.w3.org/Tools/respec/respec-w3c-common" async="async" class="remove"></script>
+      <script class="remove">
+         var respecConfig = {
+         specStatus: "ED",
+         edDraftURI: "http://dret.github.io/W3C/SocialWG/AS1-in-AS2.html",
+         shortName: "AS1-in-AS2",
+         editors: [
+         {
+         name: "James M Snell",
+         url: "http://chmod777self.com",
+         company: "IBM",
+         companyUrl: "http://ibm.com"
+         },
+         {
+         name: "Erik Wilde",
+         url: "http://dret.net/netdret/",
+         company: "Siemens",
+         companyUrl: "http://www.siemens.com/"
+         }  
+         ],
+         wg: "Social Web Working Group",
+         wgURI: "http://www.w3.org/Social/WG",
+         wgPublicList: "public-socialweb",
+         };
+         
+      </script>
+   </head>
+   <body>
+      <section id="abstract">
+         <p>This document describes how to use Activity Streams 1.0 vocabularies in Activity Streams
+            2.0.
+         </p>
+      </section>
+      <section id="AS1-vocabularies">
+         <h2>Activity Streams 1.0 Vocabularies</h2>
+         <section id="AS1-verbs">
+            <h2>Activity Streams 1.0 Verbs</h2>
+            <ul>
+               <li>accept: Indicates that the actor has accepted the object. For 
+                  instance, a person accepting an award, or accepting an assignment.
+               </li>
+               <li>access: Indicates that the actor has accessed the object. For instance,
+                  a person accessing a room, or accessing a file.
+               </li>
+               <li>acknowledge: Indicates that the actor has acknowledged the object. This 
+                  effectively signals that the actor is aware of the object's
+                  existence.
+               </li>
+               <li>add: Indicates that the actor has added the object to the target. 
+                  For instance, adding a photo to an album.
+               </li>
+               <li>agree: Indicates that the actor agrees with the object. For example, 
+                  a person agreeing with an argument, or expressing agreement with
+                  a particular issue.
+               </li>
+               <li>append: Indicates that the actor has appended the object to the target.
+                  For instance, a person appending a new record to a database.
+               </li>
+               <li>approve: Indicates that the actor has approved the object. For instance,
+                  a manager might approve a travel request.
+               </li>
+               <li>archive: Indicates that the actor has archived the object.</li>
+               <li>assign: Indicates that the actor has assigned the object to the target.</li>
+               <li>at: Indicates that the actor is currently located at the object. For 
+                  instance, a person being at a specific physical location.
+               </li>
+               <li>attach: Indicates that the actor has attached the object to the target.
+                  For instance, a person attaching a file to a wiki page or an email.
+               </li>
+               <li>attend: Indicates that the actor has attended the object. For instance,
+                  a person attending a meeting.
+               </li>
+               <li>author: Indicates that the actor has authored the object. Note that this
+                  is a more specific form of the verb "create".
+               </li>
+               <li>authorize: Indicates that the actor has authorized the object. If a target
+                  is specified, it means that the authorization is specifically in 
+                  regards to the target. For instance, a service can authorize a 
+                  person to access a given application; in which case the actor is the
+                  service, the object is the person, and the target is the application.
+                  In contrast, a person can authorize a request; in which case the 
+                  actor is the person and the object is the request and there might be 
+                  no explicit target.
+               </li>
+               <li>borrow: Indicates that the actor has borrowed the object. If a target
+                  is specified, it identifies the entity from which the object was 
+                  borrowed. For instance, if a person borrows a book from a library,
+                  the person is the actor, the book is the object and the library 
+                  is the target.
+               </li>
+               <li>build: Indicates that the actor has built the object. For example, 
+                  if a person builds a model or compiles code.
+               </li>
+               <li>cancel: Indicates that the actor has canceled the object. For 
+                  instance, canceling a calendar event.
+               </li>
+               <li>close: Indicates that the actor has closed the object. For instance,
+                  the object could represent a ticket being tracked in an issue
+                  management system.
+               </li>
+               <li>complete: Indicates that the actor has completed the object.</li>
+               <li>confirm: Indicates that the actor has confirmed or agrees with the object.
+                  For instance, a software developer might confirm an issue reported
+                  against a product.
+               </li>
+               <li>consume: Indicates that the actor has consumed the object. The 
+                  specific meaning is dependent largely on the object's type.
+                  For instance, an actor may "consume" an audio object, indicating
+                  that the actor has listened to it; or an actor may "consume"
+                  a book, indicating that the book has been read. As such, the 
+                  "consume" verb is a more generic form of other more specific 
+                  verbs such as "read" and "play".
+               </li>
+               <li>checkin: Indicates that the actor has checked-in to the object. For 
+                  instance, a person checking-in to a Place.
+               </li>
+               <li>create: Indicates that the actor has created the object.</li>
+               <li>delete: Indicates that the actor has deleted the object. This 
+                  implies, but does not require, the permanent destruction of the 
+                  object.
+               </li>
+               <li>deliver: Indicates that the actor has delivered the object. For example,
+                  delivering a package.
+               </li>
+               <li>deny: Indicates that the actor has denied the object. For example,
+                  a manager may deny a travel request.
+               </li>
+               <li>disagree: Indicates that the actor disagrees with the object.</li>
+               <li>dislike: Indicates that the actor dislikes the object. Note that the 
+                  "dislike" verb is distinct from the "unlike" verb which assumes
+                  that the object had been previously "liked".
+               </li>
+               <li>experience: Indicates that the actor has experienced the object in some 
+                  manner. Note that, depending on the specific object types used 
+                  for both the actor and object, the meaning of this verb can 
+                  overlap that of the "consume" and "play" verbs. For instance, 
+                  a person might "experience" a movie; or "play" the movie; or "consume"
+                  the movie. The "experience" verb can be considered a more generic
+                  form of other more specific verbs as "consume", "play", "watch", 
+                  "listen", and "read"
+               </li>
+               <li>favorite: Indicates that the actor marked the object as an item of 
+                  special interest.
+               </li>
+               <li>find: Indicates that the actor has found the object.</li>
+               <li>flag-as-inappropriate: Indicates that the actor has flagged the object as being 
+                  inappropriate for some reason. When using this verb, the 
+                  context property, as specified 
+                  within  can be used to 
+                  provide additional detail about why the object has been 
+                  flagged.
+               </li>
+               <li>context: follow</li>
+               <li>follow: Indicates that the actor began following the activity of the 
+                  object. In most cases, the objectType will be a "person", but it can 
+                  potentially be of any type that can sensibly generate activity.
+                  Processors MAY ignore (silently drop) successive identical "follow" 
+                  activities.
+               </li>
+               <li>give: Indicates that the actor is giving an object to the target.
+                  Examples include one person giving a badge
+                  object to another person. The object
+                  identifies the object being given. The target
+                  identifies the receiver.
+               </li>
+               <li>badge: host</li>
+               <li>object: host</li>
+               <li>target: host</li>
+               <li>host: Indicates that the actor is hosting the object. As in hosting 
+                  an event, or hosting a service.
+               </li>
+               <li>ignore: Indicates that the actor has ignored the object. For instance, 
+                  this verb may be used when an actor has ignored a friend request, 
+                  in which case the object may be the request-friend
+                  activity.
+               </li>
+               <li>request-friend: insert</li>
+               <li>insert: Indicates that the actor has inserted the object into the target.</li>
+               <li>install: Indicates that the actor has installed the object, as in 
+                  installing an application.
+               </li>
+               <li>interact: Indicates that the actor has interacted with the object. For instance,
+                  when one person interacts with another.
+               </li>
+               <li>invite: Indicates that the actor has invited the object, typically a 
+                  person object, to join or participate in the object described by
+                  the target. The target could, for instance,
+                  be an event, group or a service.
+               </li>
+               <li>target: join</li>
+               <li>join: Indicates that the actor has become a member of the object. This 
+                  specification only defines the meaning of this verb when the 
+                  object of the Activity has an
+                  objectType of group, 
+                  though implementors need to be prepared to handle other types of objects.
+               </li>
+               <li>object: leave</li>
+               <li>objectType: leave</li>
+               <li>group: leave</li>
+               <li>leave: Indicates that the actor has left the object. For instance, 
+                  a Person leaving a Group or checking-out of a Place.
+               </li>
+               <li>like: Indicates that the actor marked the object as an item of special 
+                  interest. The "like" verb is considered to be an alias of "favorite". 
+                  The two verb are semantically identical.
+               </li>
+               <li>listen: Indicates that the actor has listened to the object. This is typically
+                  only applicable for objects representing audio content, such as music,
+                  an audio-book, or a radio broadcast. The "listen" verb is a more specific
+                  form of the "consume", "experience" and "play" verbs.
+               </li>
+               <li>lose: Indicates that the actor has lost the object. For instance, if a 
+                  person loses a game.
+               </li>
+               <li>make-friend: Indicates the creation of a friendship that is reciprocated by 
+                  the object. Since this verb implies an activity on the part of its object,
+                  processors MUST NOT accept activities with this verb unless they are
+                  able to verify through some external means that there is in fact a
+                  reciprocated connection. For example, a processor may have received
+                  a guarantee from a particular publisher that the publisher will only
+                  use this Verb in cases where a reciprocal relationship exists.
+               </li>
+               <li>open: Indicates that the actor has opened the object. For instance,
+                  the object could represent a ticket being tracked in an issue
+                  management system.
+               </li>
+               <li>play: Indicates that the actor spent some time enjoying the object. 
+                  For example, if the object is a video this indicates that the subject 
+                  watched all or part of the video. The "play" verb is a more specific 
+                  form of the "consume" verb.
+               </li>
+               <li>present: Indicates that the actor has presented the object. For instance,
+                  when a person gives a presentation at a conference.
+               </li>
+               <li>purchase: Indicates that the actor has purchased the object. If a target is
+                  specified, in indicates the entity from which the object was purchased.
+               </li>
+               <li>qualify: Indicates that the actor has qualified for the object. If a target
+                  is specified, it indicates the context within which the qualification
+                  applies.
+               </li>
+               <li>read: Indicates that the actor read the object. This is typically only
+                  applicable for objects representing printed or written content, such 
+                  as a book, a message or a comment. The "read" verb is a more specific
+                  form of the "consume", "experience" and "play" verbs.
+               </li>
+               <li>receive: Indicates that the actor is receiving an object.
+                  Examples include a person receiving a badge
+                  object. The object
+                  identifies the object being received.
+               </li>
+               <li>badge: reject</li>
+               <li>object: reject</li>
+               <li>reject: Indicates that the actor has rejected the object.</li>
+               <li>remove: Indicates that the actor has removed the object from the target.</li>
+               <li>remove-friend: Indicates that the actor has removed the object from the collection
+                  of friends.
+               </li>
+               <li>replace: Indicates that the actor has replaced the target with the object.</li>
+               <li>request: Indicates that the actor has requested the object. If a target is
+                  specified, it indicates the entity from which the object is being 
+                  requested.
+               </li>
+               <li>request-friend: Indicates the creation of a friendship that has not yet been reciprocated by 
+                  the object.
+               </li>
+               <li>resolve: Indicates that the actor has resolved the object. For instance,
+                  the object could represent a ticket being tracked in an issue
+                  management system.
+               </li>
+               <li>return: Indicates that the actor has returned the object. If a target is
+                  specified, it indicates the entity to which the object was returned.
+               </li>
+               <li>retract: Indicates that the actor has retracted the object. For instance,
+                  if an actor wishes to retract a previously published activity, 
+                  the object would be the previously published activity that is being
+                  retracted.
+               </li>
+               <li>rsvp-maybe: The "possible RSVP" verb indicates that the actor has made a
+                  possible RSVP for the object. This specification only defines the
+                  meaning of this verb when its object is an event (see ), though implementors need
+                  to be prepared to
+                  handle other object types. The use of this verb is only appropriate 
+                  when the RSVP was created by an explicit action by the actor. It 
+                  is not appropriate to use this verb when a user has been added as 
+                  an attendee by an event organiser or administrator.
+               </li>
+               <li>rsvp-no: The "negative RSVP" verb indicates that the actor has made a
+                  negative RSVP for the object. This specification only defines the
+                  meaning of this verb when its object is an event (see ), though implementors need
+                  to be prepared to
+                  handle other object types. The use of this verb is only appropriate 
+                  when the RSVP was created by an explicit action by the actor. It is 
+                  not appropriate to use this verb when a user has been added as an 
+                  attendee by an event organiser or administrator.
+               </li>
+               <li>rsvp-yes: The "positive RSVP" verb indicates that the actor has made a
+                  positive RSVP for an object. This specification only defines the
+                  meaning of this verb when its object is an event (see ), though implementors need
+                  to be prepared to
+                  handle other object types. The use of this verb is only appropriate 
+                  when the RSVP was created by an explicit action by the actor. It 
+                  is not appropriate to use this verb when a user has been added as 
+                  an attendee by an event organiser or administrator.
+               </li>
+               <li>satisfy: Indicates that the actor has satisfied the object. If a target 
+                  is specified, it indicate the context within which the object was 
+                  satisfied. For instance, if a person satisfies the requirements for
+                  a particular challenge, the person is the actor; the requirement is
+                  the object; and the challenge is the target.
+               </li>
+               <li>save: Indicates that the actor has called out the object as being of 
+                  interest primarily to him- or herself. Though this action MAY be 
+                  shared publicly, the implication is that the object has been saved 
+                  primarily for the actor's own benefit rather than to show it to 
+                  others as would be indicated by the "share" verb.
+               </li>
+               <li>schedule: Indicates that the actor has scheduled the object. For instance,
+                  scheduling a meeting.
+               </li>
+               <li>search: Indicates that the actor is or has searched for the object. If
+                  a target is specified, it indicates the context within which the 
+                  search is or has been conducted.
+               </li>
+               <li>sell: Indicates that the actor has sold the object. If a target is 
+                  specified, it indicates the entity to which the object was sold.
+               </li>
+               <li>send: Indicates that the actor has sent the object. If a target is 
+                  specified, it indicates the entity to which the object was sent.
+               </li>
+               <li>share: Indicates that the actor has called out the object to readers. 
+                  In most cases, the actor did not create the object being shared, 
+                  but is instead drawing attention to it.
+               </li>
+               <li>sponsor: Indicates that the actor has sponsored the object. If a target
+                  is specified, it indicates the context within which the sponsorship
+                  is offered. For instance, a company can sponsor an event; or an 
+                  individual can sponsor a project; etc.
+               </li>
+               <li>start: Indicates that the actor has started the object. For instance, 
+                  when a person starts a project.
+               </li>
+               <li>stop-following: Indicates that the actor has stopped following the object.</li>
+               <li>submit: Indicates that the actor has submitted the object. If a target
+                  is specified, it indicates the entity to which the object was submitted.
+               </li>
+               <li>tag: Indicates that the actor has associated the object with the target.
+                  For example, if the actor specifies that a particular user 
+                  appears in a photo. the object is the user and the target is the photo.
+               </li>
+               <li>terminate: Indicates that the actor has terminated the object. </li>
+               <li>tie: Indicates that the actor has neither won or lost the object. This
+                  verb is generally only applicable when the object represents some form
+                  of competition, such as a game.
+               </li>
+               <li>unfavorite: Indicates that the actor has removed the object from the collection
+                  of favorited items.
+               </li>
+               <li>unlike: Indicates that the actor has removed the object from the collection
+                  of liked items.
+               </li>
+               <li>unsatisfy: Indicates that the actor has not satisfied the object. If a target
+                  is specified, it indicates the context within which the object was not
+                  satisfied. For instance, if a person fails to satisfy the requirements 
+                  of some particular challenge, the person is the actor; the requirement 
+                  is the object and the challenge is the target.
+               </li>
+               <li>unsave: Indicates that the actor has removed the object from the collection
+                  of saved items.
+               </li>
+               <li>unshare: Indicates that the actor is no longer sharing the object. If a 
+                  target is specified, it indicates the entity with whom the object is
+                  no longer being shared.
+               </li>
+               <li>update: The "update" verb indicates that the actor has modified the
+                  object. Use of the "update" verb is generally reserved to indicate 
+                  modifications to existing objects or data such as changing an existing
+                  user's profile information.
+               </li>
+               <li>use: Indicates that the actor has used the object in some manner.</li>
+               <li>watch: Indicates that the actor has watched the object. This verb is 
+                  typically applicable only when the object represents dynamic, visible
+                  content such as a movie, a television show or a public performance.
+                  This verb is a more specific form of the verbs "experience", "play"
+                  and "consume".
+               </li>
+               <li>win: Indicates that the actor has won the object. This verb is typically
+                  applicable only when the object represents some form of competition, 
+                  such as a game.
+               </li>
+            </ul>
+         </section>
+         <section id="AS1-objects">
+            <h2>Activity Streams 1.0 Objects</h2>
+         </section>
+      </section>
+   </body>
+</html>
