@@ -1,82 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.w3.org/1999/xhtml/" exclude-result-prefixes="xsd" version="2.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xsd" version="2.0">
     <xsl:output method="xhtml" encoding="UTF-8" omit-xml-declaration="yes" indent="yes"/>
     <xsl:template match="/">
-        <html>
-            <xsl:comment>
-                <xsl:text> Generated: </xsl:text>
-                <xsl:value-of select="current-dateTime()"/>
-                <xsl:text> </xsl:text>
-            </xsl:comment>
-            <head>
-                <title>Use Cases and Requirements</title>
-                <style type="text/css">
-.section { padding-left : 20px; }
-*:target { outline : red solid medium ; }
-body { color : #202020 ; background-color : #F0F0F0 ; }
-a { color : #407040 ; text-decoration : none ; border-bottom : 1px dotted ; }
-a:hover { background-color: #FFFFFF ; }
-                </style>
-            </head>
-            <body>
-                <h1>Use Cases and Requirements</h1>
-                <hr/>
-                <h2>Table of Contents</h2>
-                <ol>
-                    <li>
-                        <xsl:text>Use Cases</xsl:text>
-                        <ol>
-                            <xsl:for-each select="/ucr/usecase">
-                                <li>
-                                    <a href="#{@id}">
-                                        <xsl:value-of select="title"/>
-                                    </a>
-                                </li>
-                            </xsl:for-each>
-                        </ol>
-                    </li>
-                    <li>
-                        <xsl:text>Requirements</xsl:text>
-                        <ol>
-                            <xsl:for-each select="/ucr/req">
-                                <li>
-                                    <a href="#{@id}">
-                                        <xsl:value-of select="title"/>
-                                    </a>
-                                </li>
-                            </xsl:for-each>
-                        </ol>
-                    </li>
-                    <li>
-                        <xsl:text>Technologies</xsl:text>
-                        <ol>
-                            <xsl:for-each select="/ucr/tech">
-                                <li>
-                                    <a href="#{@id}">
-                                        <xsl:value-of select="title"/>
-                                    </a>
-                                </li>
-                            </xsl:for-each>
-                        </ol>
-                    </li>
-                </ol>
-                <hr/>
-                <h3>1. Use Cases</h3>
-                <div class="section">
-                    <xsl:apply-templates select="/ucr/usecase"/>
-                </div>
-                <hr/>
-                <h3>2. Requirements</h3>
-                <div class="section">
-                    <xsl:apply-templates select="/ucr/req"/>
-                </div>
-                <hr/>
-                <h3>3. Technologies</h3>
-                <div class="section">
-                    <xsl:apply-templates select="/ucr/tech"/>
-                </div>
-            </body>
-        </html>
+        <div>
+            <section id="use-cases">
+                <h2>Use Cases</h2>
+                <xsl:apply-templates select="/ucr/usecase"/>
+            </section>
+            <section id="requirements">
+                <h2>Requirements</h2>
+                <xsl:apply-templates select="/ucr/req"/>
+            </section>
+            <section id="technologies">
+                <h2>Technologies</h2>
+                <xsl:apply-templates select="/ucr/tech"/>
+            </section>
+        </div> 
     </xsl:template>
     <xsl:template match="usecase">
         <div id="{@id}">
