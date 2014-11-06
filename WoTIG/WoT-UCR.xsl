@@ -44,15 +44,15 @@
         </html>
     </xsl:template>
     <xsl:template match="usecase">
-        <div id="{@id}">
+        <section id="{@id}">
             <xsl:apply-templates select="title, p, ul">
                 <xsl:with-param name="position" select="position()"/>
             </xsl:apply-templates>
-        </div>
+        </section>
     </xsl:template>
     <xsl:template match="req">
         <xsl:variable name="reqid" select="@id"/>
-        <div id="{$reqid}">
+        <section id="{$reqid}">
             <xsl:apply-templates select="title, p">
                 <xsl:with-param name="position" select="position()"/>
             </xsl:apply-templates>
@@ -92,27 +92,27 @@
                     </ul>
                 </dd>
             </dl>
-        </div>
+        </section>
     </xsl:template>
     <xsl:template match="tech">
-        <div id="{@id}">
+        <section id="{@id}">
             <xsl:apply-templates select="title, p, ul">
                 <xsl:with-param name="position" select="position()"/>
             </xsl:apply-templates>
-        </div>
+        </section>
     </xsl:template>
     <xsl:template match="title">
         <xsl:param name="position"/>
-        <h4>
+        <h2>
             <xsl:if test="exists(../@author)">
                 <xsl:attribute name="title" select="concat('Authored by: ', ../@author)"/>
             </xsl:if>
-            <xsl:value-of select="concat($position, '. ', .)"/>
+            <xsl:value-of select="."/>
             <xsl:if test="exists(../@href)">
                 <xsl:text> </xsl:text>
                 <a href="{../@href}" title="External Link">(Link)</a>
             </xsl:if>
-        </h4>
+        </h2>
     </xsl:template>
     <xsl:template match="p">
         <p>
