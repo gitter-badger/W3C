@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<as1impl>
+  <impl id="pump.io">
+    <name>pump.io</name>
+    <verbs>
+      <verb name="create">Synonym for "post".</verb>
+      <verb name="follow"/>
+      <verb name="stop-following"/>
+      <verb name="favorite"/>
+      <verb name="like">Synoym for "favorite".</verb>
+      <verb name="unfavorite"/>
+      <verb name="unlike">Synonym for "unfavorite"</verb>
+      <verb name="delete"/>
+      <verb name="update"/>
+      <verb name="add"/>
+      <verb name="remove"/>
+      <verb name="share"/>
+      <verb name="unshare"/>
+      <verb name="join"/>
+      <verb name="leave"/>
+    </verbs>
+  </impl>
+</as1impl>
