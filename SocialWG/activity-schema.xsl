@@ -2,7 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
     <xsl:template match="/">
-        <xsl:comment> Generated from activity-schema.xml via activity-schema.xsl, do not edit by hand. </xsl:comment>
+        <xsl:comment> Generated from activity-schema.md.xml via activity-schema.xsl, do not edit by hand. </xsl:comment>
         <as1>
             <verbs>
                 <xsl:for-each select="//verbs/table/tr/td[1]/tt/text()">
