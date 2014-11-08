@@ -5,9 +5,14 @@
         <xsl:comment> Generated from activity-schema.xml via activity-schema.xsl, do not edit by hand. </xsl:comment>
         <as1>
             <verbs>
-                <xsl:for-each select="//section[@anchor='verbs']//texttable//c/spanx[@style='verb']">
+                <xsl:for-each select="//verbs/table/tr/td[1]/tt/text()">
                     <verb name="{.}">
-                        <xsl:copy-of select="../following-sibling::c[1]/node()"/>
+                        <desc>
+                            <xsl:copy-of select="../../following-sibling::td[1]/node()"/>
+                        </desc>
+                        <example>
+                            <xsl:copy-of select="../../following-sibling::td[2]/pre/node()"/>
+                        </example>
                     </verb>
                 </xsl:for-each>
             </verbs>
