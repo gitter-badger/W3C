@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- Copied from https://github.com/activitystreams/activity-schema, and then hand-XMLified the MD; please do not make any changes to this copy. -->
 <as1md>
-  <verbs>
+<section id="verbs" title="Verbs">
 <table border="1">
   <tr><th align="left" width="5%">Verb</th><th width="50%" align="left">Description</th><th align="left" nowrap="nowrap">Example</th></tr>
   <tr>
@@ -1515,8 +1515,8 @@
     </td>
   </tr>
 </table>
-  </verbs>
-<objects>
+</section>
+<section id="object-types" title="Object Types">
 <table border="1">
   <tr><th align="left">Object Type</th><th align="left">Description</th></tr>
   <tr>
@@ -1652,8 +1652,8 @@
     <td>Represents video content of any kind. Objects of this type MAY contain additional properties as specified <a href='#audio-video'>here</a>.</td>
   </tr>
 </table>
-</objects>
-<audiovideo>
+</section>
+<section id="audio-video" title="Audio and Video Objects">
 <table border="1">
   <tr><th align="left">Property</th><th align="left">Value</th><th align="left">Description</th></tr>
   <tr>
@@ -1667,8 +1667,8 @@
     <td>An Activity Streams Media Link to the video or audio content itself.</td>
   </tr>
 </table>
-</audiovideo>
-<binary>
+</section>
+<section id="binary" title="Binary Objects">
 <table border="1">
   <tr><th align="left">Property</th><th align="left">Value</th><th align="left">Description</th></tr>
   <tr>
@@ -1702,8 +1702,8 @@
     <td>The MIME Media Type of the binary data contained within the object.</td>
   </tr>
 </table>
-</binary>
-<events>
+</section>
+<section id="event" title="Event">
 <table border="1">
   <tr><th align="left">Property</th><th align="left">Value</th><th align="left">Description</th></tr>
   <tr>
@@ -1747,8 +1747,8 @@
     <td>The date and time that the event begins represented as a String confirming to the "date-time" production in RFC 3339.</td>
   </tr>
 </table>
-</events>
-<issue>
+</section>
+<section id="issue" title="Issue">
 <table border="1">
   <tr><th align="left">Property</th><th align="left">Value</th><th align="left">Description</th></tr>
   <tr>
@@ -1757,8 +1757,8 @@
     <td> An array of one or more absolute IRI's that describe the type of issue represented by the object. Note that the IRI's are intended for use as identifiers and MAY or MAY NOT be dereferenceable.</td>
   </tr>
 </table>
-</issue>
-<permissions>
+</section>
+<section id="permissions" title="Permissions">
   <table border="1">
   <tr><th align="left">Property</th><th align="left">Value</th><th align="left">Description</th></tr>
   <tr>
@@ -1772,8 +1772,8 @@
     <td>An array of Strings that identify the specific actions associated with the permission. The actions are application and scope specific. No common, core set of actions is defined by this specification.</td>
   </tr>
 </table>
-</permissions>
-<place>
+</section>
+<section id="place" title="Place">
 <table border="1">
   <tr><th align="left">Property</th><th align="left">Value</th><th align="left">Description</th></tr>
   <tr>
@@ -1787,8 +1787,8 @@
     <td>A physical address represented as a JSON object as described below.</td>
   </tr>
 </table>
-</place>
-<position>
+</section>
+<section id="position" title="Position">
 <table border="1">
   <tr><th align="left">Property</th><th align="left">Value</th><th align="left">Description</th></tr>
   <tr>
@@ -1807,8 +1807,8 @@
     <td>The longitude of this point on Earth according to the WGS-74 coordinate reference system in decimal degrees (e.g. 86.9253, -134.4323).</td>
   </tr>
 </table>
-</position>
-<address>
+</section>
+<section id="address" title="Address">
 <table border="1">
   <tr><th align="left">Property</th><th align="left">Value</th><th align="left">Description</th></tr>
   <tr>
@@ -1842,8 +1842,8 @@
     <td>The country name component</td>
   </tr>
 </table>
-</address>
-<rolesgroups>
+</section>
+<section id="roles-groups" title="Roles and Groups">
 <table border="1">
   <tr><th align="left">Property</th><th align="left">Value</th><th align="left">Description</th></tr>
   <tr>
@@ -1852,8 +1852,8 @@
     <td>An optional Activity Streams Collection object listing the members of a group, or listing the entities assigned to a particular role.</td>
   </tr>
 </table> 
-</rolesgroups>
-<task>
+</section>
+<section id="task" title="Task">
 <table border="1">
   <tr><th align="left">Property</th><th align="left">Value</th><th align="left">Description</th></tr>
   <tr>
@@ -1892,8 +1892,8 @@
     <td>A string indicating the verb for this task as defined in Section 3.2 of [activitystreams].</td>
   </tr>
 </table>
-</task>
-<mood>
+</section>
+<section id="mood" title="Mood">
 <table border="1">
   <tr><th align="left">Property</th><th align="left">Value</th><th align="left">Description</th></tr>
   <tr>
@@ -1907,8 +1907,8 @@
     <td>An optional image that provides a visual representation of the mood.</td>
   </tr>
 </table>
-</mood>
-<multipage>
+</section>
+<section id="multipage" title="Multipage">
 <table border="1">
   <tr><th align="left">Property</th><th align="left">Value</th><th align="left">Description</th></tr>
   <tr>
@@ -1937,8 +1937,8 @@
     <td>A non-negative integer value identifying the relative position within the collection of the first object contained in the items property.  For instance, if there are 20 items that are considered to be members of a collection, but only the last 10 of those items are serialized within the value of the "items" property, the value of "startIndex" would be 10.</td>
   </tr>
 </table>      
-</multipage>
-<multipagelinks>
+</section>
+<section id="multipage-links" title="Multipage Links">
 <table border="1">
   <tr><th align="left">Name</th><th align="left">Value</th><th align="left">Description</th></tr>
   <tr>
@@ -1972,8 +1972,8 @@
     <td>A Link Object referencing this page.</td>
   </tr>    
 </table>
-</multipagelinks>
-<linkobjects>
+</section>
+<section id="link-objects" title="Link Objects">
 <table border="1">
   <tr><th align="left">Property</th><th align="left">Value</th><th align="left">Description</th></tr>
   <tr>
@@ -1992,5 +1992,5 @@
     <td>A hint identifying the MIME media type of the linked resource.</td>
   </tr>
 </table>
-</linkobjects>
+</section>
 </as1md>

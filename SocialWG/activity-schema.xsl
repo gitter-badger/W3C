@@ -5,7 +5,7 @@
         <xsl:comment> Generated from activity-schema.md.xml via activity-schema.xsl, do not edit by hand. </xsl:comment>
         <as1>
             <verbs>
-                <xsl:for-each select="//verbs/table/tr/td[1]/tt/text()">
+                <xsl:for-each select="//section[@id eq 'verbs']/table/tr/td[1]/tt/text()">
                     <verb name="{.}">
                         <desc>
                             <xsl:value-of select="../../following-sibling::td[1]"/>
