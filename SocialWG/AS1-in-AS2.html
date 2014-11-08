@@ -75,7 +75,7 @@
       "objectTypes": ["image"]
     }
   }
-      </pre></td><td><ul><li><a href="#pump.io-verb-add">pump.io</a></li></ul></td></tr><tr id="verb-agree"><td><tt>agree</tt></td><td>Indicates that the actor agrees with the object. For example, a person agreeing with an argument, or expressing agreement with a particular issue.</td><td><pre>
+      </pre></td><td><ul><li><a href="#pump.io-verb-add">pump.io</a> (Social graph management, add to contact list)</li></ul></td></tr><tr id="verb-agree"><td><tt>agree</tt></td><td>Indicates that the actor agrees with the object. For example, a person agreeing with an argument, or expressing agreement with a particular issue.</td><td><pre>
   {
     "actor": {
       "objectType": "person", 
@@ -314,7 +314,7 @@
     "displayName": "Some amazing product"
   }
 }
-    </pre></td><td><ul><li><a href="#pump.io-verb-create">pump.io</a> (Synonym for "post".)</li></ul></td></tr><tr id="verb-delete"><td><tt>delete</tt></td><td>Indicates that the actor has deleted the object. This implies, but does not require, the permanent destruction of the object.</td><td><pre>
+    </pre></td><td><ul><li><a href="#pump.io-verb-create">pump.io</a> (CRUD on content, synonym for "post")</li></ul></td></tr><tr id="verb-delete"><td><tt>delete</tt></td><td>Indicates that the actor has deleted the object. This implies, but does not require, the permanent destruction of the object.</td><td><pre>
 {
   "actor": {
     "objectType": "person", 
@@ -326,7 +326,7 @@
   },
   "title": "Joe is probably going to get fired."
 }
-    </pre></td><td><ul><li><a href="#pump.io-verb-delete">pump.io</a></li></ul></td></tr><tr id="verb-deliver"><td><tt>deliver</tt></td><td>Indicates that the actor has delivered the object. For example, delivering a package.</td><td><pre>
+    </pre></td><td><ul><li><a href="#pump.io-verb-delete">pump.io</a> (CRUD on content)</li></ul></td></tr><tr id="verb-deliver"><td><tt>deliver</tt></td><td>Indicates that the actor has delivered the object. For example, delivering a package.</td><td><pre>
 {
   "actor": {
     "objectType": "person", 
@@ -419,7 +419,7 @@
     "displayName": "Sally"
   }
 }
-    </pre></td><td><ul><li><a href="#pump.io-verb-favorite">pump.io</a></li></ul></td></tr><tr id="verb-find"><td><tt>find</tt></td><td>Indicates that the actor has found the object.</td><td><pre>
+    </pre></td><td><ul><li><a href="#pump.io-verb-favorite">pump.io</a> (Response management)</li></ul></td></tr><tr id="verb-find"><td><tt>find</tt></td><td>Indicates that the actor has found the object.</td><td><pre>
 {
   "actor": {
     "objectType": "person", 
@@ -468,7 +468,7 @@
     "displayName": "Issue #125"
   }
 }
-    </pre></td><td><ul><li><a href="#pump.io-verb-follow">pump.io</a></li></ul></td></tr><tr id="verb-give"><td><tt>give</tt></td><td>Indicates that the actor is giving an object to the target. Examples include one person giving a badge object to another person. The object identifies the object being given. The target identifies the receiver.</td><td><pre>
+    </pre></td><td><ul><li><a href="#pump.io-verb-follow">pump.io</a> (Social graph management)</li></ul></td></tr><tr id="verb-give"><td><tt>give</tt></td><td>Indicates that the actor is giving an object to the target. Examples include one person giving a badge object to another person. The object identifies the object being given. The target identifies the receiver.</td><td><pre>
 {
   "actor": {
     "objectType": "person", 
@@ -583,7 +583,7 @@
     "displayName": "Acme, Co"
   }
 }
-    </pre></td><td><ul><li><a href="#pump.io-verb-join">pump.io</a></li></ul></td></tr><tr id="verb-leave"><td><tt>leave</tt></td><td>Indicates that the actor has left the object. For instance, a Person leaving a Group or checking-out of a Place.</td><td><pre>
+    </pre></td><td><ul><li><a href="#pump.io-verb-join">pump.io</a> (Social graph management, join a group)</li></ul></td></tr><tr id="verb-leave"><td><tt>leave</tt></td><td>Indicates that the actor has left the object. For instance, a Person leaving a Group or checking-out of a Place.</td><td><pre>
 {
   "actor": {
     "objectType": "person", 
@@ -594,7 +594,7 @@
     "displayName": "Other, Co"
   }
 }
-    </pre></td><td><ul><li><a href="#pump.io-verb-leave">pump.io</a></li></ul></td></tr><tr id="verb-like"><td><tt>like</tt></td><td>Indicates that the actor marked the object as an item of special interest. The "like" verb is considered to be an alias of "favorite". The two verb are semantically identical.</td><td><pre>
+    </pre></td><td><ul><li><a href="#pump.io-verb-leave">pump.io</a> (Social graph management, leave a group)</li></ul></td></tr><tr id="verb-like"><td><tt>like</tt></td><td>Indicates that the actor marked the object as an item of special interest. The "like" verb is considered to be an alias of "favorite". The two verb are semantically identical.</td><td><pre>
 {
   "actor": {
     "objectType": "person", 
@@ -765,7 +765,7 @@
       "objectTypes": ["image"]
     }
   }
-      </pre></td><td><ul><li><a href="#pump.io-verb-remove">pump.io</a></li></ul></td></tr><tr id="verb-remove-friend"><td><tt>remove-friend</tt></td><td>Indicates that the actor has removed the object from the collection of friends.</td><td><pre>
+      </pre></td><td><ul><li><a href="#pump.io-verb-remove">pump.io</a> (Social graph management, remove from contact list)</li></ul></td></tr><tr id="verb-remove-friend"><td><tt>remove-friend</tt></td><td>Indicates that the actor has removed the object from the collection of friends.</td><td><pre>
   {
     "actor": {
       "objectType": "person",
@@ -1023,7 +1023,7 @@
     },
     "title": "Mark shared an important note."
   }
-      </pre></td><td><ul><li><a href="#pump.io-verb-share">pump.io</a></li></ul></td></tr><tr id="verb-sponsor"><td><tt>sponsor</tt></td><td>Indicates that the actor has sponsored the object. If a target is specified, it indicates the context within which the sponsorship is offered. For instance, a company can sponsor an event; or an individual can sponsor a project; etc.</td><td><pre>
+      </pre></td><td><ul><li><a href="#pump.io-verb-share">pump.io</a> (Response management)</li></ul></td></tr><tr id="verb-sponsor"><td><tt>sponsor</tt></td><td>Indicates that the actor has sponsored the object. If a target is specified, it indicates the context within which the sponsorship is offered. For instance, a company can sponsor an event; or an individual can sponsor a project; etc.</td><td><pre>
   {
     "actor": {
       "objectType": "organization",
@@ -1060,7 +1060,7 @@
       "displayName": "Mark"
     }
   }
-      </pre></td><td><ul><li><a href="#pump.io-verb-stop-following">pump.io</a></li></ul></td></tr><tr id="verb-submit"><td><tt>submit</tt></td><td>Indicates that the actor has submitted the object. If a target is specified, it indicates the entity to which the object was submitted.</td><td><pre>
+      </pre></td><td><ul><li><a href="#pump.io-verb-stop-following">pump.io</a> (Social graph management)</li></ul></td></tr><tr id="verb-submit"><td><tt>submit</tt></td><td>Indicates that the actor has submitted the object. If a target is specified, it indicates the entity to which the object was submitted.</td><td><pre>
   {
     "actor": {
       "objectType": "person",
@@ -1133,7 +1133,7 @@
       "displayName": "Some article"
     }
   }
-      </pre></td><td><ul><li><a href="#pump.io-verb-unfavorite">pump.io</a></li></ul></td></tr><tr id="verb-unlike"><td><tt>unlike</tt></td><td>Indicates that the actor has removed the object from the collection of liked items.</td><td><pre>
+      </pre></td><td><ul><li><a href="#pump.io-verb-unfavorite">pump.io</a> (Response management)</li></ul></td></tr><tr id="verb-unlike"><td><tt>unlike</tt></td><td>Indicates that the actor has removed the object from the collection of liked items.</td><td><pre>
   {
     "actor": {
       "objectType": "person",
@@ -1186,7 +1186,7 @@
       "displayName": "Some article"
     }
   }
-      </pre></td><td><ul><li><a href="#pump.io-verb-unshare">pump.io</a></li></ul></td></tr><tr id="verb-update"><td><tt>update</tt></td><td>The "update" verb indicates that the actor has modified the object. Use of the "update" verb is generally reserved to indicate modifications to existing objects or data such as changing an existing user's profile information.</td><td><pre>
+      </pre></td><td><ul><li><a href="#pump.io-verb-unshare">pump.io</a> (Response management)</li></ul></td></tr><tr id="verb-update"><td><tt>update</tt></td><td>The "update" verb indicates that the actor has modified the object. Use of the "update" verb is generally reserved to indicate modifications to existing objects or data such as changing an existing user's profile information.</td><td><pre>
   {
     "actor": {
       "objectType": "person",
@@ -1198,7 +1198,7 @@
       "displayName": "Some article"
     }
   }
-      </pre></td><td><ul><li><a href="#pump.io-verb-update">pump.io</a></li></ul></td></tr><tr id="verb-use"><td><tt>use</tt></td><td>Indicates that the actor has used the object in some manner.</td><td><pre>
+      </pre></td><td><ul><li><a href="#pump.io-verb-update">pump.io</a> (CRUD on content)</li></ul></td></tr><tr id="verb-use"><td><tt>use</tt></td><td>Indicates that the actor has used the object in some manner.</td><td><pre>
   {
     "actor": {
       "objectType": "person",
@@ -1234,4 +1234,4 @@
       "displayName": "World Series"
     }
   }
-      </pre></td><td><ul></ul></td></tr></tbody></table></section><section id="AS1-objects"><h2>Activity Streams 1.0 Objects</h2></section></section><section id="AS1-implementations"><h2>Activity Streams 1.0 Implementations</h2><section id="pump.io"><h2>pump.io</h2><p>As <a href="http://lists.w3.org/Archives/Public/public-socialweb/2014Nov/0021.html">reported by Evan Podromou</a>, the pump.io supports a number of AS1 verbs as semantically meaningful, in the sense that pump.io will act upon them. These verbs are the following (excluding "post", which is not part of the AS1 vocabulary):</p><ul><li id="pump.io-verb-create"><a href="#verb-create" title="Indicates that the actor has created the object.">create</a> (Synonym for "post".)</li><li id="pump.io-verb-follow"><a href="#verb-follow" title="Indicates that the actor began following the activity of the object. In most cases, the objectType will be a &#34;person&#34;, but it can potentially be of any type that can sensibly generate activity. Processors MAY ignore (silently drop) successive identical &#34;follow&#34; activities.">follow</a></li><li id="pump.io-verb-stop-following"><a href="#verb-stop-following" title="Indicates that the actor has stopped following the object.">stop-following</a></li><li id="pump.io-verb-favorite"><a href="#verb-favorite" title="Indicates that the actor marked the object as an item of special interest.">favorite</a></li><li id="pump.io-verb-like"><a href="#verb-like" title="Indicates that the actor marked the object as an item of special interest. The &#34;like&#34; verb is considered to be an alias of &#34;favorite&#34;. The two verb are semantically identical.">like</a> (Synoym for "favorite".)</li><li id="pump.io-verb-unfavorite"><a href="#verb-unfavorite" title="Indicates that the actor has removed the object from the collection of favorited items.">unfavorite</a></li><li id="pump.io-verb-unlike"><a href="#verb-unlike" title="Indicates that the actor has removed the object from the collection of liked items.">unlike</a> (Synonym for "unfavorite")</li><li id="pump.io-verb-delete"><a href="#verb-delete" title="Indicates that the actor has deleted the object. This implies, but does not require, the permanent destruction of the object.">delete</a></li><li id="pump.io-verb-update"><a href="#verb-update" title="The &#34;update&#34; verb indicates that the actor has modified the object. Use of the &#34;update&#34; verb is generally reserved to indicate modifications to existing objects or data such as changing an existing user's profile information.">update</a></li><li id="pump.io-verb-add"><a href="#verb-add" title="Indicates that the actor has added the object to the target. For instance, adding a photo to an album.">add</a></li><li id="pump.io-verb-remove"><a href="#verb-remove" title="Indicates that the actor has removed the object from the target.">remove</a></li><li id="pump.io-verb-share"><a href="#verb-share" title="Indicates that the actor has called out the object to readers. In most cases, the actor did not create the object being shared, but is instead drawing attention to it.">share</a></li><li id="pump.io-verb-unshare"><a href="#verb-unshare" title="Indicates that the actor is no longer sharing the object. If a target is specified, it indicates the entity with whom the object is no longer being shared.">unshare</a></li><li id="pump.io-verb-join"><a href="#verb-join" title="Indicates that the actor has become a member of the object. This specification only defines the meaning of this verb when the &#xA;  of the Activity has an  of , though implementors need to be prepared to handle other types of objects.">join</a></li><li id="pump.io-verb-leave"><a href="#verb-leave" title="Indicates that the actor has left the object. For instance, a Person leaving a Group or checking-out of a Place.">leave</a></li></ul><p>It should be noted that pump.io will accept, store, and forward all other verbs as well. But for those other verbs, there are no special semantics associated that will trigger internal actions in pump.io.</p></section></section></body></html>
+      </pre></td><td><ul></ul></td></tr></tbody></table></section><section id="AS1-objects"><h2>Activity Streams 1.0 Objects</h2></section></section><section id="AS1-implementations"><h2>Activity Streams 1.0 Implementations</h2><section id="pump.io"><h2>pump.io</h2><p>As <a href="http://lists.w3.org/Archives/Public/public-socialweb/2014Nov/0021.html">reported by Evan Podromou</a>, the pump.io supports a number of AS1 verbs as semantically meaningful, in the sense that pump.io will act upon them. These verbs are the following (excluding "post", which is not part of the AS1 vocabulary):</p><ul><li id="pump.io-verb-create"><a href="#verb-create" title="Indicates that the actor has created the object.">create</a> (CRUD on content, synonym for "post")</li><li id="pump.io-verb-follow"><a href="#verb-follow" title="Indicates that the actor began following the activity of the object. In most cases, the objectType will be a &#34;person&#34;, but it can potentially be of any type that can sensibly generate activity. Processors MAY ignore (silently drop) successive identical &#34;follow&#34; activities.">follow</a> (Social graph management)</li><li id="pump.io-verb-stop-following"><a href="#verb-stop-following" title="Indicates that the actor has stopped following the object.">stop-following</a> (Social graph management)</li><li id="pump.io-verb-favorite"><a href="#verb-favorite" title="Indicates that the actor marked the object as an item of special interest.">favorite</a> (Response management)</li><li id="pump.io-verb-like"><a href="#verb-like" title="Indicates that the actor marked the object as an item of special interest. The &#34;like&#34; verb is considered to be an alias of &#34;favorite&#34;. The two verb are semantically identical.">like</a> (Synoym for "favorite".)</li><li id="pump.io-verb-unfavorite"><a href="#verb-unfavorite" title="Indicates that the actor has removed the object from the collection of favorited items.">unfavorite</a> (Response management)</li><li id="pump.io-verb-unlike"><a href="#verb-unlike" title="Indicates that the actor has removed the object from the collection of liked items.">unlike</a> (Synonym for "unfavorite")</li><li id="pump.io-verb-delete"><a href="#verb-delete" title="Indicates that the actor has deleted the object. This implies, but does not require, the permanent destruction of the object.">delete</a> (CRUD on content)</li><li id="pump.io-verb-update"><a href="#verb-update" title="The &#34;update&#34; verb indicates that the actor has modified the object. Use of the &#34;update&#34; verb is generally reserved to indicate modifications to existing objects or data such as changing an existing user's profile information.">update</a> (CRUD on content)</li><li id="pump.io-verb-add"><a href="#verb-add" title="Indicates that the actor has added the object to the target. For instance, adding a photo to an album.">add</a> (Social graph management, add to contact list)</li><li id="pump.io-verb-remove"><a href="#verb-remove" title="Indicates that the actor has removed the object from the target.">remove</a> (Social graph management, remove from contact list)</li><li id="pump.io-verb-share"><a href="#verb-share" title="Indicates that the actor has called out the object to readers. In most cases, the actor did not create the object being shared, but is instead drawing attention to it.">share</a> (Response management)</li><li id="pump.io-verb-unshare"><a href="#verb-unshare" title="Indicates that the actor is no longer sharing the object. If a target is specified, it indicates the entity with whom the object is no longer being shared.">unshare</a> (Response management)</li><li id="pump.io-verb-join"><a href="#verb-join" title="Indicates that the actor has become a member of the object. This specification only defines the meaning of this verb when the &#xA;  of the Activity has an  of , though implementors need to be prepared to handle other types of objects.">join</a> (Social graph management, join a group)</li><li id="pump.io-verb-leave"><a href="#verb-leave" title="Indicates that the actor has left the object. For instance, a Person leaving a Group or checking-out of a Place.">leave</a> (Social graph management, leave a group)</li></ul><p>It should be noted that pump.io will accept, store, and forward all other verbs as well. But for those other verbs, there are no special semantics associated that will trigger internal actions in pump.io.</p></section></section></body></html>

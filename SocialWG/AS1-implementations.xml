@@ -3,21 +3,21 @@
   <impl id="pump.io">
     <name>pump.io</name>
     <verbs>
-      <verb name="create">Synonym for "post".</verb>
-      <verb name="follow"/>
-      <verb name="stop-following"/>
-      <verb name="favorite"/>
+      <verb name="create">CRUD on content, synonym for "post"</verb>
+      <verb name="follow">Social graph management</verb>
+      <verb name="stop-following">Social graph management</verb>
+      <verb name="favorite">Response management</verb>
       <verb name="like">Synoym for "favorite".</verb>
-      <verb name="unfavorite"/>
+      <verb name="unfavorite">Response management</verb>
       <verb name="unlike">Synonym for "unfavorite"</verb>
-      <verb name="delete"/>
-      <verb name="update"/>
-      <verb name="add"/>
-      <verb name="remove"/>
-      <verb name="share"/>
-      <verb name="unshare"/>
-      <verb name="join"/>
-      <verb name="leave"/>
+      <verb name="delete">CRUD on content</verb>
+      <verb name="update">CRUD on content</verb>
+      <verb name="add">Social graph management, add to contact list</verb>
+      <verb name="remove">Social graph management, remove from contact list</verb>
+      <verb name="share">Response management</verb>
+      <verb name="unshare">Response management</verb>
+      <verb name="join">Social graph management, join a group</verb>
+      <verb name="leave">Social graph management, leave a group</verb>
     </verbs>
   </impl>
 </as1impl>
