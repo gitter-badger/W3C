@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xsd" version="2.0">
-    <xsl:output method="xhtml" encoding="UTF-8" omit-xml-declaration="yes" indent="no" />
-    <xsl:variable name="AS1" select="document('AS1.xml')" />
-    <xsl:variable name="AS1i" select="document('AS1-implementations.xml')" />
+    <xsl:output method="xhtml" encoding="UTF-8" omit-xml-declaration="yes" indent="no"/>
+    <xsl:variable name="AS1" select="document('AS1.xml')"/>
+    <xsl:variable name="AS1i" select="document('AS1-implementations.xml')"/>
     <xsl:template match="/">
         <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html>&#xa;</xsl:text>
         <html>
             <head>
                 <title>Using Activity Streams 1.0 Vocabularies in Activity Streams 2.0</title>
-                <meta charset="utf-8" />
+                <meta charset="utf-8"/>
                     <script src="http://www.w3.org/Tools/respec/respec-w3c-common" async="async" class="remove"></script>
                     <script class="remove">
                         var respecConfig = {
@@ -57,26 +57,26 @@
                                     <tr id="verb-{@name}">
                                         <td>
                                             <tt>
-                                                <xsl:value-of select="@name" />
+                                                <xsl:value-of select="@name"/>
                                             </tt>
                                         </td>
                                         <td>
-                                            <xsl:value-of select="desc/text()" />
+                                            <xsl:value-of select="desc/text()"/>
                                         </td>
                                         <td>
-                                            <pre ><xsl:value-of select="example/text()" /></pre>
+                                            <pre><xsl:copy-of select="example/text()"/></pre>
                                         </td>
                                         <td>
                                             <ul>
-                                                <xsl:variable name="verb" select="@name" />
+                                                <xsl:variable name="verb" select="@name"/>
                                                 <xsl:for-each select="$AS1i//verb[@name eq $verb]">
                                                     <li>
                                                         <a href="#{../../@id}-verb-{$verb}">
-                                                            <xsl:value-of select="../../name/text()" />
+                                                            <xsl:value-of select="../../name/text()"/>
                                                         </a>
                                                         <xsl:if test="exists(text())">
                                                             <xsl:text> (</xsl:text>
-                                                            <xsl:value-of select="text()" />
+                                                            <xsl:value-of select="text()"/>
                                                             <xsl:text>)</xsl:text>
                                                         </xsl:if>
                                                     </li>
@@ -100,13 +100,13 @@
                         <ul>
                             <xsl:for-each select="$AS1i//impl[@id eq 'pump.io']/verbs/verb">
                                 <li id="pump.io-verb-{@name}">
-                                    <xsl:variable name="verb" select="@name" />
+                                    <xsl:variable name="verb" select="@name"/>
                                     <a href="#verb-{@name}" title="{$AS1/as1/verbs/verb[@name = $verb]/desc/text()}">
-                                        <xsl:value-of select="@name" />
+                                        <xsl:value-of select="@name"/>
                                     </a>
                                     <xsl:if test="exists(text())">
                                         <xsl:text> (</xsl:text>
-                                        <xsl:value-of select="text()" />
+                                        <xsl:value-of select="text()"/>
                                         <xsl:text>)</xsl:text>
                                     </xsl:if>
                                 </li>

@@ -9,16 +9,14 @@
     <td>Indicates that that the actor has accepted the object. For instance, a person accepting an award, or accepting an assignment.</td>
     <td nowrap="nowrap">
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person", 
-      "displayName": "Sally"},
+      "displayName": "Sally" },
     "verb": "accept",
     "object": {
       "objectType": "job", 
-      "displayName": "Director of Marketing"},
-    "title": "Sally accepted the Director of Marketing job."
-  }
+      "displayName": "Director of Marketing" },
+    "title": "Sally accepted the Director of Marketing job." }
       </pre>
     </td>
   </tr>
@@ -27,17 +25,15 @@
     <td>Indicates that the actor has accessed the object. For instance, a person accessing a room, or accessing a file.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person", 
-      "displayName": "Joe"},
+      "displayName": "Joe" },
     "verb": "access",
     "object": {
       "objectType": "file", 
-      "displayName": "4Q2012 Sales Forecast.xls"},
+      "displayName": "4Q2012 Sales Forecast.xls" },
     "published": "2012-12-12T12:12:12Z",
-    "title": "Joe accessed the file \"4Q2012 Sales Forecast.xls\""
-  }
+    "title": "Joe accessed the file \"4Q2012 Sales Forecast.xls\"" }
       </pre>
     </td>
   </tr>
@@ -46,16 +42,14 @@
     <td>Indicates that the actor has acknowledged the object. This effectively signals that the actor is aware of the object's existence.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person", 
-      "displayName": "Sally"},
+      "displayName": "Sally" },
     "verb": "acknowledge",
     "object": {
       "objectType": "issue", 
-      "displayName": "#123: There is a problem with the build"},
-    "Sally acknowledged Issue #123"
-  }
+      "displayName": "#123: There is a problem with the build" },
+    "Sally acknowledged Issue #123" }
       </pre>
     </td>
   </tr>
@@ -64,24 +58,19 @@
     <td>Indicates that the actor has added the object to the target. For instance, adding a photo to an album.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person", 
-      "displayName": "Joe"},
+      "displayName": "Joe" },
     "verb": "add",
     "object": {
       "objectType": "image", 
       "displayName": "My cat", 
       "fullImage": {
-        "url": "http://example.org/cat.jpg"
-      }
-    },
+        "url": "http://example.org/cat.jpg" } },
     "target": {
       "objectType": "collection",
       "displayName": "Joe's Photo Album",
-      "objectTypes": ["image"]
-    }
-  }
+      "objectTypes": ["image"] } }
       </pre>
     </td>
   </tr>
@@ -90,15 +79,13 @@
     <td>Indicates that the actor agrees with the object. For example, a person agreeing with an argument, or expressing agreement with a particular issue.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person", 
-      "displayName": "Sally"},
+      "displayName": "Sally" },
     "verb": "agree",
     "object": {
       "objectType": "article", 
-      "displayName": "Some Random Article Online"}
-  }
+      "displayName": "Some Random Article Online" } }
       </pre>
     </td>
   </tr>
@@ -107,18 +94,15 @@
     <td>Indicates that the actor has appended the object to the target. For instance, a person appending a new record to a database.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person", 
-      "displayName": "Joe"},
+      "displayName": "Joe" },
     "verb": "append",
     "object": {
-      "content": "This is some text"
-    }
+      "content": "This is some text" }
     "target": {
       "objectType": "file", 
-      "displayName": "log.txt"}
-  }
+      "displayName": "log.txt" } }
       </pre>
     </td>
   </tr>
@@ -127,20 +111,17 @@
     <td>Indicates that the actor has approved the object. For instance, a manager might approve a travel request.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person", 
-      "displayName": "Sally"},
+      "displayName": "Sally" },
     "verb": "approve",
     "object": {
       "objectType": "task", 
-      "actor": {"displayName": "Joe"},
+      "actor": {"displayName": "Joe" },
       "verb": "join",
       "object": {
         "objectType":"group", 
-        "displayName": "Administrators"}
-    }
-  }
+        "displayName": "Administrators" } } }
       </pre>
     </td>
   </tr>
@@ -149,15 +130,13 @@
     <td>Indicates that the actor has archived the object.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person", 
-      "displayName": "Joe"},
+      "displayName": "Joe" },
     "verb": "archive",
     "object": {
       "objectType": "file", 
-      "displayName": "4Q2012 Sales Forecast.xls"}
-  }
+      "displayName": "4Q2012 Sales Forecast.xls" } }
       </pre>
     </td>
   </tr>
@@ -166,20 +145,17 @@
     <td>Indicates that the actor has assigned the object to the target.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person", 
-      "displayName": "Sally"},
+      "displayName": "Sally" },
     "verb": "assign",
     "object": {
       "objectType": "issue", 
-      "displayName": "Issue #123: Some Issue"},
+      "displayName": "Issue #123: Some Issue" },
     "target": {
       "objectType": "person",
-      "displayName": "Joe"
-    },
-    "title": "Sally assigned Issue #123 to Joe"
-  }
+      "displayName": "Joe" },
+    "title": "Sally assigned Issue #123 to Joe" }
       </pre>
     </td>
   </tr>
@@ -188,16 +164,13 @@
     <td>Indicates that the actor is currently located at the object. For instance, a person being at a specific physical location.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person", 
-      "displayName": "Joe"},
+      "displayName": "Joe" },
     "verb": "at",
     "object": {
       "objectType": "place",
-      "displayName": "Acme, Co."
-    }
-  }
+      "displayName": "Acme, Co." } }
       </pre>
     </td>
   </tr>
@@ -206,21 +179,17 @@
     <td>Indicates that the actor has attached the object to the target.For instance, a person attaching a file to a wiki page or an email.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person", 
-      "displayName": "Sally"},
+      "displayName": "Sally" },
     "verb": "attach",
     "object": {
       "objectType": "binary",
-      "data": "dGhpcyBpcyB1bmNvbXByZXNzZWQgZGF0YQo="
-    },
+      "data": "dGhpcyBpcyB1bmNvbXByZXNzZWQgZGF0YQo=" },
     "target": {
       "objectType": "issue",
-      "displayName": "Issue #123"
-    },
-    "title": "Sally added an attachment to Issue #123"
-  }
+      "displayName": "Issue #123" },
+    "title": "Sally added an attachment to Issue #123" }
       </pre>
     </td>
   </tr>
@@ -232,13 +201,11 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Joe"},
+    "displayName": "Joe" },
   "verb": "attend",
   "object": {
     "objectType": "event",
-    "displayName": "Sally's Meeting"
-  }
-}
+    "displayName": "Sally's Meeting" } }
     </pre>
     </td>
   </tr>
@@ -250,13 +217,11 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Sally"},
+    "displayName": "Sally" },
   "verb": "author",
   "object": {
     "objectType": "file",
-    "displayName": "4Q2012 Sales Forecast.xls"
-  }
-}
+    "displayName": "4Q2012 Sales Forecast.xls" } }
     </pre>
     </td>
   </tr>
@@ -268,21 +233,17 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Joe"},
+    "displayName": "Joe" },
   "verb": "authorize",
   "object": {
     "objectType": "task",
     "actor": {
       "objectType": "person",
-      "displayName": "Sally"
-    },
+      "displayName": "Sally" },
     "verb": "access",
     "object": {
       "objectType": "place",
-      "displayName": "Joe's Home"
-    }
-  }
-}
+      "displayName": "Joe's Home" } } }
     </pre>
     </td>
   </tr>
@@ -294,18 +255,15 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Sally"},
+    "displayName": "Sally" },
   "verb": "borrow",
   "object": {
     "objectType": "book",
-    "displayName": "Cloud Atlas"
-  },
+    "displayName": "Cloud Atlas" },
   "target": {
     "objectType": "person",
-    "displayName": "Joe"
-  },
-  "title": "Sally borrowed the book 'Cloud Atlas' from Joe"
-}
+    "displayName": "Joe" },
+  "title": "Sally borrowed the book 'Cloud Atlas' from Joe" }
     </pre>
     </td>
   </tr>
@@ -317,13 +275,11 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Joe"},
+    "displayName": "Joe" },
   "verb": "build",
   "object": {
     "objectType": "application",
-    "displayName": "MyApp Builder 12345"
-  }
-}
+    "displayName": "MyApp Builder 12345" } }
     </pre>
     </td>
   </tr>
@@ -335,14 +291,12 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Sally"},
+    "displayName": "Sally" },
   "verb": "cancel",
   "object": {
     "objectType": "offer",
-    "displayName": "Free Money!"
-  },
-  "title": "Sally cancelled the offer for free money."
-}
+    "displayName": "Free Money!" },
+  "title": "Sally cancelled the offer for free money." }
     </pre>
     </td>
   </tr>
@@ -354,14 +308,12 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Joe"},
+    "displayName": "Joe" },
   "verb": "close",
   "object": {
     "objectType": "issue",
-    "displayName": "Issue #123"
-  },
-  "title": "Joe closed issue #123"
-}
+    "displayName": "Issue #123" },
+  "title": "Joe closed issue #123" }
     </pre>
     </td>
   </tr>
@@ -373,13 +325,11 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Sally"},
+    "displayName": "Sally" },
   "verb": "complete",
   "object": {
     "objectType": "process",
-    "displayName": "Some long process"
-  }
-}
+    "displayName": "Some long process" } }
     </pre>
     </td>
   </tr>
@@ -391,14 +341,12 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Joe"},
+    "displayName": "Joe" },
   "verb": "confirm",
   "object": {
     "objectType": "issue",
-    "displayName": "Issue #123"
-  },
-  "title": "Joe confirmed issue #123"
-}
+    "displayName": "Issue #123" },
+  "title": "Joe confirmed issue #123" }
     </pre>
     </td>
   </tr>
@@ -410,13 +358,11 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Sally"},
+    "displayName": "Sally" },
   "verb": "consume",
   "object": {
     "objectType": "product",
-    "displayName": "Some amazing product"
-  }
-}
+    "displayName": "Some amazing product" } }
     </pre>
     </td>
   </tr>
@@ -428,14 +374,12 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Joe"},
+    "displayName": "Joe" },
   "verb": "checkin",
   "object": {
     "objectType": "place",
-    "displayName": "Acme, Co"
-  },
-  "title": "Joe checked in at Acme, Co"
-}
+    "displayName": "Acme, Co" },
+  "title": "Joe checked in at Acme, Co" }
     </pre>
     </td>
   </tr>
@@ -447,13 +391,11 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Sally"},
+    "displayName": "Sally" },
   "verb": "create",
   "object": {
     "objectType": "product",
-    "displayName": "Some amazing product"
-  }
-}
+    "displayName": "Some amazing product" } }
     </pre>
     </td>
   </tr>
@@ -465,14 +407,12 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Joe"},
+    "displayName": "Joe" },
   "verb": "delete",
   "object": {
     "objectType": "file",
-    "displayName": "4Q2012 Sales Forecast.xls"
-  },
-  "title": "Joe is probably going to get fired."
-}
+    "displayName": "4Q2012 Sales Forecast.xls" },
+  "title": "Joe is probably going to get fired." }
     </pre>
     </td>
   </tr>
@@ -484,18 +424,15 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Sally"},
+    "displayName": "Sally" },
   "verb": "deliver",
   "object": {
     "objectType": "note",
     "displayName": "Bad News",
-    "content": "Joe deleted the sales forecast"
-  },
+    "content": "Joe deleted the sales forecast" },
   "target": {
     "objectType": "person",
-    "displayName": "Joe's Boss"
-  }
-}
+    "displayName": "Joe's Boss" } }
     </pre>
     </td>
   </tr>
@@ -507,21 +444,17 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Joe"},
+    "displayName": "Joe" },
   "verb": "deny",
   "object": {
     "objectType": "task",
     "actor": {
       "objectType": "person",
-      "displayName": "Joe"
-    },
+      "displayName": "Joe" },
     "verb": "delete",
     "object": {
       "objectType": "file",
-      "displayName": "4Q2012 Sales Forecast.xls"
-    }
-  }
-}
+      "displayName": "4Q2012 Sales Forecast.xls" } } }
     </pre>
     </td>
   </tr>
@@ -533,27 +466,22 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Sally"},
+    "displayName": "Sally" },
   "verb": "disagree",
   "object": {
     "actor": {
       "objectType": "person", 
-      "displayName": "Joe"},
+      "displayName": "Joe" },
     "verb": "deny",
     "object": {
       "objectType": "task",
       "actor": {
         "objectType": "person",
-        "displayName": "Joe"
-      },
+        "displayName": "Joe" },
       "verb": "delete",
       "object": {
         "objectType": "file",
-        "displayName": "4Q2012 Sales Forecast.xls"
-      }
-    }
-  }
-}
+        "displayName": "4Q2012 Sales Forecast.xls" } } } }
     </pre>
     </td>
   </tr>
@@ -565,13 +493,11 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Joe"},
+    "displayName": "Joe" },
   "verb": "dislike",
   "object": {
     "objectType": "person",
-    "displayName": "Sally"
-  }
-}
+    "displayName": "Sally" } }
     </pre>
     </td>   
   </tr>
@@ -583,13 +509,11 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Sally"},
+    "displayName": "Sally" },
   "verb": "experience",
   "object": {
     "objectType": "event",
-    "displayName": "Disciplinary Action for Joe"
-  }
-}
+    "displayName": "Disciplinary Action for Joe" } }
     </pre>
     </td>
   </tr>
@@ -601,13 +525,11 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Joe's Boss"},
+    "displayName": "Joe's Boss" },
   "verb": "favorite",
   "object": {
     "objectType": "person",
-    "displayName": "Sally"
-  }
-}
+    "displayName": "Sally" } }
     </pre>
     </td>
   </tr>
@@ -619,17 +541,14 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Joe"},
+    "displayName": "Joe" },
   "verb": "find",
   "object": {
     "objectType": "application",
-    "displayName": "Unapproved Software Application"
-  },
+    "displayName": "Unapproved Software Application" },
   "location": {
     "objectType": "place",
-    "displayName": "Sally's Computer"
-  }
-}
+    "displayName": "Sally's Computer" } }
     </pre>
     </td>
   </tr>
@@ -643,21 +562,17 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Sally's Boss"},
+    "displayName": "Sally's Boss" },
   "verb": "flag-as-inappropriate",
   "object": {
     "objectType": "application",
     "displayName": "Unapproved Software Application",
     "location": {
-      "displayName": "Sally's Computer"
-    }
-  },
+      "displayName": "Sally's Computer" } },
   "context": {
     "objectType": "issue",
     "displayName": "Issue #125",
-    "types": ["http://example.org/violation-of-corporate-policy"]
-  }
-}
+    "types": ["http://example.org/violation-of-corporate-policy"] } }
     </pre>
     </td>
   </tr>
@@ -669,13 +584,11 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Joe"},
+    "displayName": "Joe" },
   "verb": "follow",
   "object": {
     "objectType": "issue",
-    "displayName": "Issue #125"
-  }
-}
+    "displayName": "Issue #125" } }
     </pre>
     </td>
   </tr>
@@ -687,26 +600,18 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Joe's Boss"},
+    "displayName": "Joe's Boss" },
   "verb": "give",
   "object": {
     "objectType": "note",
-    "displayName": "Notice of Employment Termination"
-  },
+    "displayName": "Notice of Employment Termination" },
   "target": {
     "objectType": "collection",
     "items": [
-      {
-        "objectType": "person",
-        "displayName": "Joe"
-      },
-      {
-        "objectType": "person",
-        "displayName": "Sally"
-      }
-    ]
-  }
-}
+      { "objectType": "person",
+        "displayName": "Joe" },
+      { "objectType": "person",
+        "displayName": "Sally" } ] } }
     </pre>
     </td>
   </tr>
@@ -718,13 +623,11 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Bob"},
+    "displayName": "Bob" },
   "verb": "host",
   "object": {
     "objectType": "event",
-    "displayName": "Job Interview"
-  }
-}
+    "displayName": "Job Interview" } }
     </pre>
     </td>
   </tr>
@@ -736,13 +639,11 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Laura"},
+    "displayName": "Laura" },
   "verb": "ignore",
   "object": {
     "objectType": "note",
-    "displayName": "Joe's request for his job back."
-  }
-}
+    "displayName": "Joe's request for his job back." } }
     </pre>
     </td>
   </tr>
@@ -754,17 +655,14 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Bob"},
+    "displayName": "Bob" },
   "verb": "insert",
   "object": {
     "objectType": "note",
-    "displayName": "Notes about Employee Disciplinary Actions"
-  },
+    "displayName": "Notes about Employee Disciplinary Actions" },
   "target": {
     "objectType": "file",
-    "displayName": "2013 Corporate Policy Updates.doc"
-  }
-}
+    "displayName": "2013 Corporate Policy Updates.doc" } }
     </pre>
     </td>
   </tr>
@@ -776,16 +674,13 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Laura"},
+    "displayName": "Laura" },
   "verb": "install",
   "object": {
     "objectType": "application",
     "displayName": "Approved Software Scanning Tool",
     "location": {
-      "displayName": "All computers in Building A"
-    }
-  }
-}
+      "displayName": "All computers in Building A" } } }
     </pre>
     </td>
   </tr>
@@ -797,14 +692,12 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Bob"},
+    "displayName": "Bob" },
   "verb": "interact",
   "object": {
     "objectType": "person",
-    "displayName": "Laura"
-  },
-  "title": "Bob called Laura."
-}
+    "displayName": "Laura" },
+  "title": "Bob called Laura." }
     </pre>
     </td>
   </tr>
@@ -817,17 +710,14 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Laura"},
+    "displayName": "Laura" },
   "verb": "invite",
   "object": {
     "objectType": "person",
-    "displayName": "Mark"
-  },
+    "displayName": "Mark" },
   "target": {
     "objectType": "event",
-    "displayName": "Job Interview"
-  }
-}
+    "displayName": "Job Interview" } }
     </pre>
     </td>
   </tr>
@@ -840,13 +730,11 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Mark"},
+    "displayName": "Mark" },
   "verb": "join",
   "object": {
     "objectType": "organization",
-    "displayName": "Acme, Co"
-  }
-}
+    "displayName": "Acme, Co" } }
     </pre>
     </td>
   </tr>
@@ -858,13 +746,11 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Mark"},
+    "displayName": "Mark" },
   "verb": "leave",
   "object": {
     "objectType": "organization",
-    "displayName": "Other, Co"
-  }
-}
+    "displayName": "Other, Co" } }
     </pre>
     </td>
   </tr>
@@ -876,19 +762,16 @@
 {
   "actor": {
     "objectType": "person", 
-    "displayName": "Laura"},
+    "displayName": "Laura" },
   "verb": "like",
   "object": {
     "actor": {
       "objectType": "person", 
-      "displayName": "Mark"},
+      "displayName": "Mark" },
     "verb": "join",
     "object": {
       "objectType": "organization",
-      "displayName": "Acme, Co"
-    }
-  }
-}
+      "displayName": "Acme, Co" } } }
     </pre>
     </td>
   </tr>
@@ -897,16 +780,13 @@
     <td>Indicates that the actor has listened to the object. This is typically only applicable for objects representing audio content, such as music, an audio-book, or a radio broadcast. The "listen" verb is a more specific form of the "consume", "experience" and "play" verbs.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person", 
-      "displayName": "Mark"},
+      "displayName": "Mark" },
     "verb": "listen",
     "object": {
       "objectType": "audio",
-      "displayName": "Welcome to the Company (Podcast).mp3"
-    }
-  }
+      "displayName": "Welcome to the Company (Podcast).mp3" } }
       </pre>
     </td>
   </tr>
@@ -915,17 +795,13 @@
     <td>Indicates that the actor has lost the object. For instance, if a person loses a game.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "organization",
-      "displayName": "New York Yankees"
-    },
+      "displayName": "New York Yankees" },
     "verb": "lose",
     "object": {
       "objectType": "game",
-      "displayName": "World Series"
-    }
-  }
+      "displayName": "World Series" } }
       </pre>
     </td>
   </tr>
@@ -934,17 +810,13 @@
     <td>Indicates the creation of a friendship that is reciprocated by the object. Since this verb implies an activity on the part of its object, processors MUST NOT accept activities with this verb unless they are able to verify through some external means that there is in fact a reciprocated connection. For example, a processor may have received a guarantee from a particular publisher that the publisher will only use this Verb in cases where a reciprocal relationship exists.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "make-friend",
     "object": {
       "objectType": "person",
-      "displayName": "Laura"
-    }
-  }
+      "displayName": "Laura" } }
       </pre>
     </td>
   </tr>
@@ -953,17 +825,13 @@
     <td>Indicates that the actor has opened the object. For instance, the object could represent a ticket being tracked in an issue management system.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Laura"
-    },
+      "displayName": "Laura" },
     "verb": "open",
     "object": {
       "objectType": "issue",
-      "displayName": "Issue #126"
-    }
-  }
+      "displayName": "Issue #126" } }
       </pre>
     </td>
   </tr>
@@ -972,17 +840,13 @@
     <td>Indicates that the actor spent some time enjoying the object. For example, if the object is a video this indicates that the subject watched all or part of the video. The "play" verb is a more specific form of the "consume" verb.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "play",
     "object": {
       "objectType": "audio",
-      "displayName": "Call Me Maybe"
-    }
-  }
+      "displayName": "Call Me Maybe" } }
       </pre>
     </td>
   </tr>
@@ -991,17 +855,13 @@
     <td>Indicates that the actor has presented the object. For instance, when a person gives a presentation at a conference.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Laura"
-    },
+      "displayName": "Laura" },
     "verb": "present",
     "object": {
       "objectType": "file",
-      "displayName": "1Q2013 Sales Forecast.ppt"
-    }
-  }
+      "displayName": "1Q2013 Sales Forecast.ppt" } }
       </pre>
     </td>
   </tr>
@@ -1010,18 +870,14 @@
     <td>Indicates that the actor has purchased the object. If a target is specified, in indicates the entity from which the object was purchased.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "purchase",
     "object": {
       "objectType": "video",
-      "displayName": "The Avengers"
-    },
-    "title": "Mark purchased the movie, The Avengers"
-  }
+      "displayName": "The Avengers" },
+    "title": "Mark purchased the movie, The Avengers" }
       </pre>
     </td>
   </tr>
@@ -1030,17 +886,13 @@
     <td>Indicates that the actor has qualified for the object. If a target is specified, it indicates the context within which the qualification applies.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Laura"
-    },
+      "displayName": "Laura" },
     "verb": "qualify",
     "object": {
       "objectType": "offer",
-      "displayName": "Free Money!"
-    }
-  }
+      "displayName": "Free Money!" } }
       </pre>
     </td>
   </tr>
@@ -1049,17 +901,13 @@
     <td>Indicates that the actor read the object. This is typically only applicable for objects representing printed or written content, such as a book, a message or a comment. The "read" verb is a more specific form of the "consume", "experience" and "play" verbs.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "read",
     "object": {
       "objectType": "book",
-      "displayName": "Cloud Atlas"
-    }
-  }
+      "displayName": "Cloud Atlas" } }
       </pre>
     </td>
   </tr>
@@ -1068,19 +916,15 @@
     <td>Indicates that the actor is receiving an object. Examples include a person receiving a <tt>badge</tt> object. The <tt>object</tt> identifies the object being received.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Laura"
-    },
+      "displayName": "Laura" },
     "verb": "receive",
     "object": {
       "objectType": "badge",
-      "displayName": "Most Checkins in 24 hours"
-    },
+      "displayName": "Most Checkins in 24 hours" },
     "title": "Laura was awarded a badge 
-      for \"Most Checkins in 24 hours\""
-  }
+      for \"Most Checkins in 24 hours\"" }
       </pre>
     </td>
   </tr>
@@ -1089,17 +933,13 @@
     <td>Indicates that the actor has rejected the object.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "reject",
     "object": {
       "objectType": "issue",
-      "displayName": "Issue #126"
-    }
-  }
+      "displayName": "Issue #126" } }
       </pre>
     </td>
   </tr>
@@ -1108,25 +948,19 @@
     <td>Indicates that the actor has removed the object from the target.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Laura"
-    },
+      "displayName": "Laura" },
     "verb": "remove",
     "object": {
       "objectType": "image",
       "displayName": "Cat Photo",
       "fullImage": {
-        "url": "http://example.org/cats.jpg"
-      }
-    },
+        "url": "http://example.org/cats.jpg" } },
     "target": {
       "objectType": "collection",
       "displayName": "Cat Photo Album",
-      "objectTypes": ["image"]
-    }
-  }
+      "objectTypes": ["image"] } }
       </pre>
     </td>
   </tr>
@@ -1135,17 +969,13 @@
     <td>Indicates that the actor has removed the object from the collection of friends.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "remove-friend",
     "object": {
       "objectType": "person",
-      "displayName": "Laura"
-    }
-  }
+      "displayName": "Laura" } }
       </pre>
     </td>
   </tr>
@@ -1154,21 +984,16 @@
     <td>Indicates that the actor has replaced the target with the object.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "replace",
     "object": {
       "objectType": "file",
-      "displayName": "Updated 1Q2014 Sales Forecast.xls"
-    },
+      "displayName": "Updated 1Q2014 Sales Forecast.xls" },
     "target": {
       "objectType": "file",
-      "displayName": "1Q2014 Sales Forecast.xls"
-    }
-  }
+      "displayName": "1Q2014 Sales Forecast.xls" } }
       </pre>
     </td>
   </tr>
@@ -1177,25 +1002,19 @@
     <td>Indicates that the actor has requested the object. If a target is specified, it indicates the entity from which the object is being  requested.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Laura"
-    },
+      "displayName": "Laura" },
     "verb": "request",
     "object": {
       "objectType": "task",
       "actor": {
         "objectType": "person",
-        "displayName": "Mark"
-      },
+        "displayName": "Mark" },
       "verb": "join", 
       "object": {
         "objectType": "event",
-        "displayName": "The Big Meeting"
-      }
-    }
-  }
+        "displayName": "The Big Meeting" } } }
       </pre>
     </td>
   </tr>
@@ -1204,17 +1023,13 @@
     <td>Indicates the creation of a friendship that has not yet been reciprocated by  the object.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "request-friend",
     "object": {
       "objectType": "person",
-      "displayName": "Laura"
-    }
-  }
+      "displayName": "Laura" } }
       </pre>
     </td>
   </tr>
@@ -1223,17 +1038,13 @@
     <td>Indicates that the actor has resolved the object. For instance, the object could represent a ticket being tracked in an issue management system.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Laura"
-    },
+      "displayName": "Laura" },
     "verb": "resolve",
     "object": {
       "objectType": "issue",
-      "displayName": "Issue #126"
-    }
-  }
+      "displayName": "Issue #126" } }
       </pre>
     </td>
   </tr>
@@ -1242,21 +1053,16 @@
     <td>Indicates that the actor has returned the object. If a target is specified, it indicates the entity to which the object was returned.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "return",
     "object": {
       "objectType": "book",
-      "displayName": "Cloud Atlas"
-    },
+      "displayName": "Cloud Atlas" },
     "target": {
       "objectType": "person",
-      "displayName": "Laura"
-    }
-  }
+      "displayName": "Laura" } }
       </pre>
     </td>
   </tr>
@@ -1265,28 +1071,21 @@
     <td>Indicates that the actor has retracted the object. For instance, if an actor wishes to retract a previously published activity, the object would be the previously published activity that is being retracted.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Laura"
-    },
+      "displayName": "Laura" },
     "verb": "retract",
     "object": {
       "actor": {
         "objectType": "person",
-        "displayName": "Mark"
-      },
+        "displayName": "Mark" },
       "verb": "return",
       "object": {
         "objectType": "book",
-        "displayName": "Cloud Atlas"
-      },
+        "displayName": "Cloud Atlas" },
       "target": {
         "objectType": "person",
-        "displayName": "Laura"
-      }
-    }
-  }
+        "displayName": "Laura" } } }
       </pre>
     </td>
   </tr>
@@ -1295,18 +1094,14 @@
     <td>The "possible RSVP" verb indicates that the actor has made a possible RSVP for the object. This specification only defines the meaning of this verb when its object is an <a href="#event">event</a>, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Laura"
-    },
+      "displayName": "Laura" },
     "verb": "rsvp-maybe",
     "object": {
       "objectType": "event",
-      "displayName": "The Big Meeting"
-    },
-    "title": "Laura might attend The Big Meeting"
-  }
+      "displayName": "The Big Meeting" },
+    "title": "Laura might attend The Big Meeting" }
       </pre>
     </td>
   </tr>
@@ -1315,18 +1110,14 @@
     <td>The "negative RSVP" verb indicates that the actor has made a negative RSVP for the object. This specification only defines the meaning of this verb when its object is an <a href="#event">event</a>, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "rsvp-no",
     "object": {
       "objectType": "event",
-      "displayName": "The Big Meeting"
-    },
-    "title": "Mark will not attend the Big Meeting"
-  }
+      "displayName": "The Big Meeting" },
+    "title": "Mark will not attend the Big Meeting" }
       </pre>
     </td>
   </tr>
@@ -1335,18 +1126,14 @@
     <td>The "positive RSVP" verb indicates that the actor has made a positive RSVP for an object. This specification only defines the meaning of this verb when its object is an <a href="#event">event</a>, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Laura"
-    },
+      "displayName": "Laura" },
     "verb": "rsvp-yes",
     "object": {
       "objectType": "event",
-      "displayName": "The Big Meeting"
-    },
-    "title": "Laura will attend the Big Meeting"
-  }
+      "displayName": "The Big Meeting" },
+    "title": "Laura will attend the Big Meeting" }
       </pre>
     </td>
   </tr>
@@ -1355,22 +1142,17 @@
     <td>Indicates that the actor has satisfied the object. If a target is specified, it indicate the context within which the object was satisfied. For instance, if a person satisfies the requirements for a particular challenge, the person is the actor; the requirement is the object; and the challenge is the target.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "satisfy",
     "object": {
       "objectType": "http://example.org/condition",
-      "displayName": "Some Condition"
-    },
+      "displayName": "Some Condition" },
     "target": {
       "objectType": "http://example.org/parole",
-      "displayName": "Terms of Parole"
-    },
-    "title": "Mark has satisfied a condition of his parole."
-  } 
+      "displayName": "Terms of Parole" },
+    "title": "Mark has satisfied a condition of his parole." } 
       </pre>
     </td>
   </tr>
@@ -1379,22 +1161,17 @@
     <td>Indicates that the actor has called out the object as being of interest primarily to him- or herself. Though this action MAY be shared publicly, the implication is that the object has been saved primarily for the actor's own benefit rather than to show it to others as would be indicated by the "share" verb.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Laura"
-    },
+      "displayName": "Laura" },
     "verb": "save",
     "object": {
       "objectType": "note",
-      "displayName": "A note about something important"
-    },
+      "displayName": "A note about something important" },
     "target": {
       "objectType": "collection",
-      "displayName": "Laura's Reading List"
-    },
-    "title": "Laura saved the note to her reading list"
-  }
+      "displayName": "Laura's Reading List" },
+    "title": "Laura saved the note to her reading list" }
       </pre>
     </td>
   </tr>
@@ -1403,17 +1180,13 @@
     <td>Indicates that the actor has scheduled the object. For instance, scheduling a meeting.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "schedule",
     "object": {
       "objectType": "event",
-      "displayName": "The Big Meeting"
-    }
-  }
+      "displayName": "The Big Meeting" } }
       </pre>
     </td>
   </tr>
@@ -1422,22 +1195,17 @@
     <td>Indicates that the actor is or has searched for the object. If a target is specified, it indicates the context within which the search is or has been conducted.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Laura"
-    },
+      "displayName": "Laura" },
     "verb": "search",
     "object": {
       "objectType": "place",
       "displayName": "Big Hotel",
       "address": {
         "locality": "New York",
-        "region": "NY"
-      }
-    },
-    "title": "Laura searched for a hotel in New York City, NY"
-  }
+        "region": "NY" } },
+    "title": "Laura searched for a hotel in New York City, NY" }
       </pre>
     </td>
   </tr>
@@ -1446,21 +1214,16 @@
     <td>Indicates that the actor has sold the object. If a target is specified, it indicates the entity to which the object was sold.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "sell",
     "object": {
       "objectType": "product",
-      "displayName": "A cool product"
-    },
+      "displayName": "A cool product" },
     "target": {
       "objectType": "person",
-      "displayName": "Laura"
-    }
-  }
+      "displayName": "Laura" } }
       </pre>
     </td>
   </tr>
@@ -1469,21 +1232,16 @@
     <td>Indicates that the actor has sent the object. If a target is specified, it indicates the entity to which the object was sent.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Laura"
-    },
+      "displayName": "Laura" },
     "verb": "send",
     "object": {
       "objectType": "note",
-      "content": "Thank you for the cool product."
-    },
+      "content": "Thank you for the cool product." },
     "target": {
       "objectType": "person",
-      "displayName": "Mark"
-    }
-  }
+      "displayName": "Mark" } }
       </pre>
     </td>
   </tr>
@@ -1492,18 +1250,14 @@
     <td>Indicates that the actor has called out the object to readers. In most cases, the actor did not create the object being shared, but is instead drawing attention to it.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "share",
     "object": {
       "objectType": "note",
-      "displayName": "An important note"
-    },
-    "title": "Mark shared an important note."
-  }
+      "displayName": "An important note" },
+    "title": "Mark shared an important note." }
       </pre>
     </td>
   </tr>
@@ -1512,18 +1266,14 @@
     <td>Indicates that the actor has sponsored the object. If a target is specified, it indicates the context within which the sponsorship is offered. For instance, a company can sponsor an event; or an individual can sponsor a project; etc.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "organization",
-      "displayName": "Acme, Co"
-    },
+      "displayName": "Acme, Co" },
     "verb": "sponsor",
     "object": {
       "objectType": "game",
-      "displayName": "World Series"
-    },
-    "title": "Acme, Co sponsored the World Series"
-  }
+      "displayName": "World Series" },
+    "title": "Acme, Co sponsored the World Series" }
       </pre>
     </td>
   </tr>
@@ -1532,17 +1282,13 @@
     <td>Indicates that the actor has started the object. For instance, when a person starts a project.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "start",
     "object": {
       "objectType": "process",
-      "displayName": "A Long Running Process"
-    }
-  }
+      "displayName": "A Long Running Process" } }
       </pre>
     </td>
   </tr>
@@ -1551,17 +1297,13 @@
     <td>Indicates that the actor has stopped following the object.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Laura"
-    },
+      "displayName": "Laura" },
     "verb": "stop-following",
     "object": {
       "objectType": "person",
-      "displayName": "Mark"
-    }
-  }
+      "displayName": "Mark" } }
       </pre>
     </td>
   </tr>
@@ -1570,17 +1312,13 @@
     <td>Indicates that the actor has submitted the object. If a target is specified, it indicates the entity to which the object was submitted.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "submit",
     "object": {
       "objectType": "issue",
-      "displayName": "Issue #127"
-    }
-  }
+      "displayName": "Issue #127" } }
       </pre>
     </td>
   </tr>
@@ -1589,21 +1327,16 @@
     <td>Indicates that the actor has associated the object with the target. For example, if the actor specifies that a particular user appears in a photo. the object is the user and the target is the photo.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Laura"
-    },
+      "displayName": "Laura" },
     "verb": "tag",
     "object": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "target": {
       "objectType": "image",
-      "displayName": "Pictures of my cats"
-    }
-  }
+      "displayName": "Pictures of my cats" } }
       </pre>
     </td>
   </tr>
@@ -1612,17 +1345,13 @@
     <td>Indicates that the actor has terminated the object. </td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "terminate",
     "object": {
       "objectType": "process",
-      "displayName": "A long running process"
-    }
-  }
+      "displayName": "A long running process" } }
       </pre>
     </td>
   </tr>
@@ -1631,26 +1360,17 @@
     <td>Indicates that the actor has neither won or lost the object. This verb is generally only applicable when the object represents some form of competition, such as a game.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "collection",
       "items": [
-        {
-          "objectType": "organization",
-          "displayName": "New York Giants"
-        },
-        {
-          "objectType": "organization",
-          "displayName": "Oakland Raiders"
-        }
-      ]
-    },
+        { "objectType": "organization",
+          "displayName": "New York Giants" },
+        { "objectType": "organization",
+          "displayName": "Oakland Raiders" } ] },
     "verb": "tie",
     "object": {
       "objectType": "game",
-      "displayName": "Super Bowl"
-    }
-  }
+      "displayName": "Super Bowl" } }
       </pre>
     </td>
   </tr>
@@ -1659,17 +1379,13 @@
     <td>Indicates that the actor has removed the object from the collection of favorited items.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Laura"
-    },
+      "displayName": "Laura" },
     "verb": "unfavorite",
     "object": {
       "objectType": "article",
-      "displayName": "Some article"
-    }
-  }
+      "displayName": "Some article" } }
       </pre>
     </td>
   </tr>
@@ -1678,17 +1394,13 @@
     <td>Indicates that the actor has removed the object from the collection of liked items.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "unlike",
     "object": {
       "objectType": "article",
-      "displayName": "Some article"
-    }
-  }
+      "displayName": "Some article" } }
       </pre>
     </td>
   </tr>
@@ -1697,22 +1409,17 @@
     <td>Indicates that the actor has not satisfied the object. If a target is specified, it indicates the context within which the object was not satisfied. For instance, if a person fails to satisfy the requirements of some particular challenge, the person is the actor; the requirement is the object and the challenge is the target.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "unsatisfy",
     "object": {
       "objectType": "http://example.org/condition",
-      "displayName": "Some Condition"
-    },
+      "displayName": "Some Condition" },
     "target": {
       "objectType": "http://example.org/parole",
-      "displayName": "Terms of Parole"
-    },
-    "title": "Mark has not satisfied a condition of his parole."
-  } 
+      "displayName": "Terms of Parole" },
+    "title": "Mark has not satisfied a condition of his parole." } 
       </pre>
     </td>
 
@@ -1722,17 +1429,13 @@
     <td>Indicates that the actor has removed the object from the collection of saved items.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Laura"
-    },
+      "displayName": "Laura" },
     "verb": "unsave",
     "object": {
       "objectType": "article",
-      "displayName": "Some article"
-    }
-  }
+      "displayName": "Some article" } }
       </pre>
     </td>
   </tr>
@@ -1741,17 +1444,13 @@
     <td>Indicates that the actor is no longer sharing the object. If a target is specified, it indicates the entity with whom the object is no longer being shared.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "unshare",
     "object": {
       "objectType": "article",
-      "displayName": "Some article"
-    }
-  }
+      "displayName": "Some article" } }
       </pre>
     </td>
   </tr>
@@ -1760,17 +1459,13 @@
     <td>The "update" verb indicates that the actor has modified the object. Use of the "update" verb is generally reserved to indicate modifications to existing objects or data such as changing an existing user's profile information.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "update",
     "object": {
       "objectType": "article",
-      "displayName": "Some article"
-    }
-  }
+      "displayName": "Some article" } }
       </pre>
     </td>
   </tr>
@@ -1779,17 +1474,13 @@
     <td>Indicates that the actor has used the object in some manner.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Laura"
-    },
+      "displayName": "Laura" },
     "verb": "use",
     "object": {
       "objectType": "product",
-      "displayName": "A cool product"
-    }
-  }
+      "displayName": "A cool product" } }
       </pre>
     </td>
   </tr>
@@ -1798,17 +1489,13 @@
     <td>Indicates that the actor has watched the object. This verb is typically applicable only when the object represents dynamic, visible content such as a movie, a television show or a public performance. This verb is a more specific form of the verbs "experience", "play" and "consume".</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "person",
-      "displayName": "Mark"
-    },
+      "displayName": "Mark" },
     "verb": "watch",
     "object": {
       "objectType": "video",
-      "displayName": "Some random movie"
-    }
-  }
+      "displayName": "Some random movie" } }
       </pre>
     </td>
   </tr>
@@ -1817,17 +1504,13 @@
     <td>Indicates that the actor has won the object. This verb is typically applicable only when the object represents some form of competition, such as a game.</td>
     <td>
       <pre>
-  {
-    "actor": {
+  { "actor": {
       "objectType": "organization",
-      "displayName": "Arizona Diamond Backs"
-    },
+      "displayName": "Arizona Diamond Backs" },
     "verb": "win",
     "object": {
       "objectType": "game",
-      "displayName": "World Series"
-    }
-  }
+      "displayName": "World Series" } }
       </pre>
     </td>
   </tr>
