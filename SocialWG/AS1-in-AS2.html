@@ -1,403 +1,1237 @@
 <!DOCTYPE html>
-<html>
-   <head>
-      <title>Using Activity Streams 1.0 Vocabularies in Activity Streams 2.0</title>
-      <meta charset="utf-8"></meta>
-      <script src="http://www.w3.org/Tools/respec/respec-w3c-common" async="async" class="remove"></script>
-      <script class="remove">
-         var respecConfig = {
-         specStatus: "ED",
-         edDraftURI: "http://dret.github.io/W3C/SocialWG/AS1-in-AS2.html",
-         shortName: "AS1-in-AS2",
-         editors: [
-         {
-         name: "James M Snell",
-         url: "http://chmod777self.com",
-         company: "IBM",
-         companyUrl: "http://ibm.com"
-         },
-         {
-         name: "Erik Wilde",
-         url: "http://dret.net/netdret/",
-         company: "Siemens",
-         companyUrl: "http://www.siemens.com/"
-         }  
-         ],
-         wg: "Social Web Working Group",
-         wgURI: "http://www.w3.org/Social/WG",
-         wgPublicList: "public-socialweb",
-         };
-         
-      </script>
-   </head>
-   <body>
-      <section id="abstract">
-         <p>This document describes how to use Activity Streams 1.0 vocabularies in Activity Streams
-            2.0.
-         </p>
-      </section>
-      <section id="AS1-vocabularies">
-         <h2>Activity Streams 1.0 Vocabularies</h2>
-         <section id="AS1-verbs">
-            <h2>Activity Streams 1.0 Verbs</h2>
-            <ul>
-               <li>accept: Indicates that the actor has accepted the object. For 
-                  instance, a person accepting an award, or accepting an assignment.
-               </li>
-               <li>access: Indicates that the actor has accessed the object. For instance,
-                  a person accessing a room, or accessing a file.
-               </li>
-               <li>acknowledge: Indicates that the actor has acknowledged the object. This 
-                  effectively signals that the actor is aware of the object's
-                  existence.
-               </li>
-               <li>add: Indicates that the actor has added the object to the target. 
-                  For instance, adding a photo to an album.
-               </li>
-               <li>agree: Indicates that the actor agrees with the object. For example, 
-                  a person agreeing with an argument, or expressing agreement with
-                  a particular issue.
-               </li>
-               <li>append: Indicates that the actor has appended the object to the target.
-                  For instance, a person appending a new record to a database.
-               </li>
-               <li>approve: Indicates that the actor has approved the object. For instance,
-                  a manager might approve a travel request.
-               </li>
-               <li>archive: Indicates that the actor has archived the object.</li>
-               <li>assign: Indicates that the actor has assigned the object to the target.</li>
-               <li>at: Indicates that the actor is currently located at the object. For 
-                  instance, a person being at a specific physical location.
-               </li>
-               <li>attach: Indicates that the actor has attached the object to the target.
-                  For instance, a person attaching a file to a wiki page or an email.
-               </li>
-               <li>attend: Indicates that the actor has attended the object. For instance,
-                  a person attending a meeting.
-               </li>
-               <li>author: Indicates that the actor has authored the object. Note that this
-                  is a more specific form of the verb "create".
-               </li>
-               <li>authorize: Indicates that the actor has authorized the object. If a target
-                  is specified, it means that the authorization is specifically in 
-                  regards to the target. For instance, a service can authorize a 
-                  person to access a given application; in which case the actor is the
-                  service, the object is the person, and the target is the application.
-                  In contrast, a person can authorize a request; in which case the 
-                  actor is the person and the object is the request and there might be 
-                  no explicit target.
-               </li>
-               <li>borrow: Indicates that the actor has borrowed the object. If a target
-                  is specified, it identifies the entity from which the object was 
-                  borrowed. For instance, if a person borrows a book from a library,
-                  the person is the actor, the book is the object and the library 
-                  is the target.
-               </li>
-               <li>build: Indicates that the actor has built the object. For example, 
-                  if a person builds a model or compiles code.
-               </li>
-               <li>cancel: Indicates that the actor has canceled the object. For 
-                  instance, canceling a calendar event.
-               </li>
-               <li>close: Indicates that the actor has closed the object. For instance,
-                  the object could represent a ticket being tracked in an issue
-                  management system.
-               </li>
-               <li>complete: Indicates that the actor has completed the object.</li>
-               <li>confirm: Indicates that the actor has confirmed or agrees with the object.
-                  For instance, a software developer might confirm an issue reported
-                  against a product.
-               </li>
-               <li>consume: Indicates that the actor has consumed the object. The 
-                  specific meaning is dependent largely on the object's type.
-                  For instance, an actor may "consume" an audio object, indicating
-                  that the actor has listened to it; or an actor may "consume"
-                  a book, indicating that the book has been read. As such, the 
-                  "consume" verb is a more generic form of other more specific 
-                  verbs such as "read" and "play".
-               </li>
-               <li>checkin: Indicates that the actor has checked-in to the object. For 
-                  instance, a person checking-in to a Place.
-               </li>
-               <li>create: Indicates that the actor has created the object.</li>
-               <li>delete: Indicates that the actor has deleted the object. This 
-                  implies, but does not require, the permanent destruction of the 
-                  object.
-               </li>
-               <li>deliver: Indicates that the actor has delivered the object. For example,
-                  delivering a package.
-               </li>
-               <li>deny: Indicates that the actor has denied the object. For example,
-                  a manager may deny a travel request.
-               </li>
-               <li>disagree: Indicates that the actor disagrees with the object.</li>
-               <li>dislike: Indicates that the actor dislikes the object. Note that the 
-                  "dislike" verb is distinct from the "unlike" verb which assumes
-                  that the object had been previously "liked".
-               </li>
-               <li>experience: Indicates that the actor has experienced the object in some 
-                  manner. Note that, depending on the specific object types used 
-                  for both the actor and object, the meaning of this verb can 
-                  overlap that of the "consume" and "play" verbs. For instance, 
-                  a person might "experience" a movie; or "play" the movie; or "consume"
-                  the movie. The "experience" verb can be considered a more generic
-                  form of other more specific verbs as "consume", "play", "watch", 
-                  "listen", and "read"
-               </li>
-               <li>favorite: Indicates that the actor marked the object as an item of 
-                  special interest.
-               </li>
-               <li>find: Indicates that the actor has found the object.</li>
-               <li>flag-as-inappropriate: Indicates that the actor has flagged the object as being 
-                  inappropriate for some reason. When using this verb, the 
-                  context property, as specified 
-                  within  can be used to 
-                  provide additional detail about why the object has been 
-                  flagged.
-               </li>
-               <li>context: follow</li>
-               <li>follow: Indicates that the actor began following the activity of the 
-                  object. In most cases, the objectType will be a "person", but it can 
-                  potentially be of any type that can sensibly generate activity.
-                  Processors MAY ignore (silently drop) successive identical "follow" 
-                  activities.
-               </li>
-               <li>give: Indicates that the actor is giving an object to the target.
-                  Examples include one person giving a badge
-                  object to another person. The object
-                  identifies the object being given. The target
-                  identifies the receiver.
-               </li>
-               <li>badge: host</li>
-               <li>object: host</li>
-               <li>target: host</li>
-               <li>host: Indicates that the actor is hosting the object. As in hosting 
-                  an event, or hosting a service.
-               </li>
-               <li>ignore: Indicates that the actor has ignored the object. For instance, 
-                  this verb may be used when an actor has ignored a friend request, 
-                  in which case the object may be the request-friend
-                  activity.
-               </li>
-               <li>request-friend: insert</li>
-               <li>insert: Indicates that the actor has inserted the object into the target.</li>
-               <li>install: Indicates that the actor has installed the object, as in 
-                  installing an application.
-               </li>
-               <li>interact: Indicates that the actor has interacted with the object. For instance,
-                  when one person interacts with another.
-               </li>
-               <li>invite: Indicates that the actor has invited the object, typically a 
-                  person object, to join or participate in the object described by
-                  the target. The target could, for instance,
-                  be an event, group or a service.
-               </li>
-               <li>target: join</li>
-               <li>join: Indicates that the actor has become a member of the object. This 
-                  specification only defines the meaning of this verb when the 
-                  object of the Activity has an
-                  objectType of group, 
-                  though implementors need to be prepared to handle other types of objects.
-               </li>
-               <li>object: leave</li>
-               <li>objectType: leave</li>
-               <li>group: leave</li>
-               <li>leave: Indicates that the actor has left the object. For instance, 
-                  a Person leaving a Group or checking-out of a Place.
-               </li>
-               <li>like: Indicates that the actor marked the object as an item of special 
-                  interest. The "like" verb is considered to be an alias of "favorite". 
-                  The two verb are semantically identical.
-               </li>
-               <li>listen: Indicates that the actor has listened to the object. This is typically
-                  only applicable for objects representing audio content, such as music,
-                  an audio-book, or a radio broadcast. The "listen" verb is a more specific
-                  form of the "consume", "experience" and "play" verbs.
-               </li>
-               <li>lose: Indicates that the actor has lost the object. For instance, if a 
-                  person loses a game.
-               </li>
-               <li>make-friend: Indicates the creation of a friendship that is reciprocated by 
-                  the object. Since this verb implies an activity on the part of its object,
-                  processors MUST NOT accept activities with this verb unless they are
-                  able to verify through some external means that there is in fact a
-                  reciprocated connection. For example, a processor may have received
-                  a guarantee from a particular publisher that the publisher will only
-                  use this Verb in cases where a reciprocal relationship exists.
-               </li>
-               <li>open: Indicates that the actor has opened the object. For instance,
-                  the object could represent a ticket being tracked in an issue
-                  management system.
-               </li>
-               <li>play: Indicates that the actor spent some time enjoying the object. 
-                  For example, if the object is a video this indicates that the subject 
-                  watched all or part of the video. The "play" verb is a more specific 
-                  form of the "consume" verb.
-               </li>
-               <li>present: Indicates that the actor has presented the object. For instance,
-                  when a person gives a presentation at a conference.
-               </li>
-               <li>purchase: Indicates that the actor has purchased the object. If a target is
-                  specified, in indicates the entity from which the object was purchased.
-               </li>
-               <li>qualify: Indicates that the actor has qualified for the object. If a target
-                  is specified, it indicates the context within which the qualification
-                  applies.
-               </li>
-               <li>read: Indicates that the actor read the object. This is typically only
-                  applicable for objects representing printed or written content, such 
-                  as a book, a message or a comment. The "read" verb is a more specific
-                  form of the "consume", "experience" and "play" verbs.
-               </li>
-               <li>receive: Indicates that the actor is receiving an object.
-                  Examples include a person receiving a badge
-                  object. The object
-                  identifies the object being received.
-               </li>
-               <li>badge: reject</li>
-               <li>object: reject</li>
-               <li>reject: Indicates that the actor has rejected the object.</li>
-               <li>remove: Indicates that the actor has removed the object from the target.</li>
-               <li>remove-friend: Indicates that the actor has removed the object from the collection
-                  of friends.
-               </li>
-               <li>replace: Indicates that the actor has replaced the target with the object.</li>
-               <li>request: Indicates that the actor has requested the object. If a target is
-                  specified, it indicates the entity from which the object is being 
-                  requested.
-               </li>
-               <li>request-friend: Indicates the creation of a friendship that has not yet been reciprocated by 
-                  the object.
-               </li>
-               <li>resolve: Indicates that the actor has resolved the object. For instance,
-                  the object could represent a ticket being tracked in an issue
-                  management system.
-               </li>
-               <li>return: Indicates that the actor has returned the object. If a target is
-                  specified, it indicates the entity to which the object was returned.
-               </li>
-               <li>retract: Indicates that the actor has retracted the object. For instance,
-                  if an actor wishes to retract a previously published activity, 
-                  the object would be the previously published activity that is being
-                  retracted.
-               </li>
-               <li>rsvp-maybe: The "possible RSVP" verb indicates that the actor has made a
-                  possible RSVP for the object. This specification only defines the
-                  meaning of this verb when its object is an event (see ), though implementors need
-                  to be prepared to
-                  handle other object types. The use of this verb is only appropriate 
-                  when the RSVP was created by an explicit action by the actor. It 
-                  is not appropriate to use this verb when a user has been added as 
-                  an attendee by an event organiser or administrator.
-               </li>
-               <li>rsvp-no: The "negative RSVP" verb indicates that the actor has made a
-                  negative RSVP for the object. This specification only defines the
-                  meaning of this verb when its object is an event (see ), though implementors need
-                  to be prepared to
-                  handle other object types. The use of this verb is only appropriate 
-                  when the RSVP was created by an explicit action by the actor. It is 
-                  not appropriate to use this verb when a user has been added as an 
-                  attendee by an event organiser or administrator.
-               </li>
-               <li>rsvp-yes: The "positive RSVP" verb indicates that the actor has made a
-                  positive RSVP for an object. This specification only defines the
-                  meaning of this verb when its object is an event (see ), though implementors need
-                  to be prepared to
-                  handle other object types. The use of this verb is only appropriate 
-                  when the RSVP was created by an explicit action by the actor. It 
-                  is not appropriate to use this verb when a user has been added as 
-                  an attendee by an event organiser or administrator.
-               </li>
-               <li>satisfy: Indicates that the actor has satisfied the object. If a target 
-                  is specified, it indicate the context within which the object was 
-                  satisfied. For instance, if a person satisfies the requirements for
-                  a particular challenge, the person is the actor; the requirement is
-                  the object; and the challenge is the target.
-               </li>
-               <li>save: Indicates that the actor has called out the object as being of 
-                  interest primarily to him- or herself. Though this action MAY be 
-                  shared publicly, the implication is that the object has been saved 
-                  primarily for the actor's own benefit rather than to show it to 
-                  others as would be indicated by the "share" verb.
-               </li>
-               <li>schedule: Indicates that the actor has scheduled the object. For instance,
-                  scheduling a meeting.
-               </li>
-               <li>search: Indicates that the actor is or has searched for the object. If
-                  a target is specified, it indicates the context within which the 
-                  search is or has been conducted.
-               </li>
-               <li>sell: Indicates that the actor has sold the object. If a target is 
-                  specified, it indicates the entity to which the object was sold.
-               </li>
-               <li>send: Indicates that the actor has sent the object. If a target is 
-                  specified, it indicates the entity to which the object was sent.
-               </li>
-               <li>share: Indicates that the actor has called out the object to readers. 
-                  In most cases, the actor did not create the object being shared, 
-                  but is instead drawing attention to it.
-               </li>
-               <li>sponsor: Indicates that the actor has sponsored the object. If a target
-                  is specified, it indicates the context within which the sponsorship
-                  is offered. For instance, a company can sponsor an event; or an 
-                  individual can sponsor a project; etc.
-               </li>
-               <li>start: Indicates that the actor has started the object. For instance, 
-                  when a person starts a project.
-               </li>
-               <li>stop-following: Indicates that the actor has stopped following the object.</li>
-               <li>submit: Indicates that the actor has submitted the object. If a target
-                  is specified, it indicates the entity to which the object was submitted.
-               </li>
-               <li>tag: Indicates that the actor has associated the object with the target.
-                  For example, if the actor specifies that a particular user 
-                  appears in a photo. the object is the user and the target is the photo.
-               </li>
-               <li>terminate: Indicates that the actor has terminated the object. </li>
-               <li>tie: Indicates that the actor has neither won or lost the object. This
-                  verb is generally only applicable when the object represents some form
-                  of competition, such as a game.
-               </li>
-               <li>unfavorite: Indicates that the actor has removed the object from the collection
-                  of favorited items.
-               </li>
-               <li>unlike: Indicates that the actor has removed the object from the collection
-                  of liked items.
-               </li>
-               <li>unsatisfy: Indicates that the actor has not satisfied the object. If a target
-                  is specified, it indicates the context within which the object was not
-                  satisfied. For instance, if a person fails to satisfy the requirements 
-                  of some particular challenge, the person is the actor; the requirement 
-                  is the object and the challenge is the target.
-               </li>
-               <li>unsave: Indicates that the actor has removed the object from the collection
-                  of saved items.
-               </li>
-               <li>unshare: Indicates that the actor is no longer sharing the object. If a 
-                  target is specified, it indicates the entity with whom the object is
-                  no longer being shared.
-               </li>
-               <li>update: The "update" verb indicates that the actor has modified the
-                  object. Use of the "update" verb is generally reserved to indicate 
-                  modifications to existing objects or data such as changing an existing
-                  user's profile information.
-               </li>
-               <li>use: Indicates that the actor has used the object in some manner.</li>
-               <li>watch: Indicates that the actor has watched the object. This verb is 
-                  typically applicable only when the object represents dynamic, visible
-                  content such as a movie, a television show or a public performance.
-                  This verb is a more specific form of the verbs "experience", "play"
-                  and "consume".
-               </li>
-               <li>win: Indicates that the actor has won the object. This verb is typically
-                  applicable only when the object represents some form of competition, 
-                  such as a game.
-               </li>
-            </ul>
-         </section>
-         <section id="AS1-objects">
-            <h2>Activity Streams 1.0 Objects</h2>
-         </section>
-      </section>
-   </body>
-</html>
+<html><head><title>Using Activity Streams 1.0 Vocabularies in Activity Streams 2.0</title><meta charset="utf-8"></meta><script src="http://www.w3.org/Tools/respec/respec-w3c-common" async="async" class="remove"></script><script class="remove">
+                        var respecConfig = {
+                        specStatus: "ED",
+                        edDraftURI: "http://dret.github.io/W3C/SocialWG/AS1-in-AS2.html",
+                        shortName: "AS1-in-AS2",
+                        editors: [
+                        {
+                            name: "James M. Snell",
+                            url: "http://chmod777self.com",
+                            company: "IBM",
+                            companyUrl: "http://ibm.com"
+                        },
+                        {
+                            name: "Erik Wilde",
+                            url: "http://dret.net/netdret/",
+                            company: "Siemens",
+                            companyUrl: "http://www.siemens.com/"
+                            }  
+                        ],
+                        wg: "Social Web Working Group",
+                        wgURI: "http://www.w3.org/Social/WG",
+                        wgPublicList: "public-socialweb",
+                        };
+                    </script></head><body><section id="abstract"><p>This document describes how to use Activity Streams 1.0 vocabularies in Activity Streams 2.0.</p></section><section id="AS1-vocabularies"><h2>Activity Streams 1.0 Vocabularies</h2><section id="AS1-verbs"><h2>Activity Streams 1.0 Verbs</h2><table><thead><tr><th>Name</th><th>Description</th><th>Example</th></tr></thead><tbody><tr id="verb-accept"><td><tt>accept</tt></td><td>Indicates that that the actor has accepted the object. For instance, a person accepting an award, or accepting an assignment.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person", 
+      "displayName": "Sally"},
+    "verb": "accept",
+    "object": {
+      "objectType": "job", 
+      "displayName": "Director of Marketing"},
+    "title": "Sally accepted the Director of Marketing job."
+  }
+      </pre></td></tr><tr id="verb-access"><td><tt>access</tt></td><td>Indicates that the actor has accessed the object. For instance, a person accessing a room, or accessing a file.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person", 
+      "displayName": "Joe"},
+    "verb": "access",
+    "object": {
+      "objectType": "file", 
+      "displayName": "4Q2012 Sales Forecast.xls"},
+    "published": "2012-12-12T12:12:12Z",
+    "title": "Joe accessed the file \"4Q2012 Sales Forecast.xls\""
+  }
+      </pre></td></tr><tr id="verb-acknowledge"><td><tt>acknowledge</tt></td><td>Indicates that the actor has acknowledged the object. This effectively signals that the actor is aware of the object's existence.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person", 
+      "displayName": "Sally"},
+    "verb": "acknowledge",
+    "object": {
+      "objectType": "issue", 
+      "displayName": "#123: There is a problem with the build"},
+    "Sally acknowledged Issue #123"
+  }
+      </pre></td></tr><tr id="verb-add"><td><tt>add</tt></td><td>Indicates that the actor has added the object to the target. For instance, adding a photo to an album.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person", 
+      "displayName": "Joe"},
+    "verb": "add",
+    "object": {
+      "objectType": "image", 
+      "displayName": "My cat", 
+      "fullImage": {
+        "url": "http://example.org/cat.jpg"
+      }
+    },
+    "target": {
+      "objectType": "collection",
+      "displayName": "Joe's Photo Album",
+      "objectTypes": ["image"]
+    }
+  }
+      </pre></td></tr><tr id="verb-agree"><td><tt>agree</tt></td><td>Indicates that the actor agrees with the object. For example, a person agreeing with an argument, or expressing agreement with a particular issue.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person", 
+      "displayName": "Sally"},
+    "verb": "agree",
+    "object": {
+      "objectType": "article", 
+      "displayName": "Some Random Article Online"}
+  }
+      </pre></td></tr><tr id="verb-append"><td><tt>append</tt></td><td>Indicates that the actor has appended the object to the target. For instance, a person appending a new record to a database.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person", 
+      "displayName": "Joe"},
+    "verb": "append",
+    "object": {
+      "content": "This is some text"
+    }
+    "target": {
+      "objectType": "file", 
+      "displayName": "log.txt"}
+  }
+      </pre></td></tr><tr id="verb-approve"><td><tt>approve</tt></td><td>Indicates that the actor has approved the object. For instance, a manager might approve a travel request.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person", 
+      "displayName": "Sally"},
+    "verb": "approve",
+    "object": {
+      "objectType": "task", 
+      "actor": {"displayName": "Joe"},
+      "verb": "join",
+      "object": {
+        "objectType":"group", 
+        "displayName": "Administrators"}
+    }
+  }
+      </pre></td></tr><tr id="verb-archive"><td><tt>archive</tt></td><td>Indicates that the actor has archived the object.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person", 
+      "displayName": "Joe"},
+    "verb": "archive",
+    "object": {
+      "objectType": "file", 
+      "displayName": "4Q2012 Sales Forecast.xls"}
+  }
+      </pre></td></tr><tr id="verb-assign"><td><tt>assign</tt></td><td>Indicates that the actor has assigned the object to the target.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person", 
+      "displayName": "Sally"},
+    "verb": "assign",
+    "object": {
+      "objectType": "issue", 
+      "displayName": "Issue #123: Some Issue"},
+    "target": {
+      "objectType": "person",
+      "displayName": "Joe"
+    },
+    "title": "Sally assigned Issue #123 to Joe"
+  }
+      </pre></td></tr><tr id="verb-at"><td><tt>at</tt></td><td>Indicates that the actor is currently located at the object. For instance, a person being at a specific physical location.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person", 
+      "displayName": "Joe"},
+    "verb": "at",
+    "object": {
+      "objectType": "place",
+      "displayName": "Acme, Co."
+    }
+  }
+      </pre></td></tr><tr id="verb-attach"><td><tt>attach</tt></td><td>Indicates that the actor has attached the object to the target.For instance, a person attaching a file to a wiki page or an email.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person", 
+      "displayName": "Sally"},
+    "verb": "attach",
+    "object": {
+      "objectType": "binary",
+      "data": "dGhpcyBpcyB1bmNvbXByZXNzZWQgZGF0YQo="
+    },
+    "target": {
+      "objectType": "issue",
+      "displayName": "Issue #123"
+    },
+    "title": "Sally added an attachment to Issue #123"
+  }
+      </pre></td></tr><tr id="verb-attend"><td><tt>attend</tt></td><td>Indicates that the actor has attended the object. For instance, a person attending a meeting.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Joe"},
+  "verb": "attend",
+  "object": {
+    "objectType": "event",
+    "displayName": "Sally's Meeting"
+  }
+}
+    </pre></td></tr><tr id="verb-author"><td><tt>author</tt></td><td>Indicates that the actor has authored the object. Note that this is a more specific form of the verb "create".</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Sally"},
+  "verb": "author",
+  "object": {
+    "objectType": "file",
+    "displayName": "4Q2012 Sales Forecast.xls"
+  }
+}
+    </pre></td></tr><tr id="verb-authorize"><td><tt>authorize</tt></td><td>Indicates that the actor has authorized the object. If a target is specified, it means that the authorization is specifically in regards to the target. For instance, a service can authorize a person to access a given application; in which case the actor is the service, the object is the person, and the target is the application. In contrast, a person can authorize a request; in which case the actor is the person and the object is the request and there might be no explicit target.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Joe"},
+  "verb": "authorize",
+  "object": {
+    "objectType": "task",
+    "actor": {
+      "objectType": "person",
+      "displayName": "Sally"
+    },
+    "verb": "access",
+    "object": {
+      "objectType": "place",
+      "displayName": "Joe's Home"
+    }
+  }
+}
+    </pre></td></tr><tr id="verb-borrow"><td><tt>borrow</tt></td><td>Indicates that the actor has borrowed the object. If a target is specified, it identifies the entity from which the object was borrowed. For instance, if a person borrows a book from a library, the person is the actor, the book is the object and the library is the target.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Sally"},
+  "verb": "borrow",
+  "object": {
+    "objectType": "book",
+    "displayName": "Cloud Atlas"
+  },
+  "target": {
+    "objectType": "person",
+    "displayName": "Joe"
+  },
+  "title": "Sally borrowed the book 'Cloud Atlas' from Joe"
+}
+    </pre></td></tr><tr id="verb-build"><td><tt>build</tt></td><td>Indicates that the actor has built the object. For example, if a person builds a model or compiles code.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Joe"},
+  "verb": "build",
+  "object": {
+    "objectType": "application",
+    "displayName": "MyApp Builder 12345"
+  }
+}
+    </pre></td></tr><tr id="verb-cancel"><td><tt>cancel</tt></td><td>Indicates that the actor has canceled the object. For instance, canceling a calendar event.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Sally"},
+  "verb": "cancel",
+  "object": {
+    "objectType": "offer",
+    "displayName": "Free Money!"
+  },
+  "title": "Sally cancelled the offer for free money."
+}
+    </pre></td></tr><tr id="verb-close"><td><tt>close</tt></td><td>Indicates that the actor has closed the object. For instance, the object could represent a ticket being tracked in an issue management system.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Joe"},
+  "verb": "close",
+  "object": {
+    "objectType": "issue",
+    "displayName": "Issue #123"
+  },
+  "title": "Joe closed issue #123"
+}
+    </pre></td></tr><tr id="verb-complete"><td><tt>complete</tt></td><td>Indicates that the actor has completed the object.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Sally"},
+  "verb": "complete",
+  "object": {
+    "objectType": "process",
+    "displayName": "Some long process"
+  }
+}
+    </pre></td></tr><tr id="verb-confirm"><td><tt>confirm</tt></td><td>Indicates that the actor has confirmed or agrees with the object. For instance, a software developer might confirm an issue reported against a product.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Joe"},
+  "verb": "confirm",
+  "object": {
+    "objectType": "issue",
+    "displayName": "Issue #123"
+  },
+  "title": "Joe confirmed issue #123"
+}
+    </pre></td></tr><tr id="verb-consume"><td><tt>consume</tt></td><td>Indicates that the actor has consumed the object. The specific meaning is dependent largely on the object's type. For instance, an actor may "consume" an audio object, indicating that the actor has listened to it; or an actor may "consume" a book, indicating that the book has been read. As such, the "consume" verb is a more generic form of other more specific verbs such as "read" and "play".</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Sally"},
+  "verb": "consume",
+  "object": {
+    "objectType": "product",
+    "displayName": "Some amazing product"
+  }
+}
+    </pre></td></tr><tr id="verb-checkin"><td><tt>checkin</tt></td><td>Indicates that the actor has checked-in to the object. For instance, a person checking-in to a Place.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Joe"},
+  "verb": "checkin",
+  "object": {
+    "objectType": "place",
+    "displayName": "Acme, Co"
+  },
+  "title": "Joe checked in at Acme, Co"
+}
+    </pre></td></tr><tr id="verb-create"><td><tt>create</tt></td><td>Indicates that the actor has created the object.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Sally"},
+  "verb": "create",
+  "object": {
+    "objectType": "product",
+    "displayName": "Some amazing product"
+  }
+}
+    </pre></td></tr><tr id="verb-delete"><td><tt>delete</tt></td><td>Indicates that the actor has deleted the object. This implies, but does not require, the permanent destruction of the object.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Joe"},
+  "verb": "delete",
+  "object": {
+    "objectType": "file",
+    "displayName": "4Q2012 Sales Forecast.xls"
+  },
+  "title": "Joe is probably going to get fired."
+}
+    </pre></td></tr><tr id="verb-deliver"><td><tt>deliver</tt></td><td>Indicates that the actor has delivered the object. For example, delivering a package.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Sally"},
+  "verb": "deliver",
+  "object": {
+    "objectType": "note",
+    "displayName": "Bad News",
+    "content": "Joe deleted the sales forecast"
+  },
+  "target": {
+    "objectType": "person",
+    "displayName": "Joe's Boss"
+  }
+}
+    </pre></td></tr><tr id="verb-deny"><td><tt>deny</tt></td><td>Indicates that the actor has denied the object. For example, a manager may deny a travel request.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Joe"},
+  "verb": "deny",
+  "object": {
+    "objectType": "task",
+    "actor": {
+      "objectType": "person",
+      "displayName": "Joe"
+    },
+    "verb": "delete",
+    "object": {
+      "objectType": "file",
+      "displayName": "4Q2012 Sales Forecast.xls"
+    }
+  }
+}
+    </pre></td></tr><tr id="verb-disagree"><td><tt>disagree</tt></td><td>Indicates that the actor disagrees with the object.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Sally"},
+  "verb": "disagree",
+  "object": {
+    "actor": {
+      "objectType": "person", 
+      "displayName": "Joe"},
+    "verb": "deny",
+    "object": {
+      "objectType": "task",
+      "actor": {
+        "objectType": "person",
+        "displayName": "Joe"
+      },
+      "verb": "delete",
+      "object": {
+        "objectType": "file",
+        "displayName": "4Q2012 Sales Forecast.xls"
+      }
+    }
+  }
+}
+    </pre></td></tr><tr id="verb-dislike"><td><tt>dislike</tt></td><td>Indicates that the actor dislikes the object. Note that the "dislike" verb is distinct from the "unlike" verb which assumes that the object had been previously "liked".</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Joe"},
+  "verb": "dislike",
+  "object": {
+    "objectType": "person",
+    "displayName": "Sally"
+  }
+}
+    </pre></td></tr><tr id="verb-experience"><td><tt>experience</tt></td><td>Indicates that the actor has experienced the object in some manner. Note that, depending on the specific object types used for both the actor and object, the meaning of this verb can overlap that of the "consume" and "play" verbs. For instance, a person might "experience" a movie; or "play" the movie; or "consume" the movie. The "experience" verb can be considered a more generic form of other more specific verbs as "consume", "play", "watch", "listen", and "read"</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Sally"},
+  "verb": "experience",
+  "object": {
+    "objectType": "event",
+    "displayName": "Disciplinary Action for Joe"
+  }
+}
+    </pre></td></tr><tr id="verb-favorite"><td><tt>favorite</tt></td><td>Indicates that the actor marked the object as an item of special interest.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Joe's Boss"},
+  "verb": "favorite",
+  "object": {
+    "objectType": "person",
+    "displayName": "Sally"
+  }
+}
+    </pre></td></tr><tr id="verb-find"><td><tt>find</tt></td><td>Indicates that the actor has found the object.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Joe"},
+  "verb": "find",
+  "object": {
+    "objectType": "application",
+    "displayName": "Unapproved Software Application"
+  },
+  "location": {
+    "objectType": "place",
+    "displayName": "Sally's Computer"
+  }
+}
+    </pre></td></tr><tr id="verb-flag-as-inappropriate"><td><tt>flag-as-inappropriate</tt></td><td>Indicates that the actor has flagged the object as being 
+ inappropriate for some reason. When using this verb, the 
+ 
+               context
+             property can be used to provide additional detail about why the object has been flagged.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Sally's Boss"},
+  "verb": "flag-as-inappropriate",
+  "object": {
+    "objectType": "application",
+    "displayName": "Unapproved Software Application",
+    "location": {
+      "displayName": "Sally's Computer"
+    }
+  },
+  "context": {
+    "objectType": "issue",
+    "displayName": "Issue #125",
+    "types": ["http://example.org/violation-of-corporate-policy"]
+  }
+}
+    </pre></td></tr><tr id="verb-follow"><td><tt>follow</tt></td><td>Indicates that the actor began following the activity of the object. In most cases, the objectType will be a "person", but it can potentially be of any type that can sensibly generate activity. Processors MAY ignore (silently drop) successive identical "follow" activities.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Joe"},
+  "verb": "follow",
+  "object": {
+    "objectType": "issue",
+    "displayName": "Issue #125"
+  }
+}
+    </pre></td></tr><tr id="verb-give"><td><tt>give</tt></td><td>Indicates that the actor is giving an object to the target. Examples include one person giving a badge object to another person. The object identifies the object being given. The target identifies the receiver.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Joe's Boss"},
+  "verb": "give",
+  "object": {
+    "objectType": "note",
+    "displayName": "Notice of Employment Termination"
+  },
+  "target": {
+    "objectType": "collection",
+    "items": [
+      {
+        "objectType": "person",
+        "displayName": "Joe"
+      },
+      {
+        "objectType": "person",
+        "displayName": "Sally"
+      }
+    ]
+  }
+}
+    </pre></td></tr><tr id="verb-host"><td><tt>host</tt></td><td>Indicates that the actor is hosting the object. As in hosting an event, or hosting a service.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Bob"},
+  "verb": "host",
+  "object": {
+    "objectType": "event",
+    "displayName": "Job Interview"
+  }
+}
+    </pre></td></tr><tr id="verb-ignore"><td><tt>ignore</tt></td><td>Indicates that the actor has ignored the object. For instance, this verb may be used when an actor has ignored a friend request, in which case the object may be the request-friend activity.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Laura"},
+  "verb": "ignore",
+  "object": {
+    "objectType": "note",
+    "displayName": "Joe's request for his job back."
+  }
+}
+    </pre></td></tr><tr id="verb-insert"><td><tt>insert</tt></td><td>Indicates that the actor has inserted the object into the target.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Bob"},
+  "verb": "insert",
+  "object": {
+    "objectType": "note",
+    "displayName": "Notes about Employee Disciplinary Actions"
+  },
+  "target": {
+    "objectType": "file",
+    "displayName": "2013 Corporate Policy Updates.doc"
+  }
+}
+    </pre></td></tr><tr id="verb-install"><td><tt>install</tt></td><td>Indicates that the actor has installed the object, as in installing an application.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Laura"},
+  "verb": "install",
+  "object": {
+    "objectType": "application",
+    "displayName": "Approved Software Scanning Tool",
+    "location": {
+      "displayName": "All computers in Building A"
+    }
+  }
+}
+    </pre></td></tr><tr id="verb-interact"><td><tt>interact</tt></td><td>Indicates that the actor has interacted with the object. For instance, when one person interacts with another.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Bob"},
+  "verb": "interact",
+  "object": {
+    "objectType": "person",
+    "displayName": "Laura"
+  },
+  "title": "Bob called Laura."
+}
+    </pre></td></tr><tr id="verb-invite"><td><tt>invite</tt></td><td>Indicates that the actor has invited the object, typically a person object, to join or participate in the object described by
+ the target. The target could, for instance, be an event, group or a service.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Laura"},
+  "verb": "invite",
+  "object": {
+    "objectType": "person",
+    "displayName": "Mark"
+  },
+  "target": {
+    "objectType": "event",
+    "displayName": "Job Interview"
+  }
+}
+    </pre></td></tr><tr id="verb-join"><td><tt>join</tt></td><td>Indicates that the actor has become a member of the object. This specification only defines the meaning of this verb when the 
+ object of the Activity has an objectType of group, though implementors need to be prepared to handle other types of objects.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Mark"},
+  "verb": "join",
+  "object": {
+    "objectType": "organization",
+    "displayName": "Acme, Co"
+  }
+}
+    </pre></td></tr><tr id="verb-leave"><td><tt>leave</tt></td><td>Indicates that the actor has left the object. For instance, a Person leaving a Group or checking-out of a Place.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Mark"},
+  "verb": "leave",
+  "object": {
+    "objectType": "organization",
+    "displayName": "Other, Co"
+  }
+}
+    </pre></td></tr><tr id="verb-like"><td><tt>like</tt></td><td>Indicates that the actor marked the object as an item of special interest. The "like" verb is considered to be an alias of "favorite". The two verb are semantically identical.</td><td><pre>
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Laura"},
+  "verb": "like",
+  "object": {
+    "actor": {
+      "objectType": "person", 
+      "displayName": "Mark"},
+    "verb": "join",
+    "object": {
+      "objectType": "organization",
+      "displayName": "Acme, Co"
+    }
+  }
+}
+    </pre></td></tr><tr id="verb-listen"><td><tt>listen</tt></td><td>Indicates that the actor has listened to the object. This is typically only applicable for objects representing audio content, such as music, an audio-book, or a radio broadcast. The "listen" verb is a more specific form of the "consume", "experience" and "play" verbs.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person", 
+      "displayName": "Mark"},
+    "verb": "listen",
+    "object": {
+      "objectType": "audio",
+      "displayName": "Welcome to the Company (Podcast).mp3"
+    }
+  }
+      </pre></td></tr><tr id="verb-lose"><td><tt>lose</tt></td><td>Indicates that the actor has lost the object. For instance, if a person loses a game.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "organization",
+      "displayName": "New York Yankees"
+    },
+    "verb": "lose",
+    "object": {
+      "objectType": "game",
+      "displayName": "World Series"
+    }
+  }
+      </pre></td></tr><tr id="verb-make-friend"><td><tt>make-friend</tt></td><td>Indicates the creation of a friendship that is reciprocated by the object. Since this verb implies an activity on the part of its object, processors MUST NOT accept activities with this verb unless they are able to verify through some external means that there is in fact a reciprocated connection. For example, a processor may have received a guarantee from a particular publisher that the publisher will only use this Verb in cases where a reciprocal relationship exists.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "make-friend",
+    "object": {
+      "objectType": "person",
+      "displayName": "Laura"
+    }
+  }
+      </pre></td></tr><tr id="verb-open"><td><tt>open</tt></td><td>Indicates that the actor has opened the object. For instance, the object could represent a ticket being tracked in an issue management system.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Laura"
+    },
+    "verb": "open",
+    "object": {
+      "objectType": "issue",
+      "displayName": "Issue #126"
+    }
+  }
+      </pre></td></tr><tr id="verb-play"><td><tt>play</tt></td><td>Indicates that the actor spent some time enjoying the object. For example, if the object is a video this indicates that the subject watched all or part of the video. The "play" verb is a more specific form of the "consume" verb.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "play",
+    "object": {
+      "objectType": "audio",
+      "displayName": "Call Me Maybe"
+    }
+  }
+      </pre></td></tr><tr id="verb-present"><td><tt>present</tt></td><td>Indicates that the actor has presented the object. For instance, when a person gives a presentation at a conference.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Laura"
+    },
+    "verb": "present",
+    "object": {
+      "objectType": "file",
+      "displayName": "1Q2013 Sales Forecast.ppt"
+    }
+  }
+      </pre></td></tr><tr id="verb-purchase"><td><tt>purchase</tt></td><td>Indicates that the actor has purchased the object. If a target is specified, in indicates the entity from which the object was purchased.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "purchase",
+    "object": {
+      "objectType": "video",
+      "displayName": "The Avengers"
+    },
+    "title": "Mark purchased the movie, The Avengers"
+  }
+      </pre></td></tr><tr id="verb-qualify"><td><tt>qualify</tt></td><td>Indicates that the actor has qualified for the object. If a target is specified, it indicates the context within which the qualification applies.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Laura"
+    },
+    "verb": "qualify",
+    "object": {
+      "objectType": "offer",
+      "displayName": "Free Money!"
+    }
+  }
+      </pre></td></tr><tr id="verb-read"><td><tt>read</tt></td><td>Indicates that the actor read the object. This is typically only applicable for objects representing printed or written content, such as a book, a message or a comment. The "read" verb is a more specific form of the "consume", "experience" and "play" verbs.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "read",
+    "object": {
+      "objectType": "book",
+      "displayName": "Cloud Atlas"
+    }
+  }
+      </pre></td></tr><tr id="verb-receive"><td><tt>receive</tt></td><td>Indicates that the actor is receiving an object. Examples include a person receiving a badge object. The object identifies the object being received.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Laura"
+    },
+    "verb": "receive",
+    "object": {
+      "objectType": "badge",
+      "displayName": "Most Checkins in 24 hours"
+    },
+    "title": "Laura was awarded a badge 
+      for \"Most Checkins in 24 hours\""
+  }
+      </pre></td></tr><tr id="verb-reject"><td><tt>reject</tt></td><td>Indicates that the actor has rejected the object.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "reject",
+    "object": {
+      "objectType": "issue",
+      "displayName": "Issue #126"
+    }
+  }
+      </pre></td></tr><tr id="verb-remove"><td><tt>remove</tt></td><td>Indicates that the actor has removed the object from the target.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Laura"
+    },
+    "verb": "remove",
+    "object": {
+      "objectType": "image",
+      "displayName": "Cat Photo",
+      "fullImage": {
+        "url": "http://example.org/cats.jpg"
+      }
+    },
+    "target": {
+      "objectType": "collection",
+      "displayName": "Cat Photo Album",
+      "objectTypes": ["image"]
+    }
+  }
+      </pre></td></tr><tr id="verb-remove-friend"><td><tt>remove-friend</tt></td><td>Indicates that the actor has removed the object from the collection of friends.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "remove-friend",
+    "object": {
+      "objectType": "person",
+      "displayName": "Laura"
+    }
+  }
+      </pre></td></tr><tr id="verb-replace"><td><tt>replace</tt></td><td>Indicates that the actor has replaced the target with the object.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "replace",
+    "object": {
+      "objectType": "file",
+      "displayName": "Updated 1Q2014 Sales Forecast.xls"
+    },
+    "target": {
+      "objectType": "file",
+      "displayName": "1Q2014 Sales Forecast.xls"
+    }
+  }
+      </pre></td></tr><tr id="verb-request"><td><tt>request</tt></td><td>Indicates that the actor has requested the object. If a target is specified, it indicates the entity from which the object is being  requested.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Laura"
+    },
+    "verb": "request",
+    "object": {
+      "objectType": "task",
+      "actor": {
+        "objectType": "person",
+        "displayName": "Mark"
+      },
+      "verb": "join", 
+      "object": {
+        "objectType": "event",
+        "displayName": "The Big Meeting"
+      }
+    }
+  }
+      </pre></td></tr><tr id="verb-request-friend"><td><tt>request-friend</tt></td><td>Indicates the creation of a friendship that has not yet been reciprocated by  the object.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "request-friend",
+    "object": {
+      "objectType": "person",
+      "displayName": "Laura"
+    }
+  }
+      </pre></td></tr><tr id="verb-resolve"><td><tt>resolve</tt></td><td>Indicates that the actor has resolved the object. For instance, the object could represent a ticket being tracked in an issue management system.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Laura"
+    },
+    "verb": "resolve",
+    "object": {
+      "objectType": "issue",
+      "displayName": "Issue #126"
+    }
+  }
+      </pre></td></tr><tr id="verb-return"><td><tt>return</tt></td><td>Indicates that the actor has returned the object. If a target is specified, it indicates the entity to which the object was returned.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "return",
+    "object": {
+      "objectType": "book",
+      "displayName": "Cloud Atlas"
+    },
+    "target": {
+      "objectType": "person",
+      "displayName": "Laura"
+    }
+  }
+      </pre></td></tr><tr id="verb-retract"><td><tt>retract</tt></td><td>Indicates that the actor has retracted the object. For instance, if an actor wishes to retract a previously published activity, the object would be the previously published activity that is being retracted.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Laura"
+    },
+    "verb": "retract",
+    "object": {
+      "actor": {
+        "objectType": "person",
+        "displayName": "Mark"
+      },
+      "verb": "return",
+      "object": {
+        "objectType": "book",
+        "displayName": "Cloud Atlas"
+      },
+      "target": {
+        "objectType": "person",
+        "displayName": "Laura"
+      }
+    }
+  }
+      </pre></td></tr><tr id="verb-rsvp-maybe"><td><tt>rsvp-maybe</tt></td><td>The "possible RSVP" verb indicates that the actor has made a possible RSVP for the object. This specification only defines the meaning of this verb when its object is an event, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Laura"
+    },
+    "verb": "rsvp-maybe",
+    "object": {
+      "objectType": "event",
+      "displayName": "The Big Meeting"
+    },
+    "title": "Laura might attend The Big Meeting"
+  }
+      </pre></td></tr><tr id="verb-rsvp-no"><td><tt>rsvp-no</tt></td><td>The "negative RSVP" verb indicates that the actor has made a negative RSVP for the object. This specification only defines the meaning of this verb when its object is an event, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "rsvp-no",
+    "object": {
+      "objectType": "event",
+      "displayName": "The Big Meeting"
+    },
+    "title": "Mark will not attend the Big Meeting"
+  }
+      </pre></td></tr><tr id="verb-rsvp-yes"><td><tt>rsvp-yes</tt></td><td>The "positive RSVP" verb indicates that the actor has made a positive RSVP for an object. This specification only defines the meaning of this verb when its object is an event, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Laura"
+    },
+    "verb": "rsvp-yes",
+    "object": {
+      "objectType": "event",
+      "displayName": "The Big Meeting"
+    },
+    "title": "Laura will attend the Big Meeting"
+  }
+      </pre></td></tr><tr id="verb-satisfy"><td><tt>satisfy</tt></td><td>Indicates that the actor has satisfied the object. If a target is specified, it indicate the context within which the object was satisfied. For instance, if a person satisfies the requirements for a particular challenge, the person is the actor; the requirement is the object; and the challenge is the target.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "satisfy",
+    "object": {
+      "objectType": "http://example.org/condition",
+      "displayName": "Some Condition"
+    },
+    "target": {
+      "objectType": "http://example.org/parole",
+      "displayName": "Terms of Parole"
+    },
+    "title": "Mark has satisfied a condition of his parole."
+  } 
+      </pre></td></tr><tr id="verb-save"><td><tt>save</tt></td><td>Indicates that the actor has called out the object as being of interest primarily to him- or herself. Though this action MAY be shared publicly, the implication is that the object has been saved primarily for the actor's own benefit rather than to show it to others as would be indicated by the "share" verb.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Laura"
+    },
+    "verb": "save",
+    "object": {
+      "objectType": "note",
+      "displayName": "A note about something important"
+    },
+    "target": {
+      "objectType": "collection",
+      "displayName": "Laura's Reading List"
+    },
+    "title": "Laura saved the note to her reading list"
+  }
+      </pre></td></tr><tr id="verb-schedule"><td><tt>schedule</tt></td><td>Indicates that the actor has scheduled the object. For instance, scheduling a meeting.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "schedule",
+    "object": {
+      "objectType": "event",
+      "displayName": "The Big Meeting"
+    }
+  }
+      </pre></td></tr><tr id="verb-search"><td><tt>search</tt></td><td>Indicates that the actor is or has searched for the object. If a target is specified, it indicates the context within which the search is or has been conducted.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Laura"
+    },
+    "verb": "search",
+    "object": {
+      "objectType": "place",
+      "displayName": "Big Hotel",
+      "address": {
+        "locality": "New York",
+        "region": "NY"
+      }
+    },
+    "title": "Laura searched for a hotel in New York City, NY"
+  }
+      </pre></td></tr><tr id="verb-sell"><td><tt>sell</tt></td><td>Indicates that the actor has sold the object. If a target is specified, it indicates the entity to which the object was sold.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "sell",
+    "object": {
+      "objectType": "product",
+      "displayName": "A cool product"
+    },
+    "target": {
+      "objectType": "person",
+      "displayName": "Laura"
+    }
+  }
+      </pre></td></tr><tr id="verb-send"><td><tt>send</tt></td><td>Indicates that the actor has sent the object. If a target is specified, it indicates the entity to which the object was sent.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Laura"
+    },
+    "verb": "send",
+    "object": {
+      "objectType": "note",
+      "content": "Thank you for the cool product."
+    },
+    "target": {
+      "objectType": "person",
+      "displayName": "Mark"
+    }
+  }
+      </pre></td></tr><tr id="verb-share"><td><tt>share</tt></td><td>Indicates that the actor has called out the object to readers. In most cases, the actor did not create the object being shared, but is instead drawing attention to it.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "share",
+    "object": {
+      "objectType": "note",
+      "displayName": "An important note"
+    },
+    "title": "Mark shared an important note."
+  }
+      </pre></td></tr><tr id="verb-sponsor"><td><tt>sponsor</tt></td><td>Indicates that the actor has sponsored the object. If a target is specified, it indicates the context within which the sponsorship is offered. For instance, a company can sponsor an event; or an individual can sponsor a project; etc.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "organization",
+      "displayName": "Acme, Co"
+    },
+    "verb": "sponsor",
+    "object": {
+      "objectType": "game",
+      "displayName": "World Series"
+    },
+    "title": "Acme, Co sponsored the World Series"
+  }
+      </pre></td></tr><tr id="verb-start"><td><tt>start</tt></td><td>Indicates that the actor has started the object. For instance, when a person starts a project.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "start",
+    "object": {
+      "objectType": "process",
+      "displayName": "A Long Running Process"
+    }
+  }
+      </pre></td></tr><tr id="verb-stop-following"><td><tt>stop-following</tt></td><td>Indicates that the actor has stopped following the object.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Laura"
+    },
+    "verb": "stop-following",
+    "object": {
+      "objectType": "person",
+      "displayName": "Mark"
+    }
+  }
+      </pre></td></tr><tr id="verb-submit"><td><tt>submit</tt></td><td>Indicates that the actor has submitted the object. If a target is specified, it indicates the entity to which the object was submitted.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "submit",
+    "object": {
+      "objectType": "issue",
+      "displayName": "Issue #127"
+    }
+  }
+      </pre></td></tr><tr id="verb-tag"><td><tt>tag</tt></td><td>Indicates that the actor has associated the object with the target. For example, if the actor specifies that a particular user appears in a photo. the object is the user and the target is the photo.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Laura"
+    },
+    "verb": "tag",
+    "object": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "target": {
+      "objectType": "image",
+      "displayName": "Pictures of my cats"
+    }
+  }
+      </pre></td></tr><tr id="verb-terminate"><td><tt>terminate</tt></td><td>Indicates that the actor has terminated the object. </td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "terminate",
+    "object": {
+      "objectType": "process",
+      "displayName": "A long running process"
+    }
+  }
+      </pre></td></tr><tr id="verb-tie"><td><tt>tie</tt></td><td>Indicates that the actor has neither won or lost the object. This verb is generally only applicable when the object represents some form of competition, such as a game.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "collection",
+      "items": [
+        {
+          "objectType": "organization",
+          "displayName": "New York Giants"
+        },
+        {
+          "objectType": "organization",
+          "displayName": "Oakland Raiders"
+        }
+      ]
+    },
+    "verb": "tie",
+    "object": {
+      "objectType": "game",
+      "displayName": "Super Bowl"
+    }
+  }
+      </pre></td></tr><tr id="verb-unfavorite"><td><tt>unfavorite</tt></td><td>Indicates that the actor has removed the object from the collection of favorited items.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Laura"
+    },
+    "verb": "unfavorite",
+    "object": {
+      "objectType": "article",
+      "displayName": "Some article"
+    }
+  }
+      </pre></td></tr><tr id="verb-unlike"><td><tt>unlike</tt></td><td>Indicates that the actor has removed the object from the collection of liked items.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "unlike",
+    "object": {
+      "objectType": "article",
+      "displayName": "Some article"
+    }
+  }
+      </pre></td></tr><tr id="verb-unsatisfy"><td><tt>unsatisfy</tt></td><td>Indicates that the actor has not satisfied the object. If a target is specified, it indicates the context within which the object was not satisfied. For instance, if a person fails to satisfy the requirements of some particular challenge, the person is the actor; the requirement is the object and the challenge is the target.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "unsatisfy",
+    "object": {
+      "objectType": "http://example.org/condition",
+      "displayName": "Some Condition"
+    },
+    "target": {
+      "objectType": "http://example.org/parole",
+      "displayName": "Terms of Parole"
+    },
+    "title": "Mark has not satisfied a condition of his parole."
+  } 
+      </pre></td></tr><tr id="verb-unsave"><td><tt>unsave</tt></td><td>Indicates that the actor has removed the object from the collection of saved items.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Laura"
+    },
+    "verb": "unsave",
+    "object": {
+      "objectType": "article",
+      "displayName": "Some article"
+    }
+  }
+      </pre></td></tr><tr id="verb-unshare"><td><tt>unshare</tt></td><td>Indicates that the actor is no longer sharing the object. If a target is specified, it indicates the entity with whom the object is no longer being shared.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "unshare",
+    "object": {
+      "objectType": "article",
+      "displayName": "Some article"
+    }
+  }
+      </pre></td></tr><tr id="verb-update"><td><tt>update</tt></td><td>The "update" verb indicates that the actor has modified the object. Use of the "update" verb is generally reserved to indicate modifications to existing objects or data such as changing an existing user's profile information.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "update",
+    "object": {
+      "objectType": "article",
+      "displayName": "Some article"
+    }
+  }
+      </pre></td></tr><tr id="verb-use"><td><tt>use</tt></td><td>Indicates that the actor has used the object in some manner.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Laura"
+    },
+    "verb": "use",
+    "object": {
+      "objectType": "product",
+      "displayName": "A cool product"
+    }
+  }
+      </pre></td></tr><tr id="verb-watch"><td><tt>watch</tt></td><td>Indicates that the actor has watched the object. This verb is typically applicable only when the object represents dynamic, visible content such as a movie, a television show or a public performance. This verb is a more specific form of the verbs "experience", "play" and "consume".</td><td><pre>
+  {
+    "actor": {
+      "objectType": "person",
+      "displayName": "Mark"
+    },
+    "verb": "watch",
+    "object": {
+      "objectType": "video",
+      "displayName": "Some random movie"
+    }
+  }
+      </pre></td></tr><tr id="verb-win"><td><tt>win</tt></td><td>Indicates that the actor has won the object. This verb is typically applicable only when the object represents some form of competition, such as a game.</td><td><pre>
+  {
+    "actor": {
+      "objectType": "organization",
+      "displayName": "Arizona Diamond Backs"
+    },
+    "verb": "win",
+    "object": {
+      "objectType": "game",
+      "displayName": "World Series"
+    }
+  }
+      </pre></td></tr></tbody></table></section><section id="AS1-objects"><h2>Activity Streams 1.0 Objects</h2></section></section></body></html>

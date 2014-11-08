@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xsd" version="2.0">
-    <xsl:output method="xhtml" encoding="UTF-8" omit-xml-declaration="yes" indent="yes"/>
-    <xsl:variable name="AS1" select="document('activity-schema.xml')"/>
+    <xsl:output method="xhtml" encoding="UTF-8" omit-xml-declaration="yes" indent="no"/>
+    <xsl:variable name="AS1" select="document('AS1.xml')"/>
     <xsl:template match="/">
         <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html>&#xa;</xsl:text>
         <html>
@@ -42,15 +42,34 @@
                     <h2>Activity Streams 1.0 Vocabularies</h2>
                     <section id="AS1-verbs">
                         <h2>Activity Streams 1.0 Verbs</h2>
-                        <ul>
-                            <xsl:for-each select="$AS1//section[@anchor='verbs']//texttable//c/spanx[@style='verb']">
-                                <li>
-                                    <xsl:value-of select="."/>
-                                    <xsl:text>: </xsl:text>
-                                    <xsl:value-of select="../following-sibling::c[1]"/>
-                                </li>
-                            </xsl:for-each>
-                        </ul>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <xsl:for-each select="$AS1/as1/verbs/verb">
+                                    <tr id="verb-{@name}">
+                                        <td>
+                                            <tt>
+                                                <xsl:value-of select="@name"/>
+                                            </tt>
+                                        </td>
+                                        <td>
+                                            <xsl:value-of select="desc"/>
+                                        </td>
+                                        <td>
+                                            <pre>
+                                                <xsl:value-of select="example"/>
+                                            </pre>
+                                        </td>
+                                    </tr>
+                                </xsl:for-each>
+                            </tbody>
+                        </table>
                     </section>
                     <section id="AS1-objects">
                         <h2>Activity Streams 1.0 Objects</h2>
