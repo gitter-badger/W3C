@@ -8,10 +8,10 @@
                 <xsl:for-each select="//verbs/table/tr/td[1]/tt/text()">
                     <verb name="{.}">
                         <desc>
-                            <xsl:copy-of select="../../following-sibling::td[1]/node()"/>
+                            <xsl:value-of select="../../following-sibling::td[1]"/>
                         </desc>
                         <example>
-                            <xsl:copy-of select="../../following-sibling::td[2]/pre/node()"/>
+                            <xsl:value-of select="../../following-sibling::td[2]/pre"/>
                         </example>
                     </verb>
                 </xsl:for-each>

@@ -541,9 +541,7 @@
       <verb name="flag-as-inappropriate">
          <desc>Indicates that the actor has flagged the object as being 
  inappropriate for some reason. When using this verb, the 
- <a href="#context">
-               <tt>context</tt>
-            </a> property can be used to provide additional detail about why the object has been flagged.</desc>
+ context property can be used to provide additional detail about why the object has been flagged.</desc>
          <example>
 {
   "actor": {
@@ -581,7 +579,7 @@
     </example>
       </verb>
       <verb name="give">
-         <desc>Indicates that the actor is giving an object to the target. Examples include one person giving a <tt>badge</tt> object to another person. The <tt>object</tt> identifies the object being given. The <tt>target</tt> identifies the receiver.</desc>
+         <desc>Indicates that the actor is giving an object to the target. Examples include one person giving a badge object to another person. The object identifies the object being given. The target identifies the receiver.</desc>
          <example>
 {
   "actor": {
@@ -624,7 +622,7 @@
     </example>
       </verb>
       <verb name="ignore">
-         <desc>Indicates that the actor has ignored the object. For instance, this verb may be used when an actor has ignored a friend request, in which case the object may be the <tt>request-friend</tt> activity.</desc>
+         <desc>Indicates that the actor has ignored the object. For instance, this verb may be used when an actor has ignored a friend request, in which case the object may be the request-friend activity.</desc>
          <example>
 {
   "actor": {
@@ -693,7 +691,7 @@
       </verb>
       <verb name="invite">
          <desc>Indicates that the actor has invited the object, typically a person object, to join or participate in the object described by
- the <tt>target</tt>. The target could, for instance, be an event, group or a service.</desc>
+ the target. The target could, for instance, be an event, group or a service.</desc>
          <example>
 {
   "actor": {
@@ -713,7 +711,7 @@
       </verb>
       <verb name="join">
          <desc>Indicates that the actor has become a member of the object. This specification only defines the meaning of this verb when the 
- <tt>object</tt> of the Activity has an <tt>objectType</tt> of <tt>group</tt>, though implementors need to be prepared to handle other types of objects.</desc>
+ object of the Activity has an objectType of group, though implementors need to be prepared to handle other types of objects.</desc>
          <example>
 {
   "actor": {
@@ -908,7 +906,7 @@
       </example>
       </verb>
       <verb name="receive">
-         <desc>Indicates that the actor is receiving an object. Examples include a person receiving a <tt>badge</tt> object. The <tt>object</tt> identifies the object being received.</desc>
+         <desc>Indicates that the actor is receiving an object. Examples include a person receiving a badge object. The object identifies the object being received.</desc>
          <example>
   {
     "actor": {
@@ -1105,7 +1103,7 @@
       </example>
       </verb>
       <verb name="rsvp-maybe">
-         <desc>The "possible RSVP" verb indicates that the actor has made a possible RSVP for the object. This specification only defines the meaning of this verb when its object is an <a href="#event">event</a>, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.</desc>
+         <desc>The "possible RSVP" verb indicates that the actor has made a possible RSVP for the object. This specification only defines the meaning of this verb when its object is an event, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.</desc>
          <example>
   {
     "actor": {
@@ -1122,7 +1120,7 @@
       </example>
       </verb>
       <verb name="rsvp-no">
-         <desc>The "negative RSVP" verb indicates that the actor has made a negative RSVP for the object. This specification only defines the meaning of this verb when its object is an <a href="#event">event</a>, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.</desc>
+         <desc>The "negative RSVP" verb indicates that the actor has made a negative RSVP for the object. This specification only defines the meaning of this verb when its object is an event, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.</desc>
          <example>
   {
     "actor": {
@@ -1139,7 +1137,7 @@
       </example>
       </verb>
       <verb name="rsvp-yes">
-         <desc>The "positive RSVP" verb indicates that the actor has made a positive RSVP for an object. This specification only defines the meaning of this verb when its object is an <a href="#event">event</a>, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.</desc>
+         <desc>The "positive RSVP" verb indicates that the actor has made a positive RSVP for an object. This specification only defines the meaning of this verb when its object is an event, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.</desc>
          <example>
   {
     "actor": {
