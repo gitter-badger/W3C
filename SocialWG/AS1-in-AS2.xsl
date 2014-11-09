@@ -96,7 +96,7 @@
                     <h2>Activity Streams 1.0 Implementations</h2>
                     <section id="pump.io">
                         <h2>pump.io</h2>
-                        <p>As <a href="http://lists.w3.org/Archives/Public/public-socialweb/2014Nov/0021.html">reported by Evan Podromou</a>, pump.io supports a number of AS1 verbs as semantically meaningful, in the sense that pump.io will act upon them. These verbs are the following (excluding "post", which is not part of the AS1 vocabulary discussed in this document):</p>
+                        <p>As <a href="http://lists.w3.org/Archives/Public/public-socialweb/2014Nov/0021.html">reported by Evan Prodromou</a>, pump.io supports a number of AS1 verbs as semantically meaningful, in the sense that pump.io will act upon them. These verbs are the following (excluding "post", which is not part of the AS1 vocabulary discussed in this document):</p>
                         <ul>
                             <xsl:for-each select="$AS1i//impl[@id eq 'pump.io']/verbs/verb">
                                 <li id="pump.io-verb-{@name}">
@@ -114,6 +114,10 @@
                         </ul>
                         <p>It should be noted that pump.io will accept, store, and forward all other verbs as well. But for those other verbs, there are no special semantics associated that will trigger internal actions in pump.io.</p>
                     </section>
+                </section>
+                <section id="acknowledgements">
+                    <h2>Acknowledgements</h2>
+                    <p>Thanks for contributions, input, and/or suggestions by the following people: Evan Prodromou</p>
                 </section>
             </body>
         </html>
