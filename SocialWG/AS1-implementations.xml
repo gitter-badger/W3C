@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <as1impl>
-  <impl id="pump.io">
+  <impl id="pump.io" href="http://pump.io/">
     <name>pump.io</name>
     <verbs>
       <verb name="create">CRUD on content, synonym for "post"</verb>
