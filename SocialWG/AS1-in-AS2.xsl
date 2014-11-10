@@ -32,6 +32,17 @@
                         wg: "Social Web Working Group",
                         wgURI: "http://www.w3.org/Social/WG",
                         wgPublicList: "public-socialweb",
+                        otherLinks: [{
+                            key: "GitHub",
+                            data: [{
+                                value: "Master branch on GitHub",
+                                href: "https://github.com/dret/W3C/tree/master/SocialWG"
+                                },{
+                                value: "Project Pages branch on GitHub",
+                                href: "https://github.com/dret/W3C/tree/gh-pages/SocialWG"
+                                },
+                            ]
+                        }]
                         };
                     </script>
             </head>
