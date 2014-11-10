@@ -14,12 +14,12 @@
                         shortName:  "WoT-UCR",
                         editors: [
                         {   name:       "Johannes Hund",
-                        company:    "Siemens",
-                        companyURL: "http://www.siemens.com/" },
+                            company:    "Siemens",
+                            companyURL: "http://www.siemens.com/" },
                         {   name:       "Erik Wilde",
-                        url:        "http://dret.net/netdret/",
-                        company:    "Siemens",
-                        companyURL: "http://www.siemens.com/" }
+                            url:        "http://dret.net/netdret/",
+                            company:    "Siemens",
+                            companyURL: "http://www.siemens.com/" }
                         ],
                         };
                     </script>
