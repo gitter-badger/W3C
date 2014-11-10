@@ -21,6 +21,15 @@
                             company:    "Siemens",
                             companyURL: "http://www.siemens.com/" }
                         ],
+                        otherLinks: [{
+                            key: "GitHub",
+                            data: [{
+                                value: "Master branch on GitHub",
+                                href: "https://github.com/dret/W3C/tree/master/WoTIG"
+                                },{
+                                value: "Project Pages branch on GitHub",
+                                href: "https://github.com/dret/W3C/tree/gh-pages/WoTIG" }]}
+                        ],
                         };
                     </script>
             </head>
