@@ -75,19 +75,17 @@
                                                 </tt>
                                             </a>
                                         </td>
-                                        <td>
-                                            <ul>
-                                                <xsl:variable name="verb" select="@name"/>
-                                                <xsl:variable name="verbi" select="$AS1i//impl[@id eq 'pump.io']//verb[@name eq $verb]"/>
-                                                <xsl:if test="exists($verbi)">
-                                                    <a href="#pump.io-verb-{$verb}">
-                                                        <xsl:if test="exists($verbi/text())">
-                                                            <xsl:attribute name="title" select="$verbi/text()"/>
-                                                        </xsl:if>
-                                                        <xsl:text>&#x2713;</xsl:text>
-                                                    </a>
-                                                </xsl:if>
-                                            </ul>
+                                        <td align="center">
+                                            <xsl:variable name="verb" select="@name"/>
+                                            <xsl:variable name="verbi" select="$AS1i//impl[@id eq 'pump.io']//verb[@name eq current()/$verb]"/>
+                                            <xsl:if test="exists($verbi)">
+                                                <a href="#pump.io-verb-{$verb}">
+                                                    <xsl:if test="exists($verbi/text())">
+                                                        <xsl:attribute name="title" select="$verbi/text()"/>
+                                                    </xsl:if>
+                                                    <xsl:text>&#x2713;</xsl:text>
+                                                </a>
+                                            </xsl:if>
                                         </td>
                                     </tr>
                                 </xsl:for-each>
