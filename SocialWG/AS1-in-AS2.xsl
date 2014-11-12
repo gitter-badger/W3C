@@ -50,48 +50,43 @@
                 <section id="abstract">
                     <p>This document describes how to use Activity Streams 1.0 vocabularies in Activity Streams 2.0.</p>
                 </section>
-                <section id="AS1-vocabularies">
-                    <h2>Activity Streams 1.0 Vocabularies</h2>
-                    <section id="AS1-verbs">
+                <section id="AS1-implementation-overview">
+                    <h2>Activity Streams 1.0 Implementation Overview</h2>
+                    <section id="AS1-verb-implementations">
                         <h2>Activity Streams 1.0 Verbs</h2>
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Example</th>
+                                    <th rowspan="2">Name</th>
                                     <th>Implementations</th>
+                                </tr>
+                                <tr>
+                                    <th>pump.io</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <xsl:for-each select="$AS1/as1/verbs/verb">
-                                    <tr id="verb-{@name}">
+                                    <xsl:sort select="@name"/>
+                                    <tr id="verb-implementation-{@name}">
                                         <td>
-                                            <tt>
-                                                <xsl:value-of select="@name"/>
-                                            </tt>
-                                        </td>
-                                        <td>
-                                            <xsl:value-of select="desc/text()"/>
-                                        </td>
-                                        <td>
-                                            <pre><xsl:copy-of select="example/text()"/></pre>
+                                            <a href="#verb-definition-{@name}" title="{desc/text()}">
+                                                <tt>
+                                                    <xsl:value-of select="@name"/>
+                                                </tt>
+                                            </a>
                                         </td>
                                         <td>
                                             <ul>
                                                 <xsl:variable name="verb" select="@name"/>
-                                                <xsl:for-each select="$AS1i//verb[@name eq $verb]">
-                                                    <li>
-                                                        <a href="#{../../@id}-verb-{$verb}">
-                                                            <xsl:value-of select="../../name/text()"/>
-                                                        </a>
-                                                        <xsl:if test="exists(text())">
-                                                            <xsl:text> (</xsl:text>
-                                                            <xsl:value-of select="text()"/>
-                                                            <xsl:text>)</xsl:text>
+                                                <xsl:variable name="verbi" select="$AS1i//impl[@id eq 'pump.io']//verb[@name eq $verb]"/>
+                                                <xsl:if test="exists($verbi)">
+                                                    <a href="#pump.io-verb-{$verb}">
+                                                        <xsl:if test="exists($verbi/text())">
+                                                            <xsl:attribute name="title" select="$verbi/text()"/>
                                                         </xsl:if>
-                                                    </li>
-                                                </xsl:for-each>
+                                                        <xsl:text>&#x2713;</xsl:text>
+                                                    </a>
+                                                </xsl:if>
                                             </ul>
                                         </td>
                                     </tr>
@@ -99,7 +94,7 @@
                             </tbody>
                         </table>
                     </section>
-                    <section id="AS1-objects">
+                    <section id="AS1-object-implementations">
                         <h2>Activity Streams 1.0 Objects</h2>
                     </section>
                 </section>
@@ -112,7 +107,7 @@
                             <xsl:for-each select="$AS1i//impl[@id eq 'pump.io']/verbs/verb">
                                 <li id="pump.io-verb-{@name}">
                                     <xsl:variable name="verb" select="@name"/>
-                                    <a href="#verb-{@name}" title="{$AS1/as1/verbs/verb[@name = $verb]/desc/text()}">
+                                    <a href="#verb-definition-{@name}" title="{$AS1/as1/verbs/verb[@name = $verb]/desc/text()}">
                                         <xsl:value-of select="@name"/>
                                     </a>
                                     <xsl:if test="exists(text())">
@@ -129,6 +124,41 @@
                 <section id="acknowledgements">
                     <h2>Acknowledgements</h2>
                     <p>Thanks for contributions, input, and/or suggestions by the following people: Evan Prodromou</p>
+                </section>
+                <section id="AS1-verbs" class="appendix">
+                    <h2>Activity Streams 1.0 Verbs</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <xsl:for-each select="$AS1/as1/verbs/verb">
+                                <xsl:sort select="@name"/>
+                                <tr id="verb-definition-{@name}">
+                                    <td>
+                                        <a href="#verb-implementation-{@name}" title="look up implementations">
+                                            <tt>
+                                                <xsl:value-of select="@name"/>
+                                            </tt>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <xsl:value-of select="desc/text()"/>
+                                    </td>
+                                    <td>
+                                        <pre class="highlight"><xsl:copy-of select="example/text()"/></pre>
+                                    </td>
+                                </tr>
+                            </xsl:for-each>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="AS1-objects">
+                    <h2>Activity Streams 1.0 Objects</h2>
                 </section>
             </body>
         </html>

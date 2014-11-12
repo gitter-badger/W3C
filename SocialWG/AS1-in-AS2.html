@@ -33,7 +33,7 @@
                             ]
                         }]
                         };
-                    </script></head><body><section id="abstract"><p>This document describes how to use Activity Streams 1.0 vocabularies in Activity Streams 2.0.</p></section><section id="AS1-vocabularies"><h2>Activity Streams 1.0 Vocabularies</h2><section id="AS1-verbs"><h2>Activity Streams 1.0 Verbs</h2><table><thead><tr><th>Name</th><th>Description</th><th>Example</th><th>Implementations</th></tr></thead><tbody><tr id="verb-accept"><td><tt>accept</tt></td><td>Indicates that that the actor has accepted the object. For instance, a person accepting an award, or accepting an assignment.</td><td><pre>
+                    </script></head><body><section id="abstract"><p>This document describes how to use Activity Streams 1.0 vocabularies in Activity Streams 2.0.</p></section><section id="AS1-implementation-overview"><h2>Activity Streams 1.0 Implementation Overview</h2><section id="AS1-verb-implementations"><h2>Activity Streams 1.0 Verbs</h2><table><thead><tr><th rowspan="2">Name</th><th>Implementations</th></tr><tr><th>pump.io</th></tr></thead><tbody><tr id="verb-implementation-accept"><td><a href="#verb-definition-accept" title="Indicates that that the actor has accepted the object. For instance, a person accepting an award, or accepting an assignment."><tt>accept</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-access"><td><a href="#verb-definition-access" title="Indicates that the actor has accessed the object. For instance, a person accessing a room, or accessing a file."><tt>access</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-acknowledge"><td><a href="#verb-definition-acknowledge" title="Indicates that the actor has acknowledged the object. This effectively signals that the actor is aware of the object's existence."><tt>acknowledge</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-add"><td><a href="#verb-definition-add" title="Indicates that the actor has added the object to the target. For instance, adding a photo to an album."><tt>add</tt></a></td><td><ul><a href="#pump.io-verb-add" title="Social graph management, add to contact list">✓</a></ul></td></tr><tr id="verb-implementation-agree"><td><a href="#verb-definition-agree" title="Indicates that the actor agrees with the object. For example, a person agreeing with an argument, or expressing agreement with a particular issue."><tt>agree</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-append"><td><a href="#verb-definition-append" title="Indicates that the actor has appended the object to the target. For instance, a person appending a new record to a database."><tt>append</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-approve"><td><a href="#verb-definition-approve" title="Indicates that the actor has approved the object. For instance, a manager might approve a travel request."><tt>approve</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-archive"><td><a href="#verb-definition-archive" title="Indicates that the actor has archived the object."><tt>archive</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-assign"><td><a href="#verb-definition-assign" title="Indicates that the actor has assigned the object to the target."><tt>assign</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-at"><td><a href="#verb-definition-at" title="Indicates that the actor is currently located at the object. For instance, a person being at a specific physical location."><tt>at</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-attach"><td><a href="#verb-definition-attach" title="Indicates that the actor has attached the object to the target.For instance, a person attaching a file to a wiki page or an email."><tt>attach</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-attend"><td><a href="#verb-definition-attend" title="Indicates that the actor has attended the object. For instance, a person attending a meeting."><tt>attend</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-author"><td><a href="#verb-definition-author" title="Indicates that the actor has authored the object. Note that this is a more specific form of the verb &#34;create&#34;."><tt>author</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-authorize"><td><a href="#verb-definition-authorize" title="Indicates that the actor has authorized the object. If a target is specified, it means that the authorization is specifically in regards to the target. For instance, a service can authorize a person to access a given application; in which case the actor is the service, the object is the person, and the target is the application. In contrast, a person can authorize a request; in which case the actor is the person and the object is the request and there might be no explicit target."><tt>authorize</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-borrow"><td><a href="#verb-definition-borrow" title="Indicates that the actor has borrowed the object. If a target is specified, it identifies the entity from which the object was borrowed. For instance, if a person borrows a book from a library, the person is the actor, the book is the object and the library is the target."><tt>borrow</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-build"><td><a href="#verb-definition-build" title="Indicates that the actor has built the object. For example, if a person builds a model or compiles code."><tt>build</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-cancel"><td><a href="#verb-definition-cancel" title="Indicates that the actor has canceled the object. For instance, canceling a calendar event."><tt>cancel</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-checkin"><td><a href="#verb-definition-checkin" title="Indicates that the actor has checked-in to the object. For instance, a person checking-in to a Place."><tt>checkin</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-close"><td><a href="#verb-definition-close" title="Indicates that the actor has closed the object. For instance, the object could represent a ticket being tracked in an issue management system."><tt>close</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-complete"><td><a href="#verb-definition-complete" title="Indicates that the actor has completed the object."><tt>complete</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-confirm"><td><a href="#verb-definition-confirm" title="Indicates that the actor has confirmed or agrees with the object. For instance, a software developer might confirm an issue reported against a product."><tt>confirm</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-consume"><td><a href="#verb-definition-consume" title="Indicates that the actor has consumed the object. The specific meaning is dependent largely on the object's type. For instance, an actor may &#34;consume&#34; an audio object, indicating that the actor has listened to it; or an actor may &#34;consume&#34; a book, indicating that the book has been read. As such, the &#34;consume&#34; verb is a more generic form of other more specific verbs such as &#34;read&#34; and &#34;play&#34;."><tt>consume</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-create"><td><a href="#verb-definition-create" title="Indicates that the actor has created the object."><tt>create</tt></a></td><td><ul><a href="#pump.io-verb-create" title="CRUD on content, synonym for &#34;post&#34;">✓</a></ul></td></tr><tr id="verb-implementation-delete"><td><a href="#verb-definition-delete" title="Indicates that the actor has deleted the object. This implies, but does not require, the permanent destruction of the object."><tt>delete</tt></a></td><td><ul><a href="#pump.io-verb-delete" title="CRUD on content">✓</a></ul></td></tr><tr id="verb-implementation-deliver"><td><a href="#verb-definition-deliver" title="Indicates that the actor has delivered the object. For example, delivering a package."><tt>deliver</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-deny"><td><a href="#verb-definition-deny" title="Indicates that the actor has denied the object. For example, a manager may deny a travel request."><tt>deny</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-disagree"><td><a href="#verb-definition-disagree" title="Indicates that the actor disagrees with the object."><tt>disagree</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-dislike"><td><a href="#verb-definition-dislike" title="Indicates that the actor dislikes the object. Note that the &#34;dislike&#34; verb is distinct from the &#34;unlike&#34; verb which assumes that the object had been previously &#34;liked&#34;."><tt>dislike</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-experience"><td><a href="#verb-definition-experience" title="Indicates that the actor has experienced the object in some manner. Note that, depending on the specific object types used for both the actor and object, the meaning of this verb can overlap that of the &#34;consume&#34; and &#34;play&#34; verbs. For instance, a person might &#34;experience&#34; a movie; or &#34;play&#34; the movie; or &#34;consume&#34; the movie. The &#34;experience&#34; verb can be considered a more generic form of other more specific verbs as &#34;consume&#34;, &#34;play&#34;, &#34;watch&#34;, &#34;listen&#34;, and &#34;read&#34;"><tt>experience</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-favorite"><td><a href="#verb-definition-favorite" title="Indicates that the actor marked the object as an item of special interest."><tt>favorite</tt></a></td><td><ul><a href="#pump.io-verb-favorite" title="Response management">✓</a></ul></td></tr><tr id="verb-implementation-find"><td><a href="#verb-definition-find" title="Indicates that the actor has found the object."><tt>find</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-flag-as-inappropriate"><td><a href="#verb-definition-flag-as-inappropriate" title="Indicates that the actor has flagged the object as being &#xA; inappropriate for some reason. When using this verb, the &#xA; context property can be used to provide additional detail about why the object has been flagged."><tt>flag-as-inappropriate</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-follow"><td><a href="#verb-definition-follow" title="Indicates that the actor began following the activity of the object. In most cases, the objectType will be a &#34;person&#34;, but it can potentially be of any type that can sensibly generate activity. Processors MAY ignore (silently drop) successive identical &#34;follow&#34; activities."><tt>follow</tt></a></td><td><ul><a href="#pump.io-verb-follow" title="Social graph management">✓</a></ul></td></tr><tr id="verb-implementation-give"><td><a href="#verb-definition-give" title="Indicates that the actor is giving an object to the target. Examples include one person giving a badge object to another person. The object identifies the object being given. The target identifies the receiver."><tt>give</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-host"><td><a href="#verb-definition-host" title="Indicates that the actor is hosting the object. As in hosting an event, or hosting a service."><tt>host</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-ignore"><td><a href="#verb-definition-ignore" title="Indicates that the actor has ignored the object. For instance, this verb may be used when an actor has ignored a friend request, in which case the object may be the request-friend activity."><tt>ignore</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-insert"><td><a href="#verb-definition-insert" title="Indicates that the actor has inserted the object into the target."><tt>insert</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-install"><td><a href="#verb-definition-install" title="Indicates that the actor has installed the object, as in installing an application."><tt>install</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-interact"><td><a href="#verb-definition-interact" title="Indicates that the actor has interacted with the object. For instance, when one person interacts with another."><tt>interact</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-invite"><td><a href="#verb-definition-invite" title="Indicates that the actor has invited the object, typically a person object, to join or participate in the object described by&#xA; the target. The target could, for instance, be an event, group or a service."><tt>invite</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-join"><td><a href="#verb-definition-join" title="Indicates that the actor has become a member of the object. This specification only defines the meaning of this verb when the &#xA; object of the Activity has an objectType of group, though implementors need to be prepared to handle other types of objects."><tt>join</tt></a></td><td><ul><a href="#pump.io-verb-join" title="Social graph management, join a group">✓</a></ul></td></tr><tr id="verb-implementation-leave"><td><a href="#verb-definition-leave" title="Indicates that the actor has left the object. For instance, a Person leaving a Group or checking-out of a Place."><tt>leave</tt></a></td><td><ul><a href="#pump.io-verb-leave" title="Social graph management, leave a group">✓</a></ul></td></tr><tr id="verb-implementation-like"><td><a href="#verb-definition-like" title="Indicates that the actor marked the object as an item of special interest. The &#34;like&#34; verb is considered to be an alias of &#34;favorite&#34;. The two verb are semantically identical."><tt>like</tt></a></td><td><ul><a href="#pump.io-verb-like" title="Synoym for &#34;favorite&#34;.">✓</a></ul></td></tr><tr id="verb-implementation-listen"><td><a href="#verb-definition-listen" title="Indicates that the actor has listened to the object. This is typically only applicable for objects representing audio content, such as music, an audio-book, or a radio broadcast. The &#34;listen&#34; verb is a more specific form of the &#34;consume&#34;, &#34;experience&#34; and &#34;play&#34; verbs."><tt>listen</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-lose"><td><a href="#verb-definition-lose" title="Indicates that the actor has lost the object. For instance, if a person loses a game."><tt>lose</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-make-friend"><td><a href="#verb-definition-make-friend" title="Indicates the creation of a friendship that is reciprocated by the object. Since this verb implies an activity on the part of its object, processors MUST NOT accept activities with this verb unless they are able to verify through some external means that there is in fact a reciprocated connection. For example, a processor may have received a guarantee from a particular publisher that the publisher will only use this Verb in cases where a reciprocal relationship exists."><tt>make-friend</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-open"><td><a href="#verb-definition-open" title="Indicates that the actor has opened the object. For instance, the object could represent a ticket being tracked in an issue management system."><tt>open</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-play"><td><a href="#verb-definition-play" title="Indicates that the actor spent some time enjoying the object. For example, if the object is a video this indicates that the subject watched all or part of the video. The &#34;play&#34; verb is a more specific form of the &#34;consume&#34; verb."><tt>play</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-present"><td><a href="#verb-definition-present" title="Indicates that the actor has presented the object. For instance, when a person gives a presentation at a conference."><tt>present</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-purchase"><td><a href="#verb-definition-purchase" title="Indicates that the actor has purchased the object. If a target is specified, in indicates the entity from which the object was purchased."><tt>purchase</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-qualify"><td><a href="#verb-definition-qualify" title="Indicates that the actor has qualified for the object. If a target is specified, it indicates the context within which the qualification applies."><tt>qualify</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-read"><td><a href="#verb-definition-read" title="Indicates that the actor read the object. This is typically only applicable for objects representing printed or written content, such as a book, a message or a comment. The &#34;read&#34; verb is a more specific form of the &#34;consume&#34;, &#34;experience&#34; and &#34;play&#34; verbs."><tt>read</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-receive"><td><a href="#verb-definition-receive" title="Indicates that the actor is receiving an object. Examples include a person receiving a badge object. The object identifies the object being received."><tt>receive</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-reject"><td><a href="#verb-definition-reject" title="Indicates that the actor has rejected the object."><tt>reject</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-remove"><td><a href="#verb-definition-remove" title="Indicates that the actor has removed the object from the target."><tt>remove</tt></a></td><td><ul><a href="#pump.io-verb-remove" title="Social graph management, remove from contact list">✓</a></ul></td></tr><tr id="verb-implementation-remove-friend"><td><a href="#verb-definition-remove-friend" title="Indicates that the actor has removed the object from the collection of friends."><tt>remove-friend</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-replace"><td><a href="#verb-definition-replace" title="Indicates that the actor has replaced the target with the object."><tt>replace</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-request"><td><a href="#verb-definition-request" title="Indicates that the actor has requested the object. If a target is specified, it indicates the entity from which the object is being  requested."><tt>request</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-request-friend"><td><a href="#verb-definition-request-friend" title="Indicates the creation of a friendship that has not yet been reciprocated by  the object."><tt>request-friend</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-resolve"><td><a href="#verb-definition-resolve" title="Indicates that the actor has resolved the object. For instance, the object could represent a ticket being tracked in an issue management system."><tt>resolve</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-retract"><td><a href="#verb-definition-retract" title="Indicates that the actor has retracted the object. For instance, if an actor wishes to retract a previously published activity, the object would be the previously published activity that is being retracted."><tt>retract</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-return"><td><a href="#verb-definition-return" title="Indicates that the actor has returned the object. If a target is specified, it indicates the entity to which the object was returned."><tt>return</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-rsvp-maybe"><td><a href="#verb-definition-rsvp-maybe" title="The &#34;possible RSVP&#34; verb indicates that the actor has made a possible RSVP for the object. This specification only defines the meaning of this verb when its object is an event, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator."><tt>rsvp-maybe</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-rsvp-no"><td><a href="#verb-definition-rsvp-no" title="The &#34;negative RSVP&#34; verb indicates that the actor has made a negative RSVP for the object. This specification only defines the meaning of this verb when its object is an event, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator."><tt>rsvp-no</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-rsvp-yes"><td><a href="#verb-definition-rsvp-yes" title="The &#34;positive RSVP&#34; verb indicates that the actor has made a positive RSVP for an object. This specification only defines the meaning of this verb when its object is an event, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator."><tt>rsvp-yes</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-satisfy"><td><a href="#verb-definition-satisfy" title="Indicates that the actor has satisfied the object. If a target is specified, it indicate the context within which the object was satisfied. For instance, if a person satisfies the requirements for a particular challenge, the person is the actor; the requirement is the object; and the challenge is the target."><tt>satisfy</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-save"><td><a href="#verb-definition-save" title="Indicates that the actor has called out the object as being of interest primarily to him- or herself. Though this action MAY be shared publicly, the implication is that the object has been saved primarily for the actor's own benefit rather than to show it to others as would be indicated by the &#34;share&#34; verb."><tt>save</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-schedule"><td><a href="#verb-definition-schedule" title="Indicates that the actor has scheduled the object. For instance, scheduling a meeting."><tt>schedule</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-search"><td><a href="#verb-definition-search" title="Indicates that the actor is or has searched for the object. If a target is specified, it indicates the context within which the search is or has been conducted."><tt>search</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-sell"><td><a href="#verb-definition-sell" title="Indicates that the actor has sold the object. If a target is specified, it indicates the entity to which the object was sold."><tt>sell</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-send"><td><a href="#verb-definition-send" title="Indicates that the actor has sent the object. If a target is specified, it indicates the entity to which the object was sent."><tt>send</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-share"><td><a href="#verb-definition-share" title="Indicates that the actor has called out the object to readers. In most cases, the actor did not create the object being shared, but is instead drawing attention to it."><tt>share</tt></a></td><td><ul><a href="#pump.io-verb-share" title="Response management">✓</a></ul></td></tr><tr id="verb-implementation-sponsor"><td><a href="#verb-definition-sponsor" title="Indicates that the actor has sponsored the object. If a target is specified, it indicates the context within which the sponsorship is offered. For instance, a company can sponsor an event; or an individual can sponsor a project; etc."><tt>sponsor</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-start"><td><a href="#verb-definition-start" title="Indicates that the actor has started the object. For instance, when a person starts a project."><tt>start</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-stop-following"><td><a href="#verb-definition-stop-following" title="Indicates that the actor has stopped following the object."><tt>stop-following</tt></a></td><td><ul><a href="#pump.io-verb-stop-following" title="Social graph management">✓</a></ul></td></tr><tr id="verb-implementation-submit"><td><a href="#verb-definition-submit" title="Indicates that the actor has submitted the object. If a target is specified, it indicates the entity to which the object was submitted."><tt>submit</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-tag"><td><a href="#verb-definition-tag" title="Indicates that the actor has associated the object with the target. For example, if the actor specifies that a particular user appears in a photo. the object is the user and the target is the photo."><tt>tag</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-terminate"><td><a href="#verb-definition-terminate" title="Indicates that the actor has terminated the object. "><tt>terminate</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-tie"><td><a href="#verb-definition-tie" title="Indicates that the actor has neither won or lost the object. This verb is generally only applicable when the object represents some form of competition, such as a game."><tt>tie</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-unfavorite"><td><a href="#verb-definition-unfavorite" title="Indicates that the actor has removed the object from the collection of favorited items."><tt>unfavorite</tt></a></td><td><ul><a href="#pump.io-verb-unfavorite" title="Response management">✓</a></ul></td></tr><tr id="verb-implementation-unlike"><td><a href="#verb-definition-unlike" title="Indicates that the actor has removed the object from the collection of liked items."><tt>unlike</tt></a></td><td><ul><a href="#pump.io-verb-unlike" title="Synonym for &#34;unfavorite&#34;">✓</a></ul></td></tr><tr id="verb-implementation-unsatisfy"><td><a href="#verb-definition-unsatisfy" title="Indicates that the actor has not satisfied the object. If a target is specified, it indicates the context within which the object was not satisfied. For instance, if a person fails to satisfy the requirements of some particular challenge, the person is the actor; the requirement is the object and the challenge is the target."><tt>unsatisfy</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-unsave"><td><a href="#verb-definition-unsave" title="Indicates that the actor has removed the object from the collection of saved items."><tt>unsave</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-unshare"><td><a href="#verb-definition-unshare" title="Indicates that the actor is no longer sharing the object. If a target is specified, it indicates the entity with whom the object is no longer being shared."><tt>unshare</tt></a></td><td><ul><a href="#pump.io-verb-unshare" title="Response management">✓</a></ul></td></tr><tr id="verb-implementation-update"><td><a href="#verb-definition-update" title="The &#34;update&#34; verb indicates that the actor has modified the object. Use of the &#34;update&#34; verb is generally reserved to indicate modifications to existing objects or data such as changing an existing user's profile information."><tt>update</tt></a></td><td><ul><a href="#pump.io-verb-update" title="CRUD on content">✓</a></ul></td></tr><tr id="verb-implementation-use"><td><a href="#verb-definition-use" title="Indicates that the actor has used the object in some manner."><tt>use</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-watch"><td><a href="#verb-definition-watch" title="Indicates that the actor has watched the object. This verb is typically applicable only when the object represents dynamic, visible content such as a movie, a television show or a public performance. This verb is a more specific form of the verbs &#34;experience&#34;, &#34;play&#34; and &#34;consume&#34;."><tt>watch</tt></a></td><td><ul></ul></td></tr><tr id="verb-implementation-win"><td><a href="#verb-definition-win" title="Indicates that the actor has won the object. This verb is typically applicable only when the object represents some form of competition, such as a game."><tt>win</tt></a></td><td><ul></ul></td></tr></tbody></table></section><section id="AS1-object-implementations"><h2>Activity Streams 1.0 Objects</h2></section></section><section id="AS1-implementations"><h2>Activity Streams 1.0 Implementations</h2><section id="pump.io"><h2>pump.io</h2><p>As <a href="http://lists.w3.org/Archives/Public/public-socialweb/2014Nov/0021.html">reported by Evan Prodromou</a>, <a href="http://pump.io/">pump.io</a> supports a number of AS1 verbs as semantically meaningful, in the sense that pump.io will act upon them. These verbs are the following (excluding "post", which is not part of the AS1 vocabulary discussed in this document):</p><ul><li id="pump.io-verb-create"><a href="#verb-definition-create" title="Indicates that the actor has created the object.">create</a> (CRUD on content, synonym for "post")</li><li id="pump.io-verb-follow"><a href="#verb-definition-follow" title="Indicates that the actor began following the activity of the object. In most cases, the objectType will be a &#34;person&#34;, but it can potentially be of any type that can sensibly generate activity. Processors MAY ignore (silently drop) successive identical &#34;follow&#34; activities.">follow</a> (Social graph management)</li><li id="pump.io-verb-stop-following"><a href="#verb-definition-stop-following" title="Indicates that the actor has stopped following the object.">stop-following</a> (Social graph management)</li><li id="pump.io-verb-favorite"><a href="#verb-definition-favorite" title="Indicates that the actor marked the object as an item of special interest.">favorite</a> (Response management)</li><li id="pump.io-verb-like"><a href="#verb-definition-like" title="Indicates that the actor marked the object as an item of special interest. The &#34;like&#34; verb is considered to be an alias of &#34;favorite&#34;. The two verb are semantically identical.">like</a> (Synoym for "favorite".)</li><li id="pump.io-verb-unfavorite"><a href="#verb-definition-unfavorite" title="Indicates that the actor has removed the object from the collection of favorited items.">unfavorite</a> (Response management)</li><li id="pump.io-verb-unlike"><a href="#verb-definition-unlike" title="Indicates that the actor has removed the object from the collection of liked items.">unlike</a> (Synonym for "unfavorite")</li><li id="pump.io-verb-delete"><a href="#verb-definition-delete" title="Indicates that the actor has deleted the object. This implies, but does not require, the permanent destruction of the object.">delete</a> (CRUD on content)</li><li id="pump.io-verb-update"><a href="#verb-definition-update" title="The &#34;update&#34; verb indicates that the actor has modified the object. Use of the &#34;update&#34; verb is generally reserved to indicate modifications to existing objects or data such as changing an existing user's profile information.">update</a> (CRUD on content)</li><li id="pump.io-verb-add"><a href="#verb-definition-add" title="Indicates that the actor has added the object to the target. For instance, adding a photo to an album.">add</a> (Social graph management, add to contact list)</li><li id="pump.io-verb-remove"><a href="#verb-definition-remove" title="Indicates that the actor has removed the object from the target.">remove</a> (Social graph management, remove from contact list)</li><li id="pump.io-verb-share"><a href="#verb-definition-share" title="Indicates that the actor has called out the object to readers. In most cases, the actor did not create the object being shared, but is instead drawing attention to it.">share</a> (Response management)</li><li id="pump.io-verb-unshare"><a href="#verb-definition-unshare" title="Indicates that the actor is no longer sharing the object. If a target is specified, it indicates the entity with whom the object is no longer being shared.">unshare</a> (Response management)</li><li id="pump.io-verb-join"><a href="#verb-definition-join" title="Indicates that the actor has become a member of the object. This specification only defines the meaning of this verb when the &#xA; object of the Activity has an objectType of group, though implementors need to be prepared to handle other types of objects.">join</a> (Social graph management, join a group)</li><li id="pump.io-verb-leave"><a href="#verb-definition-leave" title="Indicates that the actor has left the object. For instance, a Person leaving a Group or checking-out of a Place.">leave</a> (Social graph management, leave a group)</li></ul><p>It should be noted that pump.io will accept, store, and forward all other verbs as well. But for those other verbs, there are no special semantics associated that will trigger internal actions in pump.io.</p></section></section><section id="acknowledgements"><h2>Acknowledgements</h2><p>Thanks for contributions, input, and/or suggestions by the following people: Evan Prodromou</p></section><section id="AS1-verbs" class="appendix"><h2>Activity Streams 1.0 Verbs</h2><table><thead><tr><th>Name</th><th>Description</th><th>Example</th></tr></thead><tbody><tr id="verb-definition-accept"><td><a href="#verb-implementation-accept" title="look up implementations"><tt>accept</tt></a></td><td>Indicates that that the actor has accepted the object. For instance, a person accepting an award, or accepting an assignment.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person", 
       "displayName": "Sally" },
@@ -42,7 +42,7 @@
       "objectType": "job", 
       "displayName": "Director of Marketing" },
     "title": "Sally accepted the Director of Marketing job." }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-access"><td><tt>access</tt></td><td>Indicates that the actor has accessed the object. For instance, a person accessing a room, or accessing a file.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-access"><td><a href="#verb-implementation-access" title="look up implementations"><tt>access</tt></a></td><td>Indicates that the actor has accessed the object. For instance, a person accessing a room, or accessing a file.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person", 
       "displayName": "Joe" },
@@ -52,7 +52,7 @@
       "displayName": "4Q2012 Sales Forecast.xls" },
     "published": "2012-12-12T12:12:12Z",
     "title": "Joe accessed the file \"4Q2012 Sales Forecast.xls\"" }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-acknowledge"><td><tt>acknowledge</tt></td><td>Indicates that the actor has acknowledged the object. This effectively signals that the actor is aware of the object's existence.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-acknowledge"><td><a href="#verb-implementation-acknowledge" title="look up implementations"><tt>acknowledge</tt></a></td><td>Indicates that the actor has acknowledged the object. This effectively signals that the actor is aware of the object's existence.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person", 
       "displayName": "Sally" },
@@ -61,7 +61,7 @@
       "objectType": "issue", 
       "displayName": "#123: There is a problem with the build" },
     "Sally acknowledged Issue #123" }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-add"><td><tt>add</tt></td><td>Indicates that the actor has added the object to the target. For instance, adding a photo to an album.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-add"><td><a href="#verb-implementation-add" title="look up implementations"><tt>add</tt></a></td><td>Indicates that the actor has added the object to the target. For instance, adding a photo to an album.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person", 
       "displayName": "Joe" },
@@ -75,7 +75,7 @@
       "objectType": "collection",
       "displayName": "Joe's Photo Album",
       "objectTypes": ["image"] } }
-      </pre></td><td><ul><li><a href="#pump.io-verb-add">pump.io</a> (Social graph management, add to contact list)</li></ul></td></tr><tr id="verb-agree"><td><tt>agree</tt></td><td>Indicates that the actor agrees with the object. For example, a person agreeing with an argument, or expressing agreement with a particular issue.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-agree"><td><a href="#verb-implementation-agree" title="look up implementations"><tt>agree</tt></a></td><td>Indicates that the actor agrees with the object. For example, a person agreeing with an argument, or expressing agreement with a particular issue.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person", 
       "displayName": "Sally" },
@@ -83,7 +83,7 @@
     "object": {
       "objectType": "article", 
       "displayName": "Some Random Article Online" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-append"><td><tt>append</tt></td><td>Indicates that the actor has appended the object to the target. For instance, a person appending a new record to a database.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-append"><td><a href="#verb-implementation-append" title="look up implementations"><tt>append</tt></a></td><td>Indicates that the actor has appended the object to the target. For instance, a person appending a new record to a database.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person", 
       "displayName": "Joe" },
@@ -93,7 +93,7 @@
     "target": {
       "objectType": "file", 
       "displayName": "log.txt" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-approve"><td><tt>approve</tt></td><td>Indicates that the actor has approved the object. For instance, a manager might approve a travel request.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-approve"><td><a href="#verb-implementation-approve" title="look up implementations"><tt>approve</tt></a></td><td>Indicates that the actor has approved the object. For instance, a manager might approve a travel request.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person", 
       "displayName": "Sally" },
@@ -105,7 +105,7 @@
       "object": {
         "objectType":"group", 
         "displayName": "Administrators" } } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-archive"><td><tt>archive</tt></td><td>Indicates that the actor has archived the object.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-archive"><td><a href="#verb-implementation-archive" title="look up implementations"><tt>archive</tt></a></td><td>Indicates that the actor has archived the object.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person", 
       "displayName": "Joe" },
@@ -113,7 +113,7 @@
     "object": {
       "objectType": "file", 
       "displayName": "4Q2012 Sales Forecast.xls" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-assign"><td><tt>assign</tt></td><td>Indicates that the actor has assigned the object to the target.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-assign"><td><a href="#verb-implementation-assign" title="look up implementations"><tt>assign</tt></a></td><td>Indicates that the actor has assigned the object to the target.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person", 
       "displayName": "Sally" },
@@ -125,7 +125,7 @@
       "objectType": "person",
       "displayName": "Joe" },
     "title": "Sally assigned Issue #123 to Joe" }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-at"><td><tt>at</tt></td><td>Indicates that the actor is currently located at the object. For instance, a person being at a specific physical location.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-at"><td><a href="#verb-implementation-at" title="look up implementations"><tt>at</tt></a></td><td>Indicates that the actor is currently located at the object. For instance, a person being at a specific physical location.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person", 
       "displayName": "Joe" },
@@ -133,7 +133,7 @@
     "object": {
       "objectType": "place",
       "displayName": "Acme, Co." } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-attach"><td><tt>attach</tt></td><td>Indicates that the actor has attached the object to the target.For instance, a person attaching a file to a wiki page or an email.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-attach"><td><a href="#verb-implementation-attach" title="look up implementations"><tt>attach</tt></a></td><td>Indicates that the actor has attached the object to the target.For instance, a person attaching a file to a wiki page or an email.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person", 
       "displayName": "Sally" },
@@ -145,7 +145,7 @@
       "objectType": "issue",
       "displayName": "Issue #123" },
     "title": "Sally added an attachment to Issue #123" }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-attend"><td><tt>attend</tt></td><td>Indicates that the actor has attended the object. For instance, a person attending a meeting.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-attend"><td><a href="#verb-implementation-attend" title="look up implementations"><tt>attend</tt></a></td><td>Indicates that the actor has attended the object. For instance, a person attending a meeting.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -154,7 +154,7 @@
   "object": {
     "objectType": "event",
     "displayName": "Sally's Meeting" } }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-author"><td><tt>author</tt></td><td>Indicates that the actor has authored the object. Note that this is a more specific form of the verb "create".</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-author"><td><a href="#verb-implementation-author" title="look up implementations"><tt>author</tt></a></td><td>Indicates that the actor has authored the object. Note that this is a more specific form of the verb "create".</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -163,7 +163,7 @@
   "object": {
     "objectType": "file",
     "displayName": "4Q2012 Sales Forecast.xls" } }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-authorize"><td><tt>authorize</tt></td><td>Indicates that the actor has authorized the object. If a target is specified, it means that the authorization is specifically in regards to the target. For instance, a service can authorize a person to access a given application; in which case the actor is the service, the object is the person, and the target is the application. In contrast, a person can authorize a request; in which case the actor is the person and the object is the request and there might be no explicit target.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-authorize"><td><a href="#verb-implementation-authorize" title="look up implementations"><tt>authorize</tt></a></td><td>Indicates that the actor has authorized the object. If a target is specified, it means that the authorization is specifically in regards to the target. For instance, a service can authorize a person to access a given application; in which case the actor is the service, the object is the person, and the target is the application. In contrast, a person can authorize a request; in which case the actor is the person and the object is the request and there might be no explicit target.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -178,7 +178,7 @@
     "object": {
       "objectType": "place",
       "displayName": "Joe's Home" } } }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-borrow"><td><tt>borrow</tt></td><td>Indicates that the actor has borrowed the object. If a target is specified, it identifies the entity from which the object was borrowed. For instance, if a person borrows a book from a library, the person is the actor, the book is the object and the library is the target.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-borrow"><td><a href="#verb-implementation-borrow" title="look up implementations"><tt>borrow</tt></a></td><td>Indicates that the actor has borrowed the object. If a target is specified, it identifies the entity from which the object was borrowed. For instance, if a person borrows a book from a library, the person is the actor, the book is the object and the library is the target.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -191,7 +191,7 @@
     "objectType": "person",
     "displayName": "Joe" },
   "title": "Sally borrowed the book 'Cloud Atlas' from Joe" }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-build"><td><tt>build</tt></td><td>Indicates that the actor has built the object. For example, if a person builds a model or compiles code.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-build"><td><a href="#verb-implementation-build" title="look up implementations"><tt>build</tt></a></td><td>Indicates that the actor has built the object. For example, if a person builds a model or compiles code.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -200,7 +200,7 @@
   "object": {
     "objectType": "application",
     "displayName": "MyApp Builder 12345" } }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-cancel"><td><tt>cancel</tt></td><td>Indicates that the actor has canceled the object. For instance, canceling a calendar event.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-cancel"><td><a href="#verb-implementation-cancel" title="look up implementations"><tt>cancel</tt></a></td><td>Indicates that the actor has canceled the object. For instance, canceling a calendar event.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -210,45 +210,7 @@
     "objectType": "offer",
     "displayName": "Free Money!" },
   "title": "Sally cancelled the offer for free money." }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-close"><td><tt>close</tt></td><td>Indicates that the actor has closed the object. For instance, the object could represent a ticket being tracked in an issue management system.</td><td><pre>
-{
-  "actor": {
-    "objectType": "person", 
-    "displayName": "Joe" },
-  "verb": "close",
-  "object": {
-    "objectType": "issue",
-    "displayName": "Issue #123" },
-  "title": "Joe closed issue #123" }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-complete"><td><tt>complete</tt></td><td>Indicates that the actor has completed the object.</td><td><pre>
-{
-  "actor": {
-    "objectType": "person", 
-    "displayName": "Sally" },
-  "verb": "complete",
-  "object": {
-    "objectType": "process",
-    "displayName": "Some long process" } }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-confirm"><td><tt>confirm</tt></td><td>Indicates that the actor has confirmed or agrees with the object. For instance, a software developer might confirm an issue reported against a product.</td><td><pre>
-{
-  "actor": {
-    "objectType": "person", 
-    "displayName": "Joe" },
-  "verb": "confirm",
-  "object": {
-    "objectType": "issue",
-    "displayName": "Issue #123" },
-  "title": "Joe confirmed issue #123" }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-consume"><td><tt>consume</tt></td><td>Indicates that the actor has consumed the object. The specific meaning is dependent largely on the object's type. For instance, an actor may "consume" an audio object, indicating that the actor has listened to it; or an actor may "consume" a book, indicating that the book has been read. As such, the "consume" verb is a more generic form of other more specific verbs such as "read" and "play".</td><td><pre>
-{
-  "actor": {
-    "objectType": "person", 
-    "displayName": "Sally" },
-  "verb": "consume",
-  "object": {
-    "objectType": "product",
-    "displayName": "Some amazing product" } }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-checkin"><td><tt>checkin</tt></td><td>Indicates that the actor has checked-in to the object. For instance, a person checking-in to a Place.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-checkin"><td><a href="#verb-implementation-checkin" title="look up implementations"><tt>checkin</tt></a></td><td>Indicates that the actor has checked-in to the object. For instance, a person checking-in to a Place.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -258,7 +220,45 @@
     "objectType": "place",
     "displayName": "Acme, Co" },
   "title": "Joe checked in at Acme, Co" }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-create"><td><tt>create</tt></td><td>Indicates that the actor has created the object.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-close"><td><a href="#verb-implementation-close" title="look up implementations"><tt>close</tt></a></td><td>Indicates that the actor has closed the object. For instance, the object could represent a ticket being tracked in an issue management system.</td><td><pre class="highlight">
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Joe" },
+  "verb": "close",
+  "object": {
+    "objectType": "issue",
+    "displayName": "Issue #123" },
+  "title": "Joe closed issue #123" }
+    </pre></td></tr><tr id="verb-definition-complete"><td><a href="#verb-implementation-complete" title="look up implementations"><tt>complete</tt></a></td><td>Indicates that the actor has completed the object.</td><td><pre class="highlight">
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Sally" },
+  "verb": "complete",
+  "object": {
+    "objectType": "process",
+    "displayName": "Some long process" } }
+    </pre></td></tr><tr id="verb-definition-confirm"><td><a href="#verb-implementation-confirm" title="look up implementations"><tt>confirm</tt></a></td><td>Indicates that the actor has confirmed or agrees with the object. For instance, a software developer might confirm an issue reported against a product.</td><td><pre class="highlight">
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Joe" },
+  "verb": "confirm",
+  "object": {
+    "objectType": "issue",
+    "displayName": "Issue #123" },
+  "title": "Joe confirmed issue #123" }
+    </pre></td></tr><tr id="verb-definition-consume"><td><a href="#verb-implementation-consume" title="look up implementations"><tt>consume</tt></a></td><td>Indicates that the actor has consumed the object. The specific meaning is dependent largely on the object's type. For instance, an actor may "consume" an audio object, indicating that the actor has listened to it; or an actor may "consume" a book, indicating that the book has been read. As such, the "consume" verb is a more generic form of other more specific verbs such as "read" and "play".</td><td><pre class="highlight">
+{
+  "actor": {
+    "objectType": "person", 
+    "displayName": "Sally" },
+  "verb": "consume",
+  "object": {
+    "objectType": "product",
+    "displayName": "Some amazing product" } }
+    </pre></td></tr><tr id="verb-definition-create"><td><a href="#verb-implementation-create" title="look up implementations"><tt>create</tt></a></td><td>Indicates that the actor has created the object.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -267,7 +267,7 @@
   "object": {
     "objectType": "product",
     "displayName": "Some amazing product" } }
-    </pre></td><td><ul><li><a href="#pump.io-verb-create">pump.io</a> (CRUD on content, synonym for "post")</li></ul></td></tr><tr id="verb-delete"><td><tt>delete</tt></td><td>Indicates that the actor has deleted the object. This implies, but does not require, the permanent destruction of the object.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-delete"><td><a href="#verb-implementation-delete" title="look up implementations"><tt>delete</tt></a></td><td>Indicates that the actor has deleted the object. This implies, but does not require, the permanent destruction of the object.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -277,7 +277,7 @@
     "objectType": "file",
     "displayName": "4Q2012 Sales Forecast.xls" },
   "title": "Joe is probably going to get fired." }
-    </pre></td><td><ul><li><a href="#pump.io-verb-delete">pump.io</a> (CRUD on content)</li></ul></td></tr><tr id="verb-deliver"><td><tt>deliver</tt></td><td>Indicates that the actor has delivered the object. For example, delivering a package.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-deliver"><td><a href="#verb-implementation-deliver" title="look up implementations"><tt>deliver</tt></a></td><td>Indicates that the actor has delivered the object. For example, delivering a package.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -290,7 +290,7 @@
   "target": {
     "objectType": "person",
     "displayName": "Joe's Boss" } }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-deny"><td><tt>deny</tt></td><td>Indicates that the actor has denied the object. For example, a manager may deny a travel request.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-deny"><td><a href="#verb-implementation-deny" title="look up implementations"><tt>deny</tt></a></td><td>Indicates that the actor has denied the object. For example, a manager may deny a travel request.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -305,7 +305,7 @@
     "object": {
       "objectType": "file",
       "displayName": "4Q2012 Sales Forecast.xls" } } }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-disagree"><td><tt>disagree</tt></td><td>Indicates that the actor disagrees with the object.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-disagree"><td><a href="#verb-implementation-disagree" title="look up implementations"><tt>disagree</tt></a></td><td>Indicates that the actor disagrees with the object.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -325,7 +325,7 @@
       "object": {
         "objectType": "file",
         "displayName": "4Q2012 Sales Forecast.xls" } } } }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-dislike"><td><tt>dislike</tt></td><td>Indicates that the actor dislikes the object. Note that the "dislike" verb is distinct from the "unlike" verb which assumes that the object had been previously "liked".</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-dislike"><td><a href="#verb-implementation-dislike" title="look up implementations"><tt>dislike</tt></a></td><td>Indicates that the actor dislikes the object. Note that the "dislike" verb is distinct from the "unlike" verb which assumes that the object had been previously "liked".</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -334,7 +334,7 @@
   "object": {
     "objectType": "person",
     "displayName": "Sally" } }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-experience"><td><tt>experience</tt></td><td>Indicates that the actor has experienced the object in some manner. Note that, depending on the specific object types used for both the actor and object, the meaning of this verb can overlap that of the "consume" and "play" verbs. For instance, a person might "experience" a movie; or "play" the movie; or "consume" the movie. The "experience" verb can be considered a more generic form of other more specific verbs as "consume", "play", "watch", "listen", and "read"</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-experience"><td><a href="#verb-implementation-experience" title="look up implementations"><tt>experience</tt></a></td><td>Indicates that the actor has experienced the object in some manner. Note that, depending on the specific object types used for both the actor and object, the meaning of this verb can overlap that of the "consume" and "play" verbs. For instance, a person might "experience" a movie; or "play" the movie; or "consume" the movie. The "experience" verb can be considered a more generic form of other more specific verbs as "consume", "play", "watch", "listen", and "read"</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -343,7 +343,7 @@
   "object": {
     "objectType": "event",
     "displayName": "Disciplinary Action for Joe" } }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-favorite"><td><tt>favorite</tt></td><td>Indicates that the actor marked the object as an item of special interest.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-favorite"><td><a href="#verb-implementation-favorite" title="look up implementations"><tt>favorite</tt></a></td><td>Indicates that the actor marked the object as an item of special interest.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -352,7 +352,7 @@
   "object": {
     "objectType": "person",
     "displayName": "Sally" } }
-    </pre></td><td><ul><li><a href="#pump.io-verb-favorite">pump.io</a> (Response management)</li></ul></td></tr><tr id="verb-find"><td><tt>find</tt></td><td>Indicates that the actor has found the object.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-find"><td><a href="#verb-implementation-find" title="look up implementations"><tt>find</tt></a></td><td>Indicates that the actor has found the object.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -364,9 +364,9 @@
   "location": {
     "objectType": "place",
     "displayName": "Sally's Computer" } }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-flag-as-inappropriate"><td><tt>flag-as-inappropriate</tt></td><td>Indicates that the actor has flagged the object as being 
+    </pre></td></tr><tr id="verb-definition-flag-as-inappropriate"><td><a href="#verb-implementation-flag-as-inappropriate" title="look up implementations"><tt>flag-as-inappropriate</tt></a></td><td>Indicates that the actor has flagged the object as being 
  inappropriate for some reason. When using this verb, the 
- context property can be used to provide additional detail about why the object has been flagged.</td><td><pre>
+ context property can be used to provide additional detail about why the object has been flagged.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -381,7 +381,7 @@
     "objectType": "issue",
     "displayName": "Issue #125",
     "types": ["http://example.org/violation-of-corporate-policy"] } }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-follow"><td><tt>follow</tt></td><td>Indicates that the actor began following the activity of the object. In most cases, the objectType will be a "person", but it can potentially be of any type that can sensibly generate activity. Processors MAY ignore (silently drop) successive identical "follow" activities.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-follow"><td><a href="#verb-implementation-follow" title="look up implementations"><tt>follow</tt></a></td><td>Indicates that the actor began following the activity of the object. In most cases, the objectType will be a "person", but it can potentially be of any type that can sensibly generate activity. Processors MAY ignore (silently drop) successive identical "follow" activities.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -390,7 +390,7 @@
   "object": {
     "objectType": "issue",
     "displayName": "Issue #125" } }
-    </pre></td><td><ul><li><a href="#pump.io-verb-follow">pump.io</a> (Social graph management)</li></ul></td></tr><tr id="verb-give"><td><tt>give</tt></td><td>Indicates that the actor is giving an object to the target. Examples include one person giving a badge object to another person. The object identifies the object being given. The target identifies the receiver.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-give"><td><a href="#verb-implementation-give" title="look up implementations"><tt>give</tt></a></td><td>Indicates that the actor is giving an object to the target. Examples include one person giving a badge object to another person. The object identifies the object being given. The target identifies the receiver.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -406,7 +406,7 @@
         "displayName": "Joe" },
       { "objectType": "person",
         "displayName": "Sally" } ] } }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-host"><td><tt>host</tt></td><td>Indicates that the actor is hosting the object. As in hosting an event, or hosting a service.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-host"><td><a href="#verb-implementation-host" title="look up implementations"><tt>host</tt></a></td><td>Indicates that the actor is hosting the object. As in hosting an event, or hosting a service.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -415,7 +415,7 @@
   "object": {
     "objectType": "event",
     "displayName": "Job Interview" } }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-ignore"><td><tt>ignore</tt></td><td>Indicates that the actor has ignored the object. For instance, this verb may be used when an actor has ignored a friend request, in which case the object may be the request-friend activity.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-ignore"><td><a href="#verb-implementation-ignore" title="look up implementations"><tt>ignore</tt></a></td><td>Indicates that the actor has ignored the object. For instance, this verb may be used when an actor has ignored a friend request, in which case the object may be the request-friend activity.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -424,7 +424,7 @@
   "object": {
     "objectType": "note",
     "displayName": "Joe's request for his job back." } }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-insert"><td><tt>insert</tt></td><td>Indicates that the actor has inserted the object into the target.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-insert"><td><a href="#verb-implementation-insert" title="look up implementations"><tt>insert</tt></a></td><td>Indicates that the actor has inserted the object into the target.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -436,7 +436,7 @@
   "target": {
     "objectType": "file",
     "displayName": "2013 Corporate Policy Updates.doc" } }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-install"><td><tt>install</tt></td><td>Indicates that the actor has installed the object, as in installing an application.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-install"><td><a href="#verb-implementation-install" title="look up implementations"><tt>install</tt></a></td><td>Indicates that the actor has installed the object, as in installing an application.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -447,7 +447,7 @@
     "displayName": "Approved Software Scanning Tool",
     "location": {
       "displayName": "All computers in Building A" } } }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-interact"><td><tt>interact</tt></td><td>Indicates that the actor has interacted with the object. For instance, when one person interacts with another.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-interact"><td><a href="#verb-implementation-interact" title="look up implementations"><tt>interact</tt></a></td><td>Indicates that the actor has interacted with the object. For instance, when one person interacts with another.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -457,8 +457,8 @@
     "objectType": "person",
     "displayName": "Laura" },
   "title": "Bob called Laura." }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-invite"><td><tt>invite</tt></td><td>Indicates that the actor has invited the object, typically a person object, to join or participate in the object described by
- the target. The target could, for instance, be an event, group or a service.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-invite"><td><a href="#verb-implementation-invite" title="look up implementations"><tt>invite</tt></a></td><td>Indicates that the actor has invited the object, typically a person object, to join or participate in the object described by
+ the target. The target could, for instance, be an event, group or a service.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -470,8 +470,8 @@
   "target": {
     "objectType": "event",
     "displayName": "Job Interview" } }
-    </pre></td><td><ul></ul></td></tr><tr id="verb-join"><td><tt>join</tt></td><td>Indicates that the actor has become a member of the object. This specification only defines the meaning of this verb when the 
- object of the Activity has an objectType of group, though implementors need to be prepared to handle other types of objects.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-join"><td><a href="#verb-implementation-join" title="look up implementations"><tt>join</tt></a></td><td>Indicates that the actor has become a member of the object. This specification only defines the meaning of this verb when the 
+ object of the Activity has an objectType of group, though implementors need to be prepared to handle other types of objects.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -480,7 +480,7 @@
   "object": {
     "objectType": "organization",
     "displayName": "Acme, Co" } }
-    </pre></td><td><ul><li><a href="#pump.io-verb-join">pump.io</a> (Social graph management, join a group)</li></ul></td></tr><tr id="verb-leave"><td><tt>leave</tt></td><td>Indicates that the actor has left the object. For instance, a Person leaving a Group or checking-out of a Place.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-leave"><td><a href="#verb-implementation-leave" title="look up implementations"><tt>leave</tt></a></td><td>Indicates that the actor has left the object. For instance, a Person leaving a Group or checking-out of a Place.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -489,7 +489,7 @@
   "object": {
     "objectType": "organization",
     "displayName": "Other, Co" } }
-    </pre></td><td><ul><li><a href="#pump.io-verb-leave">pump.io</a> (Social graph management, leave a group)</li></ul></td></tr><tr id="verb-like"><td><tt>like</tt></td><td>Indicates that the actor marked the object as an item of special interest. The "like" verb is considered to be an alias of "favorite". The two verb are semantically identical.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-like"><td><a href="#verb-implementation-like" title="look up implementations"><tt>like</tt></a></td><td>Indicates that the actor marked the object as an item of special interest. The "like" verb is considered to be an alias of "favorite". The two verb are semantically identical.</td><td><pre class="highlight">
 {
   "actor": {
     "objectType": "person", 
@@ -503,7 +503,7 @@
     "object": {
       "objectType": "organization",
       "displayName": "Acme, Co" } } }
-    </pre></td><td><ul><li><a href="#pump.io-verb-like">pump.io</a> (Synoym for "favorite".)</li></ul></td></tr><tr id="verb-listen"><td><tt>listen</tt></td><td>Indicates that the actor has listened to the object. This is typically only applicable for objects representing audio content, such as music, an audio-book, or a radio broadcast. The "listen" verb is a more specific form of the "consume", "experience" and "play" verbs.</td><td><pre>
+    </pre></td></tr><tr id="verb-definition-listen"><td><a href="#verb-implementation-listen" title="look up implementations"><tt>listen</tt></a></td><td>Indicates that the actor has listened to the object. This is typically only applicable for objects representing audio content, such as music, an audio-book, or a radio broadcast. The "listen" verb is a more specific form of the "consume", "experience" and "play" verbs.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person", 
       "displayName": "Mark" },
@@ -511,7 +511,7 @@
     "object": {
       "objectType": "audio",
       "displayName": "Welcome to the Company (Podcast).mp3" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-lose"><td><tt>lose</tt></td><td>Indicates that the actor has lost the object. For instance, if a person loses a game.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-lose"><td><a href="#verb-implementation-lose" title="look up implementations"><tt>lose</tt></a></td><td>Indicates that the actor has lost the object. For instance, if a person loses a game.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "organization",
       "displayName": "New York Yankees" },
@@ -519,7 +519,7 @@
     "object": {
       "objectType": "game",
       "displayName": "World Series" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-make-friend"><td><tt>make-friend</tt></td><td>Indicates the creation of a friendship that is reciprocated by the object. Since this verb implies an activity on the part of its object, processors MUST NOT accept activities with this verb unless they are able to verify through some external means that there is in fact a reciprocated connection. For example, a processor may have received a guarantee from a particular publisher that the publisher will only use this Verb in cases where a reciprocal relationship exists.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-make-friend"><td><a href="#verb-implementation-make-friend" title="look up implementations"><tt>make-friend</tt></a></td><td>Indicates the creation of a friendship that is reciprocated by the object. Since this verb implies an activity on the part of its object, processors MUST NOT accept activities with this verb unless they are able to verify through some external means that there is in fact a reciprocated connection. For example, a processor may have received a guarantee from a particular publisher that the publisher will only use this Verb in cases where a reciprocal relationship exists.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -527,7 +527,7 @@
     "object": {
       "objectType": "person",
       "displayName": "Laura" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-open"><td><tt>open</tt></td><td>Indicates that the actor has opened the object. For instance, the object could represent a ticket being tracked in an issue management system.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-open"><td><a href="#verb-implementation-open" title="look up implementations"><tt>open</tt></a></td><td>Indicates that the actor has opened the object. For instance, the object could represent a ticket being tracked in an issue management system.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Laura" },
@@ -535,7 +535,7 @@
     "object": {
       "objectType": "issue",
       "displayName": "Issue #126" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-play"><td><tt>play</tt></td><td>Indicates that the actor spent some time enjoying the object. For example, if the object is a video this indicates that the subject watched all or part of the video. The "play" verb is a more specific form of the "consume" verb.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-play"><td><a href="#verb-implementation-play" title="look up implementations"><tt>play</tt></a></td><td>Indicates that the actor spent some time enjoying the object. For example, if the object is a video this indicates that the subject watched all or part of the video. The "play" verb is a more specific form of the "consume" verb.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -543,7 +543,7 @@
     "object": {
       "objectType": "audio",
       "displayName": "Call Me Maybe" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-present"><td><tt>present</tt></td><td>Indicates that the actor has presented the object. For instance, when a person gives a presentation at a conference.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-present"><td><a href="#verb-implementation-present" title="look up implementations"><tt>present</tt></a></td><td>Indicates that the actor has presented the object. For instance, when a person gives a presentation at a conference.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Laura" },
@@ -551,7 +551,7 @@
     "object": {
       "objectType": "file",
       "displayName": "1Q2013 Sales Forecast.ppt" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-purchase"><td><tt>purchase</tt></td><td>Indicates that the actor has purchased the object. If a target is specified, in indicates the entity from which the object was purchased.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-purchase"><td><a href="#verb-implementation-purchase" title="look up implementations"><tt>purchase</tt></a></td><td>Indicates that the actor has purchased the object. If a target is specified, in indicates the entity from which the object was purchased.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -560,7 +560,7 @@
       "objectType": "video",
       "displayName": "The Avengers" },
     "title": "Mark purchased the movie, The Avengers" }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-qualify"><td><tt>qualify</tt></td><td>Indicates that the actor has qualified for the object. If a target is specified, it indicates the context within which the qualification applies.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-qualify"><td><a href="#verb-implementation-qualify" title="look up implementations"><tt>qualify</tt></a></td><td>Indicates that the actor has qualified for the object. If a target is specified, it indicates the context within which the qualification applies.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Laura" },
@@ -568,7 +568,7 @@
     "object": {
       "objectType": "offer",
       "displayName": "Free Money!" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-read"><td><tt>read</tt></td><td>Indicates that the actor read the object. This is typically only applicable for objects representing printed or written content, such as a book, a message or a comment. The "read" verb is a more specific form of the "consume", "experience" and "play" verbs.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-read"><td><a href="#verb-implementation-read" title="look up implementations"><tt>read</tt></a></td><td>Indicates that the actor read the object. This is typically only applicable for objects representing printed or written content, such as a book, a message or a comment. The "read" verb is a more specific form of the "consume", "experience" and "play" verbs.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -576,7 +576,7 @@
     "object": {
       "objectType": "book",
       "displayName": "Cloud Atlas" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-receive"><td><tt>receive</tt></td><td>Indicates that the actor is receiving an object. Examples include a person receiving a badge object. The object identifies the object being received.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-receive"><td><a href="#verb-implementation-receive" title="look up implementations"><tt>receive</tt></a></td><td>Indicates that the actor is receiving an object. Examples include a person receiving a badge object. The object identifies the object being received.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Laura" },
@@ -586,7 +586,7 @@
       "displayName": "Most Checkins in 24 hours" },
     "title": "Laura was awarded a badge 
       for \"Most Checkins in 24 hours\"" }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-reject"><td><tt>reject</tt></td><td>Indicates that the actor has rejected the object.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-reject"><td><a href="#verb-implementation-reject" title="look up implementations"><tt>reject</tt></a></td><td>Indicates that the actor has rejected the object.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -594,7 +594,7 @@
     "object": {
       "objectType": "issue",
       "displayName": "Issue #126" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-remove"><td><tt>remove</tt></td><td>Indicates that the actor has removed the object from the target.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-remove"><td><a href="#verb-implementation-remove" title="look up implementations"><tt>remove</tt></a></td><td>Indicates that the actor has removed the object from the target.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Laura" },
@@ -608,7 +608,7 @@
       "objectType": "collection",
       "displayName": "Cat Photo Album",
       "objectTypes": ["image"] } }
-      </pre></td><td><ul><li><a href="#pump.io-verb-remove">pump.io</a> (Social graph management, remove from contact list)</li></ul></td></tr><tr id="verb-remove-friend"><td><tt>remove-friend</tt></td><td>Indicates that the actor has removed the object from the collection of friends.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-remove-friend"><td><a href="#verb-implementation-remove-friend" title="look up implementations"><tt>remove-friend</tt></a></td><td>Indicates that the actor has removed the object from the collection of friends.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -616,7 +616,7 @@
     "object": {
       "objectType": "person",
       "displayName": "Laura" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-replace"><td><tt>replace</tt></td><td>Indicates that the actor has replaced the target with the object.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-replace"><td><a href="#verb-implementation-replace" title="look up implementations"><tt>replace</tt></a></td><td>Indicates that the actor has replaced the target with the object.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -627,7 +627,7 @@
     "target": {
       "objectType": "file",
       "displayName": "1Q2014 Sales Forecast.xls" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-request"><td><tt>request</tt></td><td>Indicates that the actor has requested the object. If a target is specified, it indicates the entity from which the object is being  requested.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-request"><td><a href="#verb-implementation-request" title="look up implementations"><tt>request</tt></a></td><td>Indicates that the actor has requested the object. If a target is specified, it indicates the entity from which the object is being  requested.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Laura" },
@@ -641,7 +641,7 @@
       "object": {
         "objectType": "event",
         "displayName": "The Big Meeting" } } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-request-friend"><td><tt>request-friend</tt></td><td>Indicates the creation of a friendship that has not yet been reciprocated by  the object.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-request-friend"><td><a href="#verb-implementation-request-friend" title="look up implementations"><tt>request-friend</tt></a></td><td>Indicates the creation of a friendship that has not yet been reciprocated by  the object.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -649,7 +649,7 @@
     "object": {
       "objectType": "person",
       "displayName": "Laura" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-resolve"><td><tt>resolve</tt></td><td>Indicates that the actor has resolved the object. For instance, the object could represent a ticket being tracked in an issue management system.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-resolve"><td><a href="#verb-implementation-resolve" title="look up implementations"><tt>resolve</tt></a></td><td>Indicates that the actor has resolved the object. For instance, the object could represent a ticket being tracked in an issue management system.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Laura" },
@@ -657,18 +657,7 @@
     "object": {
       "objectType": "issue",
       "displayName": "Issue #126" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-return"><td><tt>return</tt></td><td>Indicates that the actor has returned the object. If a target is specified, it indicates the entity to which the object was returned.</td><td><pre>
-  { "actor": {
-      "objectType": "person",
-      "displayName": "Mark" },
-    "verb": "return",
-    "object": {
-      "objectType": "book",
-      "displayName": "Cloud Atlas" },
-    "target": {
-      "objectType": "person",
-      "displayName": "Laura" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-retract"><td><tt>retract</tt></td><td>Indicates that the actor has retracted the object. For instance, if an actor wishes to retract a previously published activity, the object would be the previously published activity that is being retracted.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-retract"><td><a href="#verb-implementation-retract" title="look up implementations"><tt>retract</tt></a></td><td>Indicates that the actor has retracted the object. For instance, if an actor wishes to retract a previously published activity, the object would be the previously published activity that is being retracted.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Laura" },
@@ -684,7 +673,18 @@
       "target": {
         "objectType": "person",
         "displayName": "Laura" } } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-rsvp-maybe"><td><tt>rsvp-maybe</tt></td><td>The "possible RSVP" verb indicates that the actor has made a possible RSVP for the object. This specification only defines the meaning of this verb when its object is an event, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-return"><td><a href="#verb-implementation-return" title="look up implementations"><tt>return</tt></a></td><td>Indicates that the actor has returned the object. If a target is specified, it indicates the entity to which the object was returned.</td><td><pre class="highlight">
+  { "actor": {
+      "objectType": "person",
+      "displayName": "Mark" },
+    "verb": "return",
+    "object": {
+      "objectType": "book",
+      "displayName": "Cloud Atlas" },
+    "target": {
+      "objectType": "person",
+      "displayName": "Laura" } }
+      </pre></td></tr><tr id="verb-definition-rsvp-maybe"><td><a href="#verb-implementation-rsvp-maybe" title="look up implementations"><tt>rsvp-maybe</tt></a></td><td>The "possible RSVP" verb indicates that the actor has made a possible RSVP for the object. This specification only defines the meaning of this verb when its object is an event, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Laura" },
@@ -693,7 +693,7 @@
       "objectType": "event",
       "displayName": "The Big Meeting" },
     "title": "Laura might attend The Big Meeting" }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-rsvp-no"><td><tt>rsvp-no</tt></td><td>The "negative RSVP" verb indicates that the actor has made a negative RSVP for the object. This specification only defines the meaning of this verb when its object is an event, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-rsvp-no"><td><a href="#verb-implementation-rsvp-no" title="look up implementations"><tt>rsvp-no</tt></a></td><td>The "negative RSVP" verb indicates that the actor has made a negative RSVP for the object. This specification only defines the meaning of this verb when its object is an event, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -702,7 +702,7 @@
       "objectType": "event",
       "displayName": "The Big Meeting" },
     "title": "Mark will not attend the Big Meeting" }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-rsvp-yes"><td><tt>rsvp-yes</tt></td><td>The "positive RSVP" verb indicates that the actor has made a positive RSVP for an object. This specification only defines the meaning of this verb when its object is an event, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-rsvp-yes"><td><a href="#verb-implementation-rsvp-yes" title="look up implementations"><tt>rsvp-yes</tt></a></td><td>The "positive RSVP" verb indicates that the actor has made a positive RSVP for an object. This specification only defines the meaning of this verb when its object is an event, though implementors need to be prepared to handle other object types. The use of this verb is only appropriate when the RSVP was created by an explicit action by the actor. It is not appropriate to use this verb when a user has been added as an attendee by an event organiser or administrator.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Laura" },
@@ -711,7 +711,7 @@
       "objectType": "event",
       "displayName": "The Big Meeting" },
     "title": "Laura will attend the Big Meeting" }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-satisfy"><td><tt>satisfy</tt></td><td>Indicates that the actor has satisfied the object. If a target is specified, it indicate the context within which the object was satisfied. For instance, if a person satisfies the requirements for a particular challenge, the person is the actor; the requirement is the object; and the challenge is the target.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-satisfy"><td><a href="#verb-implementation-satisfy" title="look up implementations"><tt>satisfy</tt></a></td><td>Indicates that the actor has satisfied the object. If a target is specified, it indicate the context within which the object was satisfied. For instance, if a person satisfies the requirements for a particular challenge, the person is the actor; the requirement is the object; and the challenge is the target.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -723,7 +723,7 @@
       "objectType": "http://example.org/parole",
       "displayName": "Terms of Parole" },
     "title": "Mark has satisfied a condition of his parole." } 
-      </pre></td><td><ul></ul></td></tr><tr id="verb-save"><td><tt>save</tt></td><td>Indicates that the actor has called out the object as being of interest primarily to him- or herself. Though this action MAY be shared publicly, the implication is that the object has been saved primarily for the actor's own benefit rather than to show it to others as would be indicated by the "share" verb.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-save"><td><a href="#verb-implementation-save" title="look up implementations"><tt>save</tt></a></td><td>Indicates that the actor has called out the object as being of interest primarily to him- or herself. Though this action MAY be shared publicly, the implication is that the object has been saved primarily for the actor's own benefit rather than to show it to others as would be indicated by the "share" verb.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Laura" },
@@ -735,7 +735,7 @@
       "objectType": "collection",
       "displayName": "Laura's Reading List" },
     "title": "Laura saved the note to her reading list" }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-schedule"><td><tt>schedule</tt></td><td>Indicates that the actor has scheduled the object. For instance, scheduling a meeting.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-schedule"><td><a href="#verb-implementation-schedule" title="look up implementations"><tt>schedule</tt></a></td><td>Indicates that the actor has scheduled the object. For instance, scheduling a meeting.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -743,7 +743,7 @@
     "object": {
       "objectType": "event",
       "displayName": "The Big Meeting" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-search"><td><tt>search</tt></td><td>Indicates that the actor is or has searched for the object. If a target is specified, it indicates the context within which the search is or has been conducted.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-search"><td><a href="#verb-implementation-search" title="look up implementations"><tt>search</tt></a></td><td>Indicates that the actor is or has searched for the object. If a target is specified, it indicates the context within which the search is or has been conducted.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Laura" },
@@ -755,7 +755,7 @@
         "locality": "New York",
         "region": "NY" } },
     "title": "Laura searched for a hotel in New York City, NY" }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-sell"><td><tt>sell</tt></td><td>Indicates that the actor has sold the object. If a target is specified, it indicates the entity to which the object was sold.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-sell"><td><a href="#verb-implementation-sell" title="look up implementations"><tt>sell</tt></a></td><td>Indicates that the actor has sold the object. If a target is specified, it indicates the entity to which the object was sold.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -766,7 +766,7 @@
     "target": {
       "objectType": "person",
       "displayName": "Laura" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-send"><td><tt>send</tt></td><td>Indicates that the actor has sent the object. If a target is specified, it indicates the entity to which the object was sent.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-send"><td><a href="#verb-implementation-send" title="look up implementations"><tt>send</tt></a></td><td>Indicates that the actor has sent the object. If a target is specified, it indicates the entity to which the object was sent.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Laura" },
@@ -777,7 +777,7 @@
     "target": {
       "objectType": "person",
       "displayName": "Mark" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-share"><td><tt>share</tt></td><td>Indicates that the actor has called out the object to readers. In most cases, the actor did not create the object being shared, but is instead drawing attention to it.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-share"><td><a href="#verb-implementation-share" title="look up implementations"><tt>share</tt></a></td><td>Indicates that the actor has called out the object to readers. In most cases, the actor did not create the object being shared, but is instead drawing attention to it.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -786,7 +786,7 @@
       "objectType": "note",
       "displayName": "An important note" },
     "title": "Mark shared an important note." }
-      </pre></td><td><ul><li><a href="#pump.io-verb-share">pump.io</a> (Response management)</li></ul></td></tr><tr id="verb-sponsor"><td><tt>sponsor</tt></td><td>Indicates that the actor has sponsored the object. If a target is specified, it indicates the context within which the sponsorship is offered. For instance, a company can sponsor an event; or an individual can sponsor a project; etc.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-sponsor"><td><a href="#verb-implementation-sponsor" title="look up implementations"><tt>sponsor</tt></a></td><td>Indicates that the actor has sponsored the object. If a target is specified, it indicates the context within which the sponsorship is offered. For instance, a company can sponsor an event; or an individual can sponsor a project; etc.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "organization",
       "displayName": "Acme, Co" },
@@ -795,7 +795,7 @@
       "objectType": "game",
       "displayName": "World Series" },
     "title": "Acme, Co sponsored the World Series" }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-start"><td><tt>start</tt></td><td>Indicates that the actor has started the object. For instance, when a person starts a project.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-start"><td><a href="#verb-implementation-start" title="look up implementations"><tt>start</tt></a></td><td>Indicates that the actor has started the object. For instance, when a person starts a project.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -803,7 +803,7 @@
     "object": {
       "objectType": "process",
       "displayName": "A Long Running Process" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-stop-following"><td><tt>stop-following</tt></td><td>Indicates that the actor has stopped following the object.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-stop-following"><td><a href="#verb-implementation-stop-following" title="look up implementations"><tt>stop-following</tt></a></td><td>Indicates that the actor has stopped following the object.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Laura" },
@@ -811,7 +811,7 @@
     "object": {
       "objectType": "person",
       "displayName": "Mark" } }
-      </pre></td><td><ul><li><a href="#pump.io-verb-stop-following">pump.io</a> (Social graph management)</li></ul></td></tr><tr id="verb-submit"><td><tt>submit</tt></td><td>Indicates that the actor has submitted the object. If a target is specified, it indicates the entity to which the object was submitted.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-submit"><td><a href="#verb-implementation-submit" title="look up implementations"><tt>submit</tt></a></td><td>Indicates that the actor has submitted the object. If a target is specified, it indicates the entity to which the object was submitted.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -819,7 +819,7 @@
     "object": {
       "objectType": "issue",
       "displayName": "Issue #127" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-tag"><td><tt>tag</tt></td><td>Indicates that the actor has associated the object with the target. For example, if the actor specifies that a particular user appears in a photo. the object is the user and the target is the photo.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-tag"><td><a href="#verb-implementation-tag" title="look up implementations"><tt>tag</tt></a></td><td>Indicates that the actor has associated the object with the target. For example, if the actor specifies that a particular user appears in a photo. the object is the user and the target is the photo.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Laura" },
@@ -830,7 +830,7 @@
     "target": {
       "objectType": "image",
       "displayName": "Pictures of my cats" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-terminate"><td><tt>terminate</tt></td><td>Indicates that the actor has terminated the object. </td><td><pre>
+      </pre></td></tr><tr id="verb-definition-terminate"><td><a href="#verb-implementation-terminate" title="look up implementations"><tt>terminate</tt></a></td><td>Indicates that the actor has terminated the object. </td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -838,7 +838,7 @@
     "object": {
       "objectType": "process",
       "displayName": "A long running process" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-tie"><td><tt>tie</tt></td><td>Indicates that the actor has neither won or lost the object. This verb is generally only applicable when the object represents some form of competition, such as a game.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-tie"><td><a href="#verb-implementation-tie" title="look up implementations"><tt>tie</tt></a></td><td>Indicates that the actor has neither won or lost the object. This verb is generally only applicable when the object represents some form of competition, such as a game.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "collection",
       "items": [
@@ -850,7 +850,7 @@
     "object": {
       "objectType": "game",
       "displayName": "Super Bowl" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-unfavorite"><td><tt>unfavorite</tt></td><td>Indicates that the actor has removed the object from the collection of favorited items.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-unfavorite"><td><a href="#verb-implementation-unfavorite" title="look up implementations"><tt>unfavorite</tt></a></td><td>Indicates that the actor has removed the object from the collection of favorited items.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Laura" },
@@ -858,7 +858,7 @@
     "object": {
       "objectType": "article",
       "displayName": "Some article" } }
-      </pre></td><td><ul><li><a href="#pump.io-verb-unfavorite">pump.io</a> (Response management)</li></ul></td></tr><tr id="verb-unlike"><td><tt>unlike</tt></td><td>Indicates that the actor has removed the object from the collection of liked items.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-unlike"><td><a href="#verb-implementation-unlike" title="look up implementations"><tt>unlike</tt></a></td><td>Indicates that the actor has removed the object from the collection of liked items.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -866,7 +866,7 @@
     "object": {
       "objectType": "article",
       "displayName": "Some article" } }
-      </pre></td><td><ul><li><a href="#pump.io-verb-unlike">pump.io</a> (Synonym for "unfavorite")</li></ul></td></tr><tr id="verb-unsatisfy"><td><tt>unsatisfy</tt></td><td>Indicates that the actor has not satisfied the object. If a target is specified, it indicates the context within which the object was not satisfied. For instance, if a person fails to satisfy the requirements of some particular challenge, the person is the actor; the requirement is the object and the challenge is the target.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-unsatisfy"><td><a href="#verb-implementation-unsatisfy" title="look up implementations"><tt>unsatisfy</tt></a></td><td>Indicates that the actor has not satisfied the object. If a target is specified, it indicates the context within which the object was not satisfied. For instance, if a person fails to satisfy the requirements of some particular challenge, the person is the actor; the requirement is the object and the challenge is the target.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -878,7 +878,7 @@
       "objectType": "http://example.org/parole",
       "displayName": "Terms of Parole" },
     "title": "Mark has not satisfied a condition of his parole." } 
-      </pre></td><td><ul></ul></td></tr><tr id="verb-unsave"><td><tt>unsave</tt></td><td>Indicates that the actor has removed the object from the collection of saved items.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-unsave"><td><a href="#verb-implementation-unsave" title="look up implementations"><tt>unsave</tt></a></td><td>Indicates that the actor has removed the object from the collection of saved items.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Laura" },
@@ -886,7 +886,7 @@
     "object": {
       "objectType": "article",
       "displayName": "Some article" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-unshare"><td><tt>unshare</tt></td><td>Indicates that the actor is no longer sharing the object. If a target is specified, it indicates the entity with whom the object is no longer being shared.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-unshare"><td><a href="#verb-implementation-unshare" title="look up implementations"><tt>unshare</tt></a></td><td>Indicates that the actor is no longer sharing the object. If a target is specified, it indicates the entity with whom the object is no longer being shared.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -894,7 +894,7 @@
     "object": {
       "objectType": "article",
       "displayName": "Some article" } }
-      </pre></td><td><ul><li><a href="#pump.io-verb-unshare">pump.io</a> (Response management)</li></ul></td></tr><tr id="verb-update"><td><tt>update</tt></td><td>The "update" verb indicates that the actor has modified the object. Use of the "update" verb is generally reserved to indicate modifications to existing objects or data such as changing an existing user's profile information.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-update"><td><a href="#verb-implementation-update" title="look up implementations"><tt>update</tt></a></td><td>The "update" verb indicates that the actor has modified the object. Use of the "update" verb is generally reserved to indicate modifications to existing objects or data such as changing an existing user's profile information.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -902,7 +902,7 @@
     "object": {
       "objectType": "article",
       "displayName": "Some article" } }
-      </pre></td><td><ul><li><a href="#pump.io-verb-update">pump.io</a> (CRUD on content)</li></ul></td></tr><tr id="verb-use"><td><tt>use</tt></td><td>Indicates that the actor has used the object in some manner.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-use"><td><a href="#verb-implementation-use" title="look up implementations"><tt>use</tt></a></td><td>Indicates that the actor has used the object in some manner.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Laura" },
@@ -910,7 +910,7 @@
     "object": {
       "objectType": "product",
       "displayName": "A cool product" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-watch"><td><tt>watch</tt></td><td>Indicates that the actor has watched the object. This verb is typically applicable only when the object represents dynamic, visible content such as a movie, a television show or a public performance. This verb is a more specific form of the verbs "experience", "play" and "consume".</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-watch"><td><a href="#verb-implementation-watch" title="look up implementations"><tt>watch</tt></a></td><td>Indicates that the actor has watched the object. This verb is typically applicable only when the object represents dynamic, visible content such as a movie, a television show or a public performance. This verb is a more specific form of the verbs "experience", "play" and "consume".</td><td><pre class="highlight">
   { "actor": {
       "objectType": "person",
       "displayName": "Mark" },
@@ -918,7 +918,7 @@
     "object": {
       "objectType": "video",
       "displayName": "Some random movie" } }
-      </pre></td><td><ul></ul></td></tr><tr id="verb-win"><td><tt>win</tt></td><td>Indicates that the actor has won the object. This verb is typically applicable only when the object represents some form of competition, such as a game.</td><td><pre>
+      </pre></td></tr><tr id="verb-definition-win"><td><a href="#verb-implementation-win" title="look up implementations"><tt>win</tt></a></td><td>Indicates that the actor has won the object. This verb is typically applicable only when the object represents some form of competition, such as a game.</td><td><pre class="highlight">
   { "actor": {
       "objectType": "organization",
       "displayName": "Arizona Diamond Backs" },
@@ -926,4 +926,4 @@
     "object": {
       "objectType": "game",
       "displayName": "World Series" } }
-      </pre></td><td><ul></ul></td></tr></tbody></table></section><section id="AS1-objects"><h2>Activity Streams 1.0 Objects</h2></section></section><section id="AS1-implementations"><h2>Activity Streams 1.0 Implementations</h2><section id="pump.io"><h2>pump.io</h2><p>As <a href="http://lists.w3.org/Archives/Public/public-socialweb/2014Nov/0021.html">reported by Evan Prodromou</a>, <a href="http://pump.io/">pump.io</a> supports a number of AS1 verbs as semantically meaningful, in the sense that pump.io will act upon them. These verbs are the following (excluding "post", which is not part of the AS1 vocabulary discussed in this document):</p><ul><li id="pump.io-verb-create"><a href="#verb-create" title="Indicates that the actor has created the object.">create</a> (CRUD on content, synonym for "post")</li><li id="pump.io-verb-follow"><a href="#verb-follow" title="Indicates that the actor began following the activity of the object. In most cases, the objectType will be a &#34;person&#34;, but it can potentially be of any type that can sensibly generate activity. Processors MAY ignore (silently drop) successive identical &#34;follow&#34; activities.">follow</a> (Social graph management)</li><li id="pump.io-verb-stop-following"><a href="#verb-stop-following" title="Indicates that the actor has stopped following the object.">stop-following</a> (Social graph management)</li><li id="pump.io-verb-favorite"><a href="#verb-favorite" title="Indicates that the actor marked the object as an item of special interest.">favorite</a> (Response management)</li><li id="pump.io-verb-like"><a href="#verb-like" title="Indicates that the actor marked the object as an item of special interest. The &#34;like&#34; verb is considered to be an alias of &#34;favorite&#34;. The two verb are semantically identical.">like</a> (Synoym for "favorite".)</li><li id="pump.io-verb-unfavorite"><a href="#verb-unfavorite" title="Indicates that the actor has removed the object from the collection of favorited items.">unfavorite</a> (Response management)</li><li id="pump.io-verb-unlike"><a href="#verb-unlike" title="Indicates that the actor has removed the object from the collection of liked items.">unlike</a> (Synonym for "unfavorite")</li><li id="pump.io-verb-delete"><a href="#verb-delete" title="Indicates that the actor has deleted the object. This implies, but does not require, the permanent destruction of the object.">delete</a> (CRUD on content)</li><li id="pump.io-verb-update"><a href="#verb-update" title="The &#34;update&#34; verb indicates that the actor has modified the object. Use of the &#34;update&#34; verb is generally reserved to indicate modifications to existing objects or data such as changing an existing user's profile information.">update</a> (CRUD on content)</li><li id="pump.io-verb-add"><a href="#verb-add" title="Indicates that the actor has added the object to the target. For instance, adding a photo to an album.">add</a> (Social graph management, add to contact list)</li><li id="pump.io-verb-remove"><a href="#verb-remove" title="Indicates that the actor has removed the object from the target.">remove</a> (Social graph management, remove from contact list)</li><li id="pump.io-verb-share"><a href="#verb-share" title="Indicates that the actor has called out the object to readers. In most cases, the actor did not create the object being shared, but is instead drawing attention to it.">share</a> (Response management)</li><li id="pump.io-verb-unshare"><a href="#verb-unshare" title="Indicates that the actor is no longer sharing the object. If a target is specified, it indicates the entity with whom the object is no longer being shared.">unshare</a> (Response management)</li><li id="pump.io-verb-join"><a href="#verb-join" title="Indicates that the actor has become a member of the object. This specification only defines the meaning of this verb when the &#xA; object of the Activity has an objectType of group, though implementors need to be prepared to handle other types of objects.">join</a> (Social graph management, join a group)</li><li id="pump.io-verb-leave"><a href="#verb-leave" title="Indicates that the actor has left the object. For instance, a Person leaving a Group or checking-out of a Place.">leave</a> (Social graph management, leave a group)</li></ul><p>It should be noted that pump.io will accept, store, and forward all other verbs as well. But for those other verbs, there are no special semantics associated that will trigger internal actions in pump.io.</p></section></section><section id="acknowledgements"><h2>Acknowledgements</h2><p>Thanks for contributions, input, and/or suggestions by the following people: Evan Prodromou</p></section></body></html>
+      </pre></td></tr></tbody></table></section><section id="AS1-objects"><h2>Activity Streams 1.0 Objects</h2></section></body></html>
