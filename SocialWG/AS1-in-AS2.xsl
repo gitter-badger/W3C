@@ -58,10 +58,10 @@
                             <thead>
                                 <tr>
                                     <th rowspan="2">Name</th>
-                                    <th>Implementations</th>
+                                    <th><a href="#AS1-implementations">Implementations</a></th>
                                 </tr>
                                 <tr>
-                                    <th>pump.io</th>
+                                    <th><a href="#pump.io">pump.io</a></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -119,10 +119,6 @@
                         <p>It should be noted that pump.io will accept, store, and forward all other verbs as well. But for those other verbs, there are no special semantics associated that will trigger internal actions in pump.io.</p>
                     </section>
                 </section>
-                <section id="acknowledgements">
-                    <h2>Acknowledgements</h2>
-                    <p>Thanks for contributions, input, and/or suggestions by the following people: Evan Prodromou</p>
-                </section>
                 <section id="AS1-verbs" class="appendix">
                     <h2>Activity Streams 1.0 Verbs</h2>
                     <table>
@@ -157,6 +153,10 @@
                 </section>
                 <section id="AS1-objects">
                     <h2>Activity Streams 1.0 Objects</h2>
+                </section>
+                <section id="acknowledgements">
+                    <h2>Acknowledgements</h2>
+                    <p>Thanks for contributions, input, and/or suggestions by the following people: Evan Prodromou</p>
                 </section>
             </body>
         </html>
