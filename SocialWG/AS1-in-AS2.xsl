@@ -121,6 +121,7 @@
                 </section>
                 <section id="AS1-verbs" class="appendix">
                     <h2>Activity Streams 1.0 Verbs</h2>
+                    <p>The following list of <q>Activity Streams 1.0 Verbs</q> is based on the definitions of the <a href="https://github.com/activitystreams/activity-schema">Activity Streams 1.0 Base Schema</a>. Please note that while this list has been <a href="https://github.com/activitystreams/activity-schema/commits/master">stable for some time</a>, it has never reached a formal status where it was marked as being final and complete.</p>
                     <table>
                         <thead>
                             <tr>
