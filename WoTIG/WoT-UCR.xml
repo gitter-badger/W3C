@@ -88,7 +88,7 @@
             <li reqref="privacy">...</li>
             <li reqref="trust">...</li>
             <li reqref="object-memory">...</li>
-            <li reqref="layered-comm">In heterogeneous systems, integration requires a clear and consistent layering of application protocols.</li>
+            <li reqref="layered-comm">Since multiple different links are used for monitoring and control, integration requires a clear and consistent seperation of information from the used serilization and application protocols to enable the exchange of homogenous information over heterogenous application layer protocols</li>
         </ul>
     </usecase>
     <usecase id="automation-factories" author="stefan">
@@ -113,7 +113,7 @@
             <li reqref="trust">Since a financial transaction is directly involved, it is important that both sides can enter a trust relationship.</li>
             <li reqref="integrity">To avoid man-in-the middle attacks and fraud by alteration, the integrity of all exchanges messages must be confirmable</li>
             <li reqref="object-memory">...</li>
-            <li reqref="layered-comm">...</li>
+            <li reqref="layered-comm">Since the same data contents are transferred over several communication links (such as vehicle to charger, charger to driver's smartphone, charger to grid/backend, vehicle to fleet operation, etc.), it is neccessary that the communication of the information/contets can be transferred independent of the different transports or serialization formats used</li>
         </ul>
     </usecase>
     <usecase id="lifecycle-management" author="darko">
@@ -128,7 +128,7 @@
             <li reqref="ensemble-discovery">Resources need be discoverable based on their Resource Description (e.g., properties, functionalities and roles). The discovery also needs to be enabled in a dynamic environment where physical resources appear and disappear during lifecycle phases.</li>
             <li reqref="lifecycle-mgmt">Different stakeholders interact with different resources throughout different lifecycle phases, e.g., same resources may be used transparently in the development phase as well as in the operation phase.</li>
             <li reqref="multi-stakeholder-operation">Lifecycle management of Industrial Automation Systems involves multi-stakeholders (e.g., domain engineers, software engineers, system engineers, system installers etc.).</li>
-            <li reqref="layered-comm">In heterogeneous systems, integration requires a clear and consistent layering of application protocols.</li>
+            <li reqref="layered-comm">In heterogeneous systems, where several vendors use different flavors of the same data exchange in terms of data representation or  transport protocols, integration requires a clear and consistent layering of application protocols.</li>
         </ul>
     </usecase>
     <req id="resource-description">
