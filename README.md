@@ -1,5 +1,6 @@
 Giving Feedback
 ---------------
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/h0ru5/W3C?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 If the document you want to make a comment on specifies an e-mail address for feedback, please use this address.
 
